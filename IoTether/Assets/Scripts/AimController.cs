@@ -21,6 +21,7 @@ public class ShootingController : MonoBehaviour
             GetComponentInChildren<SpriteRenderer>().flipY = false;
         }
 
+        // Rotate game object based on mouse position
         Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
         mousePos = Camera.main.ScreenToWorldPoint(vect3);
         Debug.Log("Running" + mousePos);
