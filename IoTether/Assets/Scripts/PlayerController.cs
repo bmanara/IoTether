@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-        
 
         // Update animator parameters
         if (input != Vector2.zero)
