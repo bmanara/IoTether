@@ -24,7 +24,6 @@ public class ShootingController : MonoBehaviour
         // Rotate game object based on mouse position
         Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
         mousePos = Camera.main.ScreenToWorldPoint(vect3);
-        Debug.Log("Running" + mousePos);
 
         Vector3 rotation = mousePos - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
