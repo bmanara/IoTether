@@ -6,10 +6,16 @@ public class RifleController : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public AudioManager audioManager;
 
     private float bulletForce = 15f;
     private float fireRate = 0.2f;
     private float canFire = 0.1f;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,5 +32,6 @@ public class RifleController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+        audioManager.PlaySFX(audioManager.rifleShot);
     }
 }
