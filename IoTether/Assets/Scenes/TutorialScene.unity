@@ -1011,6 +1011,7 @@ GameObject:
   - component: {fileID: 226261479}
   - component: {fileID: 226261481}
   - component: {fileID: 226261480}
+  - component: {fileID: 226261482}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1057,7 +1058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome! \nSelect any gun to get started!"
+  m_text: "Welcome! \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8468c14a8ec7e044bbcc12b519b2abd1, type: 2}
   m_sharedMaterial: {fileID: -8938820017848803478, guid: 8468c14a8ec7e044bbcc12b519b2abd1, type: 2}
@@ -1134,6 +1135,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226261478}
   m_CullTransparentMesh: 1
+--- !u!114 &226261482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226261478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a83099fcb4f3224fbd85e60ff3c4e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 226261480}
+  changeInterval: 5
 --- !u!1 &557046929
 GameObject:
   m_ObjectHideFlags: 0
