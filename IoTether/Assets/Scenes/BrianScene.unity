@@ -4501,6 +4501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525921f8089330945b6e792f4de617a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   health: 4
   speed: 0
 --- !u!1001 &2618790381025373946
