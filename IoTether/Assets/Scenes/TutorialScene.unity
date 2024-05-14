@@ -1144,11 +1144,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 226261478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a83099fcb4f3224fbd85e60ff3c4e44, type: 3}
+  m_Script: {fileID: 11500000, guid: c73d9ce6bc792ba49b8491cdeec0b8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 226261480}
-  changeInterval: 5
+  character: {fileID: 1689231735}
+  targetPosition: {x: 0, y: 0, z: 0}
+  threshold: 1
 --- !u!1 &557046929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1484,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1185861069
 RectTransform:
