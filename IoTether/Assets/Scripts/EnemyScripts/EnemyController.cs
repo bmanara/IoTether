@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public Animator animator;
 
     public int health;
@@ -12,6 +12,11 @@ public class EnemyController : MonoBehaviour
 
     private float distance;
     private bool facingRight = true;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
