@@ -12,6 +12,14 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rbPlayer;
     public Animator animator;
 
+    private int health;
+    private int maxHealth = 10;
+
+    private void Awake()
+    {
+        health = maxHealth; // might need to change due to multiple levels
+    }
+
     private void Update()
     {
         // Get movement input
@@ -51,5 +59,16 @@ public class PlayerController : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            // Update death animation
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+            // Die();
+        }
     }
 }
