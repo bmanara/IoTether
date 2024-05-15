@@ -5874,7 +5874,7 @@ GameObject:
   - component: {fileID: 2093687924}
   - component: {fileID: 2093687923}
   m_Layer: 0
-  m_Name: Room 1
+  m_Name: Room 1 TriggerBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
