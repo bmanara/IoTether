@@ -10,8 +10,10 @@ public class WeaponPickup : MonoBehaviour
     {
         if (collision.CompareTag("Player")) {
             // Add UI to show player that they can pick up the weapon
+            Debug.Log("Colliding with player");
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("Pressing E");
                 collision.GetComponent<WeaponSwap>().UpdateWeapon(weaponToGive);
                 Destroy(gameObject);
             }
