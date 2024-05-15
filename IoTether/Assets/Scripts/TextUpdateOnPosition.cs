@@ -23,7 +23,6 @@ public class TextUpdateOnPosition : MonoBehaviour
 
     private void UpdateText()
     {
-        // Change the text here
         textMeshPro.text = "Select a Weapon to get started!";
     }
 }
