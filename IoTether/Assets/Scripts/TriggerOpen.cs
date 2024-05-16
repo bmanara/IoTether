@@ -7,11 +7,14 @@ public class TriggerOpen : MonoBehaviour
 {
     private GameObject Door;
     [SerializeField]
+    private GameObject TriggerBox;
     private EnemyAreaTracker enemyAreaTracker;
     bool enemiesDefeated = false;
 
     private void Start()
     {
+        enemyAreaTracker = TriggerBox.GetComponent<EnemyAreaTracker>();
+
         Door = gameObject;
 
         if(enemyAreaTracker != null)
