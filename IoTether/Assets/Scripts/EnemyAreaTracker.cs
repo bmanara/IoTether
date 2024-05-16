@@ -5,17 +5,26 @@ using UnityEngine;
 public class EnemyAreaTracker : MonoBehaviour
 {
     private HashSet<GameObject> enemiesInArea = new HashSet<GameObject>();
+    private int enemyCount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             enemiesInArea.Add(collision.gameObject);
+            enemyCount = enemiesInArea.Count;
             //Debug.Log("Enemy entered area. Current Count: " + enemiesInArea.Count);
+
         }
     }
     
    public int GetEnemyCount()
     {
-        return enemiesInArea.Count; 
+        return enemyCount;
+    }
+
+    [ContextMenu("Reduce")]
+    void ReduceCount()
+    {
+        enemyCount--;
     }
 }
