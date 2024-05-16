@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllers : MonoBehaviour
 {
     private float moveSpeed = 4f;
     private bool facingRight = true;
@@ -20,11 +19,12 @@ public class PlayerController : MonoBehaviour
         health = maxHealth; // might need to change due to multiple levels
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
         // Get movement input
         input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        input.y = Input.GetAxisRaw("Vertical"); 
 
         // Flip sprite based on movement direction
         if (input.x > 0 && !facingRight)
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         else if (input.x < 0 && facingRight)
         {
             Flip();
-        }
+        }   
 
         // Update animator parameters
         if (input != Vector2.zero)
@@ -49,15 +49,15 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Movement logic
         rbPlayer.MovePosition(rbPlayer.position + input * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void Flip()
     {
-        Vector3 currentScale = gameObject.transform.localScale;
+        GameObject child = transform.GetChild(0).gameObject;
+        Vector3 currentScale = child.transform.localScale;
         currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
+        child.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
 
