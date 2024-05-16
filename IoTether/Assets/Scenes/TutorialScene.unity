@@ -1148,8 +1148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 226261480}
-  character: {fileID: 0}
-  targetPosition: {x: 0, y: -1, z: 0}
+  character: {fileID: 2036823275}
+  targetPosition: {x: 0, y: 1, z: 0}
   threshold: 1
 --- !u!1001 &230932523
 PrefabInstance:
