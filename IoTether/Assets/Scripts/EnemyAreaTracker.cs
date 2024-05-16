@@ -10,7 +10,7 @@ public class EnemyAreaTracker : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             enemiesInArea.Add(collision.gameObject);
-            Debug.Log("Enemy entered area. Current Count: " + enemiesInArea.Count);
+            //Debug.Log("Enemy entered area. Current Count: " + enemiesInArea.Count);
         }
     }
     

@@ -6,12 +6,12 @@ using UnityEngine;
 public class TriggerOpen : MonoBehaviour
 {
     private GameObject Door;
+    [SerializeField]
     private EnemyAreaTracker enemyAreaTracker;
     bool enemiesDefeated = false;
 
     private void Start()
     {
-        enemyAreaTracker = FindObjectOfType<EnemyAreaTracker>();
         Door = gameObject;
 
         if(enemyAreaTracker != null)
@@ -32,7 +32,7 @@ public class TriggerOpen : MonoBehaviour
         if (enemyAreaTracker.GetEnemyCount() == 0)
         {
             enemiesDefeated = true;
-           // Open(); - To be implemented once enemy collision bug is fixed 
+            //Open(); - To be implemented once enemy collision bug is fixed 
         }
     }
 
@@ -42,6 +42,13 @@ public class TriggerOpen : MonoBehaviour
     private void Open()
     {
         Door.SetActive(false);
+
+    }
+
+    [ContextMenu("Close")]
+    private void Close()
+    {
+        Door.SetActive(true);
 
     }
 }
