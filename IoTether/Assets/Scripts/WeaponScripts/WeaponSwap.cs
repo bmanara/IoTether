@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class WeaponSwap : MonoBehaviour
 {
-    public Transform weaponSlot;
+    private Transform weaponSlot;
     public GameObject activeWeapon;
     private GameObject currWeapon;
 
     private void Start()
     {
+        weaponSlot = gameObject.transform.parent.GetChild(2);
         GameObject weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
         currWeapon = weapon;
         weapon.transform.parent = weaponSlot.transform;
