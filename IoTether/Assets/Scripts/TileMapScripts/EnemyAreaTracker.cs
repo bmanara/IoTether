@@ -8,7 +8,7 @@ public class EnemyAreaTracker : MonoBehaviour
     private int enemyCount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.name == "Player")
         {
             enemiesInArea.Add(collision.gameObject);
             enemyCount = enemiesInArea.Count;
