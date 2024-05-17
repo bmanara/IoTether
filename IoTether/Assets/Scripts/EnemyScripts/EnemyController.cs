@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     private GameObject player;
     public Animator animator;
+    public Rigidbody2D rb;
 
     public int health;
     public float speed;
@@ -18,6 +19,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
@@ -29,6 +31,7 @@ public class EnemyController : MonoBehaviour
             }
         }
     }
+    */
 
     private void Update()
     {
@@ -63,5 +66,14 @@ public class EnemyController : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
+    }
+
+    public void DecreaseHealth(int damage)
+    {
+        health = health - damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
