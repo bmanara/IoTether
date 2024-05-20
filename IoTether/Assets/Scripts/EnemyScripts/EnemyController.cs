@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IDamageable
 {
     private GameObject player;
     public Animator animator;
     public Rigidbody2D rb;
+    private Material matWhite;
+    private Material matDefault;
+    private SpriteRenderer sr;
 
     public int health;
     public float speed;
+    public int damage;
 
     private float distance;
     private bool facingRight = true;
@@ -17,21 +21,21 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
+        matDefault = sr.material;
     }
 
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
+     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        // Attacking the player
+        if (collision.gameObject.tag == "Player")
         {
-            health--;
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            // Player will implement IDamageable
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+            damageable.DecreaseHealth(damage);
         }
     }
-    */
 
     private void Update()
     {
@@ -51,7 +55,9 @@ public class EnemyController : MonoBehaviour
         if (distance < 10)
         {
             // Move towards player if close enough to player
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                player.transform.position, 
+                speed * Time.deltaTime);
             animator.SetBool("isMoving", true);
         }
         else
@@ -70,10 +76,39 @@ public class EnemyController : MonoBehaviour
 
     public void DecreaseHealth(int damage)
     {
+        OnHit(damage);
+    }
+
+    public void DecreaseHealth(int damage, Vector2 knockback)
+    {
+        OnHit(damage);
+
+        // Apply knockback
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+    }
+
+    private void OnHit(int damage)
+    {
+        sr.material = matWhite;
         health = health - damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            KillSelf();
         }
+        else
+        {
+            Invoke("ResetMaterial", .1f);
+        }
+    }
+
+    private void KillSelf()
+    {
+        // TODO: Add death animation here
+        Destroy(gameObject);
+    }
+
+    void ResetMaterial()
+    {
+        sr.material = matDefault;
     }
 }
