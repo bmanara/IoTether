@@ -7,6 +7,9 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
     public Animator animator;
     public Rigidbody2D rb;
+    private Material matWhite;
+    private Material matDefault;
+    private SpriteRenderer sr;
 
     public int health;
     public float speed;
@@ -17,21 +20,10 @@ public class EnemyController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
+        matDefault = sr.material;
     }
-
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            health--;
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-    */
 
     private void Update()
     {
@@ -70,10 +62,25 @@ public class EnemyController : MonoBehaviour
 
     public void DecreaseHealth(int damage)
     {
+        sr.material = matWhite;
         health = health - damage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            KillSelf();
         }
+        else
+        {
+            Invoke("ResetMaterial", .1f);
+        }
+    }
+
+    private void KillSelf()
+    {
+        Destroy(gameObject);
+    }
+
+    void ResetMaterial()
+    {
+        sr.material = matDefault;
     }
 }
