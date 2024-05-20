@@ -10,7 +10,7 @@ public class TriggerOpen : MonoBehaviour
     private Transform enemiesInRoom;
     private bool RoomClear = false;
 
-    private void Start()
+    private void Awake()
     {
         Door = gameObject;
     }
@@ -19,10 +19,6 @@ public class TriggerOpen : MonoBehaviour
     //if number of enemies = 0 then change to true
     private void Update()
     {
-        if (enemiesInRoom != null)
-        {
-            Debug.Log("enemies:" + enemiesInRoom.childCount);
-        }
 
         if (enemiesInRoom.childCount == 0)
         {
@@ -37,6 +33,7 @@ public class TriggerOpen : MonoBehaviour
     private void Open()
     {
         Door.SetActive(false);
+        Debug.Log("Door Opened");
 
     }
 
