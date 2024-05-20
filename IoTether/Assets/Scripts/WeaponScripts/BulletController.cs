@@ -13,7 +13,7 @@ public class BulletController : MonoBehaviour
             EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
             enemy.DecreaseHealth(damage);
         }
-        else if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "TriggerBox")
+        else if (collision.gameObject.tag != "Player")
         {
             Destroy(gameObject);
         }
