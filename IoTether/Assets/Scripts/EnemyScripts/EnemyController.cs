@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IDamageable
 {
     private GameObject player;
     public Animator animator;
@@ -62,6 +62,19 @@ public class EnemyController : MonoBehaviour
 
     public void DecreaseHealth(int damage)
     {
+        OnHit(damage);
+    }
+
+    public void DecreaseHealth(int damage, Vector2 knockback)
+    {
+        OnHit(damage);
+
+        // Apply knockback
+        rb.AddForce(knockback, ForceMode2D.Impulse);
+    }
+
+    private void OnHit(int damage)
+    {
         sr.material = matWhite;
         health = health - damage;
         if (health <= 0)
@@ -76,6 +89,7 @@ public class EnemyController : MonoBehaviour
 
     private void KillSelf()
     {
+        // TODO: Add death animation here
         Destroy(gameObject);
     }
 
