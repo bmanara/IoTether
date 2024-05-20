@@ -170,6 +170,7 @@ MonoBehaviour:
   rb: {fileID: 4061951358418367693}
   health: 4
   speed: 2
+  damage: 1
 --- !u!50 &4061951358418367693
 Rigidbody2D:
   serializedVersion: 4

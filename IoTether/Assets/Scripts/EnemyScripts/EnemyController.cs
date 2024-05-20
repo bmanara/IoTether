@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour, IDamageable
 
     public int health;
     public float speed;
+    public int damage;
 
     private float distance;
     private bool facingRight = true;
@@ -23,6 +24,17 @@ public class EnemyController : MonoBehaviour, IDamageable
         sr = gameObject.GetComponent<SpriteRenderer>();
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
         matDefault = sr.material;
+    }
+
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Attacking the player
+        if (collision.gameObject.tag == "Player")
+        {
+            // Player will implement IDamageable
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+            damageable.DecreaseHealth(damage);
+        }
     }
 
     private void Update()
@@ -43,7 +55,9 @@ public class EnemyController : MonoBehaviour, IDamageable
         if (distance < 10)
         {
             // Move towards player if close enough to player
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, 
+                player.transform.position, 
+                speed * Time.deltaTime);
             animator.SetBool("isMoving", true);
         }
         else
