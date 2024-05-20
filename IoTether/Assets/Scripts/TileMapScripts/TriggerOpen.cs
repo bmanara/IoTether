@@ -7,35 +7,27 @@ public class TriggerOpen : MonoBehaviour
 {
     private GameObject Door;
     [SerializeField]
-    private GameObject TriggerBox;
-    private EnemyAreaTracker enemyAreaTracker;
-    bool enemiesDefeated = false;
+    private Transform enemiesInRoom;
+    private bool RoomClear = false;
 
     private void Start()
     {
-        enemyAreaTracker = TriggerBox.GetComponent<EnemyAreaTracker>();
-
         Door = gameObject;
-
-        if(enemyAreaTracker != null)
-        {
-            Debug.Log("enemies: " + enemyAreaTracker.GetEnemyCount());
-        }
     }
 
 
     //if number of enemies = 0 then change to true
     private void Update()
     {
-        if (enemyAreaTracker != null)
+        if (enemiesInRoom != null)
         {
-            Debug.Log("enemies: " + enemyAreaTracker.GetEnemyCount());
+            Debug.Log("enemies:" + enemiesInRoom.childCount);
         }
 
-        if (enemyAreaTracker.GetEnemyCount() == 0)
+        if (enemiesInRoom.childCount == 0)
         {
-            enemiesDefeated = true;
-            //Open(); - To be implemented once enemy collision bug is fixed 
+            RoomClear = true;
+            Open(); 
         }
     }
 
