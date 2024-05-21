@@ -6,10 +6,10 @@ public class SpikeMovement : MonoBehaviour
 {
     public Sprite[] spikeSprites;
     public float changeInterval = 2f;
+    public int damage;
 
     private SpriteRenderer spriteRenderer;
     private int currentSpriteIndex = 0;
-    private Vector3 startPos;
     private bool canDamage = false;
 
 
@@ -17,7 +17,6 @@ public class SpikeMovement : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        startPos = transform.position;
         InvokeRepeating("ChangeSprite", changeInterval, changeInterval);
     }
 
@@ -33,12 +32,16 @@ public class SpikeMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (canDamage && other.CompareTag("Player"))
+        if (canDamage 
+            && other.gameObject.tag == "Player" 
+            && other.gameObject.name == "Hitbox")
         {
             // Damage the player
-            Debug.Log("Player damaged!");
-            // add code to damage the player
+            GameObject playerParent = other.gameObject.transform.parent.gameObject;
+            IDamageable damageable = playerParent.GetComponent<IDamageable>();
+            damageable.DecreaseHealth(damage);
         }
     }
+
 
 }
