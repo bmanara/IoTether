@@ -46,9 +46,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Die()
     {
-        // Should prob do something else other then Destroying the player...
-        // Destroy(gameObject);
-        Debug.Log("Game Over: Player Died.");
+        FindObjectOfType<GameManager>().GameOver();
     }
 
     void ResetMaterial()
