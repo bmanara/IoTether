@@ -19,7 +19,8 @@ public class BulletController : MonoBehaviour
             Vector2 knockback = direction * knockbackForce;
             damageable.DecreaseHealth(damage, knockback);
         }
-        else if (collision.gameObject.tag != "Player")
+        else if (collision.gameObject.tag != "Player"
+            && collision.gameObject.tag != "Spike")
         {
             Destroy(gameObject);
         }
