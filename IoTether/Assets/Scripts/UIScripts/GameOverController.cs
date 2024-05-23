@@ -8,6 +8,14 @@ using UnityEngine.SceneManagement;
 public class GameOverController : MonoBehaviour
 {
     public TMP_Text pointsText;
+    [SerializeField] Button _restartButton;
+    [SerializeField] Button _mainMenuButton;
+
+    private void Start()
+    {
+        _restartButton.onClick.AddListener(RestartGame);
+        _mainMenuButton.onClick.AddListener(MainMenu);
+    }
 
     public void Setup(int score)
     {
@@ -15,16 +23,13 @@ public class GameOverController : MonoBehaviour
         pointsText.text = "Score: " + score.ToString();
     }
 
-    // For now, this implementation works... kind of
     public void RestartGame()
     {
-        // TODO: Use SceneManager to reload the game scene instead
-        SceneManager.LoadScene("BrianScene");
+        GameManager.manager.Restart();
     }
 
     public void MainMenu()
     {
-        // TODO: Use SceneManager to load the main menu scene instead
-        SceneManager.LoadScene("StartMenuScene");
+        ScenesManager.manager.LoadStartMenu();
     }
 }
