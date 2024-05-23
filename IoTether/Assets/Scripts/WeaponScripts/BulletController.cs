@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     private int damage = 1;
     private float knockbackForce = 10f;
+    public GameObject impactEffect;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -18,11 +19,14 @@ public class BulletController : MonoBehaviour
             Vector2 direction = (collision.transform.position - transform.position).normalized;
             Vector2 knockback = direction * knockbackForce;
             damageable.DecreaseHealth(damage, knockback);
+            Instantiate(impactEffect, transform.position, transform.rotation); 
         }
         else if (collision.gameObject.tag != "Player"
             && collision.gameObject.tag != "Spike")
         {
             Destroy(gameObject);
+            Instantiate(impactEffect, transform.position, transform.rotation);
+
         }
 
         Destroy(gameObject, 2f);
