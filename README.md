@@ -6,3 +6,4 @@ Our project for NUS Orbital AY 23/24
 - [Weapon Pack](https://vladpenn.itch.io/weapon) by VladPenn
 - [9mm Pistol Shot SFX](https://pixabay.com/sound-effects/9mm-pistol-shot-6349/) by PixaBay
 - [Shot Rifle 39mm SFX](https://pixabay.com/sound-effects/shot-rifle-39-mm-37542/) by PixaBay
+- [Hit Impacts FREE](https://assetstore.unity.com/packages/vfx/particles/hit-impact-effects-free-218385) by TravisGameAssets
