@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +11,7 @@ public class GameManager : MonoBehaviour
     public int gameLevel;
     public bool gameIsOver;
 
-    public GameOverController gameOverController;
+    public static event Action OnGameOver;
 
     private void Awake()
     {
@@ -22,11 +24,18 @@ public class GameManager : MonoBehaviour
         {
             manager = this;
         }
-        DontDestroyOnLoad(this);
+
+        DontDestroyOnLoad(manager);
     }
 
     public void GameOver()
     {
-        gameOverController.Setup(score);
+        OnGameOver?.Invoke();
+    }
+
+    public void Restart()
+    {
+        // will need to reset the score to previously saved score
+        ScenesManager.manager.RestartScene();
     }
 }

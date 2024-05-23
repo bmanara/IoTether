@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -46,7 +47,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Die()
     {
-        FindObjectOfType<GameManager>().GameOver();
+        GameManager.manager.GameOver();
     }
 
     void ResetMaterial()

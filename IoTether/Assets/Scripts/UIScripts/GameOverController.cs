@@ -23,10 +23,9 @@ public class GameOverController : MonoBehaviour
         pointsText.text = "Score: " + score.ToString();
     }
 
-    // For now, this implementation works... kind of
     public void RestartGame()
     {
-        ScenesManager.manager.RestartScene();
+        GameManager.manager.Restart();
     }
 
     public void MainMenu()
