@@ -42,12 +42,17 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(Scene.TutorialScene.ToString());
     }
 
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void LoadStartMenu(int level)
+    public void LoadStartMenu()
     {
         SceneManager.LoadScene(Scene.StartMenuScene.ToString());
     }
