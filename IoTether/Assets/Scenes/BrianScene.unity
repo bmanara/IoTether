@@ -2663,6 +2663,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &448355103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3058934733439367450, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+  m_PrefabInstance: {fileID: 4252971389372555301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba866134beb3234c9da0a3fe8501c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,6 +4485,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2936089371353111781, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936089371353111781, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444190679936722720, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 448355103}
     - target: {fileID: 7671939088132736209, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4682,6 +4705,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1168414149}
+  - {fileID: 4252971389372555301}
   - {fileID: 619394802}
   - {fileID: 519420032}
   - {fileID: 1466439127}
@@ -4690,5 +4714,4 @@ SceneRoots:
   - {fileID: 2618790381025373946}
   - {fileID: 1495670248318634232}
   - {fileID: 1384535394}
-  - {fileID: 4252971389372555301}
   - {fileID: 1463034363}
