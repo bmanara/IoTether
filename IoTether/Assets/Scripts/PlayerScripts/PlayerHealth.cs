@@ -21,9 +21,16 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         matDefault = sr.material;
     }
 
+    private void Start()
+    {
+        UIManager.manager.SetMaxHealth(maxHealth);
+        UIManager.manager.SetHealth(health);
+    }
+
     public void DecreaseHealth(int damage)
     {
         OnHit(damage);
+        UIManager.manager.SetHealth(health);
     }
 
     public void DecreaseHealth(int damage, Vector2 knockback)
