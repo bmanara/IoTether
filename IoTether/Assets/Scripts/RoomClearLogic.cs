@@ -26,15 +26,17 @@ public class RoomClearLogic : MonoBehaviour
         
     }
 
+    [ContextMenu("Close")]
     private void Close()
     {
         Closed.SetActive(true);
         Opened.SetActive(false);
     }
-
+    [ContextMenu("Open")]
     private void Open()
     {
         Closed.SetActive(false);
         Opened.SetActive(true);
+        Debug.Log("Door Opened");
     }
 }
