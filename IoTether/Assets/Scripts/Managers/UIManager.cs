@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager manager;
+    public static UIManager manager { get; private set; }
 
     public HealthBarController healthBar;
     public GameObject gameOverMenu;
@@ -28,7 +28,6 @@ public class UIManager : MonoBehaviour
     {
         gameOverMenu.SetActive(true);
     }
-
 
     public void SetMaxHealth(int maxHealth)
     {
