@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        StopAllCoroutines();
+        StopAllCoroutines(); // Allow user to skip dialogue
         StartCoroutine(TypeSentence(sentence));
     }
 

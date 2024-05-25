@@ -2067,7 +2067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6242728879077048792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2321,6 +2321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3058934733439367450}
   gameOverMenu: {fileID: 1437834722081738185}
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
+  nameText: {fileID: 2080987022006227725}
+  dialogueText: {fileID: 1930183972443358589}
   dialogueAnimator: {fileID: 0}
