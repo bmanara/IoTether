@@ -191,6 +191,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &55359213 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5204745020850739327, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+  m_PrefabInstance: {fileID: 384448369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &226000207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3318967604426612196, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -570
+      objectReference: {fileID: 0}
     - target: {fileID: 4444190679936722720, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: nameText
       value: 
@@ -1870,6 +1879,10 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1044125161}
+    - target: {fileID: 4444190679936722720, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: dialogueAnimator
+      value: 
+      objectReference: {fileID: 55359213}
     - target: {fileID: 7671939088132736209, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_Pivot.x
       value: 0

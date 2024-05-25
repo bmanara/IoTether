@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
 
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public Animator dialogueAnimator;
 
     private Queue<string> sentences;
 
@@ -49,7 +50,8 @@ public class UIManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        dialogueAnimator.SetBool("isOpen", true);
+
         nameText.text = dialogue.name;
 
         sentences.Clear(); // Clear the queue
@@ -76,6 +78,6 @@ public class UIManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("End of conversation.");
+        dialogueAnimator.SetBool("isOpen", false);
     }
 }
