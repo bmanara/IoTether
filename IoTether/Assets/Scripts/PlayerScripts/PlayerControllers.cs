@@ -47,7 +47,7 @@ public class PlayerControllers : MonoBehaviour
 
     private void Flip()
     {
-        GameObject child = transform.GetChild(0).gameObject;
+        GameObject child = transform.GetChild(1).gameObject;
         Vector3 currentScale = child.transform.localScale;
         currentScale.x *= -1;
         child.transform.localScale = currentScale;
