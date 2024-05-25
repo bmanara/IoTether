@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Animator dialogueAnimator;
     private float typingSpeed = 0.02f;
+    private bool isTyping = false;
+    private string previousSentence = "";
 
     private Queue<string> sentences;
 
@@ -68,25 +70,35 @@ public class UIManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        if (isTyping)
+        {
+            StopAllCoroutines(); // Allow user to skip dialogue
+            dialogueText.text = previousSentence;
+            isTyping = false;
+            return;
+        }
+
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-
+        
         string sentence = sentences.Dequeue();
-        StopAllCoroutines(); // Allow user to skip dialogue
+        previousSentence = sentence;
         StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence(string sentence)
     {
+        isTyping = true;
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
+        isTyping = false;
     }
 
     void EndDialogue()
