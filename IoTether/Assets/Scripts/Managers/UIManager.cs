@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Animator dialogueAnimator;
+    private float typingSpeed = 0.02f;
 
     private Queue<string> sentences;
 
@@ -50,6 +51,7 @@ public class UIManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Time.timeScale = 0; // Pause game during dialogue
         dialogueAnimator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
@@ -83,12 +85,13 @@ public class UIManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSecondsRealtime(typingSpeed);
         }
     }
 
     void EndDialogue()
     {
+        Time.timeScale = 1; // Unpause game after dialogue
         dialogueAnimator.SetBool("isOpen", false);
     }
 }

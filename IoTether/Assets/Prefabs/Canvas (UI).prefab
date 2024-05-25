@@ -1428,7 +1428,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7936794b6ef71c7478d2aced1e41ebe4, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2323,4 +2323,4 @@ MonoBehaviour:
   gameOverMenu: {fileID: 1437834722081738185}
   nameText: {fileID: 2080987022006227725}
   dialogueText: {fileID: 1930183972443358589}
-  dialogueAnimator: {fileID: 0}
+  dialogueAnimator: {fileID: 5204745020850739327}
