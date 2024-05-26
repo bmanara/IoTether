@@ -10,7 +10,7 @@ public class WeaponSwap : MonoBehaviour
 
     private void Start()
     {
-        weaponSlot = gameObject.transform.parent.GetChild(2);
+        weaponSlot = gameObject.transform.parent.GetChild(0);
         GameObject weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
         currWeapon = weapon;
         weapon.transform.parent = weaponSlot.transform;

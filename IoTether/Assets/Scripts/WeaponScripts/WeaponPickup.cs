@@ -29,8 +29,7 @@ public class WeaponPickup : MonoBehaviour
     {
         if (ableToPickup && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Pressing E");
-            other.GetComponent<WeaponSwap>().UpdateWeapon(weaponToGive);
+            other.GetComponentInChildren<WeaponSwap>().UpdateWeapon(weaponToGive);
             Destroy(gameObject);
         }
     }
