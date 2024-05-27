@@ -23,8 +23,14 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        manager = this;
         sentences = new Queue<string>();
+        if (manager != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        manager = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
     private void OnEnable()
