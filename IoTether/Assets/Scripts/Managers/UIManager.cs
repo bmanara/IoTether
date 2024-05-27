@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 
     public HealthBarController healthBar;
     public GameObject gameOverMenu;
+    public GameObject pickUpPanel;
 
     public TMP_Text nameText;
     public TMP_Text dialogueText;
@@ -105,5 +106,15 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1; // Unpause game after dialogue
         dialogueAnimator.SetBool("isOpen", false);
+    }
+
+    public void EnablePickUpPanel()
+    {
+        pickUpPanel.SetActive(true);
+    }
+
+    public void DisablePickUpPanel()
+    {
+        pickUpPanel.SetActive(false);
     }
 }
