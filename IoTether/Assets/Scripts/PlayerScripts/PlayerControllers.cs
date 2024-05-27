@@ -10,6 +10,18 @@ public class PlayerControllers : MonoBehaviour
     private Vector2 input;
     public Rigidbody2D rbPlayer;
     public Animator animator;
+    public static PlayerControllers Instance;
+
+    private void Start()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
+    }
 
 
     // Update is called once per frame
