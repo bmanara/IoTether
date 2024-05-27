@@ -14,6 +14,7 @@ public class WeaponPickup : MonoBehaviour
         {
             ableToPickup = true;
             other = collision;
+            UIManager.manager.EnablePickUpPanel();
         }
     }
 
@@ -22,6 +23,7 @@ public class WeaponPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ableToPickup = false;
+            UIManager.manager.DisablePickUpPanel();
         }
     }
 
