@@ -27,7 +27,7 @@ public class BulletController : MonoBehaviour
             damageable.DecreaseHealth(damage, knockback);
         }
         else if (collision.gameObject.tag != "Player"
-            && collision.gameObject.tag != "Spike")
+            && collision.gameObject.tag != "Props")
         {
             Impact();
         }
