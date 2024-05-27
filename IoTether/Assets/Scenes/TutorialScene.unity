@@ -2036,6 +2036,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3201738194858003372, guid: 069d0ba480f925d489cfe8b480b87219, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2114,6 +2118,7 @@ GameObject:
   - component: {fileID: 778231223}
   - component: {fileID: 778231224}
   - component: {fileID: 778231225}
+  - component: {fileID: 778231226}
   m_Layer: 0
   m_Name: TutorialMaster
   m_TagString: Untagged
@@ -2233,6 +2238,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.29554152}
   m_EdgeRadius: 0
+--- !u!114 &778231226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778231222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a2f1eb9d9d05de46970d28d8edc3fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786452374
 GameObject:
   m_ObjectHideFlags: 0
