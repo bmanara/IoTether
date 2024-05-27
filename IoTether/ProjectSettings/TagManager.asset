@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bullet
-  - Spike
+  - Props
   layers:
   - Default
   - TransparentFX
