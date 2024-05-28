@@ -27,7 +27,6 @@ public class ScenesManager : MonoBehaviour
         // Ordering of scenes must be the same as build settings
         StartMenuScene,
         TutorialScene,
-        BrianScene,
         Level1,
         Level2,
         // might need to change how we name our levels

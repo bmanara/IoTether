@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     {
         gameLevel += 1;
         SaveScore();
+        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
     }
 
     public void IncreaseScore(int score)
