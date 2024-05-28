@@ -14,6 +14,6 @@ public class MainMenuController : MonoBehaviour
 
     private void PlayGame()
     {
-        ScenesManager.manager.LoadScene(ScenesManager.Scene.BrianScene);
+        ScenesManager.manager.LoadScene(ScenesManager.Scene.TutorialScene);
     }
 }
