@@ -65,4 +65,9 @@ public class PlayerControllers : MonoBehaviour
         child.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
+
+    public void Respawn(Vector3 spawnPoint)
+    {
+        transform.position = spawnPoint;
+    }
 }

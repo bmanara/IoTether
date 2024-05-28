@@ -6,6 +6,8 @@ public class WeaponSwap : MonoBehaviour
 {
     private Transform weaponSlot;
     public GameObject activeWeapon;
+    private GameObject prevWeapon; // checkpoint save
+
     private GameObject currWeapon;
 
     private void Start()
@@ -13,6 +15,7 @@ public class WeaponSwap : MonoBehaviour
         weaponSlot = gameObject.transform.parent.GetChild(0);
         GameObject weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
         currWeapon = weapon;
+        prevWeapon = activeWeapon;
         weapon.transform.parent = weaponSlot.transform;
     }
 
@@ -28,5 +31,15 @@ public class WeaponSwap : MonoBehaviour
             weaponSlot.transform.rotation);
         currWeapon = weapon;
         weapon.transform.parent = weaponSlot.transform;
+    }
+
+    public void SaveWeapon()
+    {
+        prevWeapon = activeWeapon;
+    }
+
+    public void ReloadWeapon()
+    {
+        UpdateWeapon(prevWeapon);
     }
 }
