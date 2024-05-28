@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager manager { get; private set; }
     public int score = 0;
+    public int prevScore = 0;
+
     public int gameLevel;
     public bool gameIsOver;
 
@@ -37,5 +39,20 @@ public class GameManager : MonoBehaviour
     {
         // will need to reset the score to previously saved score
         ScenesManager.manager.RestartScene();
+    }
+
+    public void IncreaseScore(int score)
+    {
+        this.score += score;
+    }
+
+    public void SaveScore()
+    {
+        prevScore = score;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

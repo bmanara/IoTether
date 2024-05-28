@@ -45,7 +45,9 @@ public class UIManager : MonoBehaviour
 
     public void EnableGameOverMenu()
     {
-        gameOverMenu.SetActive(true);
+        gameOverMenu
+            .GetComponent<GameOverController>()
+            .Setup(GameManager.manager.GetScore());
     }
 
     public void SetMaxHealth(int maxHealth)

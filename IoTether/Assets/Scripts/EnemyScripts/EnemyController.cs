@@ -105,6 +105,7 @@ public class EnemyController : MonoBehaviour, IDamageable
     {
         // TODO: Add death animation here
         Destroy(gameObject);
+        GameManager.manager.IncreaseScore(1);
     }
 
     void ResetMaterial()
