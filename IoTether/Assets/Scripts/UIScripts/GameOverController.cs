@@ -26,10 +26,12 @@ public class GameOverController : MonoBehaviour
     public void RestartGame()
     {
         GameManager.manager.Restart();
+        this.gameObject.SetActive(false);
     }
 
     public void MainMenu()
     {
         ScenesManager.manager.LoadStartMenu();
+        this.gameObject.SetActive(false);
     }
 }

@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager manager { get; private set; }
     public int score = 0;
-    public int gameLevel;
+    public int prevScore = 0;
+
+    public int gameLevel = 0;
     public bool gameIsOver;
 
     public static event Action OnGameOver;
@@ -36,6 +38,29 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         // will need to reset the score to previously saved score
+        score = prevScore;
         ScenesManager.manager.RestartScene();
+        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);   
+    }
+
+    public void NextLevel()
+    {
+        gameLevel += 1;
+        SaveScore();
+    }
+
+    public void IncreaseScore(int score)
+    {
+        this.score += score;
+    }
+
+    public void SaveScore()
+    {
+        prevScore = score;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

@@ -10,6 +10,18 @@ public class PlayerControllers : MonoBehaviour
     private Vector2 input;
     public Rigidbody2D rbPlayer;
     public Animator animator;
+    public static PlayerControllers Instance;
+
+    private void Start()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
+    }
 
 
     // Update is called once per frame
@@ -52,5 +64,10 @@ public class PlayerControllers : MonoBehaviour
         currentScale.x *= -1;
         child.transform.localScale = currentScale;
         facingRight = !facingRight;
+    }
+
+    public void Respawn(Vector3 spawnPoint)
+    {
+        transform.position = spawnPoint;
     }
 }

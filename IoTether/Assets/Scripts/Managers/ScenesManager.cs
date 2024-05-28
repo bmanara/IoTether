@@ -27,7 +27,9 @@ public class ScenesManager : MonoBehaviour
         // Ordering of scenes must be the same as build settings
         StartMenuScene,
         TutorialScene,
-        BrianScene
+        BrianScene,
+        Level1,
+        Level2,
         // might need to change how we name our levels
     }
 
@@ -45,11 +47,16 @@ public class ScenesManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
     }
 
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
+        GameManager.manager.NextLevel();
     }
 
     public void LoadStartMenu()
