@@ -47,13 +47,13 @@ public class ScenesManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().LoadHealth();
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
     }
 
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        GameObject.FindWithTag("Player").GetComponent<PlayerHealth>().SaveHealth();
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
     }
 
     public void LoadStartMenu()

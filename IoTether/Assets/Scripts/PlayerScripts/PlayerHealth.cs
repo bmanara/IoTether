@@ -29,11 +29,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
-    void Update()
-    {
-        Debug.Log(health);
-    }
-
     public void DecreaseHealth(int damage)
     {
         OnHit(damage);
@@ -72,9 +67,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         prevHealth = health;
     }
 
-    public void LoadHealth()
+    public void ReloadHealth()
     {
         health = prevHealth;
+        UpdateHealthBar();
     }
 
     public void UpdateHealthBar()
