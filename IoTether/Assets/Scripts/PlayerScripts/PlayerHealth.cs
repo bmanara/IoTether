@@ -26,8 +26,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        UIManager.manager.SetMaxHealth(maxHealth);
-        UIManager.manager.SetHealth(health);
+        UpdateHealthBar();
     }
 
     void Update()
@@ -54,10 +53,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         {
             Die();
         }
-        else
-        {
-            Invoke("ResetMaterial", .1f);
-        }
+        
+        Invoke("ResetMaterial", .1f);
     }
 
     private void Die()
@@ -78,5 +75,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void LoadHealth()
     {
         health = prevHealth;
+    }
+
+    public void UpdateHealthBar()
+    {
+        UIManager.manager.SetMaxHealth(maxHealth);
+        UIManager.manager.SetHealth(health);
     }
 }

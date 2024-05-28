@@ -37,9 +37,6 @@ public class GameManager : MonoBehaviour
     {
         // will need to reset the score to previously saved score
         ScenesManager.manager.RestartScene();
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
     }
-
-   
-
- 
 }
