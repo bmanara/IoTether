@@ -52,8 +52,10 @@ MonoBehaviour:
   - {fileID: 1288253609, guid: f0aa6fbd6edf2ec45890eb4aae4b989d, type: 3}
   - {fileID: -98685731, guid: f0aa6fbd6edf2ec45890eb4aae4b989d, type: 3}
   - {fileID: 1076148219, guid: f0aa6fbd6edf2ec45890eb4aae4b989d, type: 3}
-  changeInterval: 0.5
+  changeInterval: 1
+  fastInterval: 0.25
   damage: 1
+  damageCooldown: 1
 --- !u!212 &3156173510390639603
 SpriteRenderer:
   m_ObjectHideFlags: 0
