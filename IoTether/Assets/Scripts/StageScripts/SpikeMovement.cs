@@ -25,20 +25,10 @@ public class SpikeMovement : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
-      //  InvokeRepeating("ChangeSprite", changeInterval, changeInterval);
         StartCoroutine(ChangeSprite());
     }
 
-  
-
-    /* void ChangeSprite()
-    {
-        currentSpriteIndex = (currentSpriteIndex + 1) % spikeSprites.Length;
-        spriteRenderer.sprite = spikeSprites[currentSpriteIndex];
-
-        canDamage = (currentSpriteIndex == spikeSprites.Length - 1); // Set canDamage true only on the 4th sprite
-    } 
-    */
+ 
 
     IEnumerator ChangeSprite()
     {
@@ -87,7 +77,7 @@ public class SpikeMovement : MonoBehaviour
         if (canDamage
             && !onCooldown
             && other.gameObject.tag == "Player"
-            && other.gameObject.name == "Hitbox")
+            && other.gameObject.name == "Player")
         {
             // Damage the player
             GameObject playerParent = other.gameObject.transform.parent.gameObject;
