@@ -40,14 +40,21 @@ public class GameManager : MonoBehaviour
         // will need to reset the score to previously saved score
         score = prevScore;
         ScenesManager.manager.RestartScene();
-        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);   
+        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
     }
 
     public void NextLevel()
     {
         gameLevel += 1;
         SaveScore();
+        ScenesManager.manager.LoadNextScene();
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
+        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
     }
 
     public void IncreaseScore(int score)

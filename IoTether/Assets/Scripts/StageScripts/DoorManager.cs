@@ -48,7 +48,7 @@ public class RoomClearLogic : MonoBehaviour
 
     private void LoadScene()
     {
-        ScenesManager.manager.LoadNextScene();
+        GameManager.manager.NextLevel();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

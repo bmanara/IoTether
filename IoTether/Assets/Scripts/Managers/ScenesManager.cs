@@ -46,18 +46,11 @@ public class ScenesManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
-        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
     }
 
     public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
-        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
-        GameManager.manager.NextLevel();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
     }
 
     public void LoadStartMenu()
