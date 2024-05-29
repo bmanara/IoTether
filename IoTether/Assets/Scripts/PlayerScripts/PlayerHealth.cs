@@ -24,15 +24,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         matDefault = sr.material;
     }
 
-    private void Start()
-    {
-        UpdateHealthBar();
-    }
-
     public void DecreaseHealth(int damage)
     {
         OnHit(damage);
-        UIManager.manager.SetHealth(health);
+        UpdateHealthBar();
     }
 
     public void DecreaseHealth(int damage, Vector2 knockback)
@@ -65,6 +60,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void SaveHealth()
     {
         prevHealth = health;
+        UpdateHealthBar();
     }
 
     public void ReloadHealth()
