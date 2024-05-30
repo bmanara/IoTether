@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ableToTalk = true;
+            UIManager.manager.EnableInteractPanel();
         }
     }
 
@@ -20,6 +21,7 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ableToTalk = false;
+            UIManager.manager.DisableInteractPanel();
         }
     }
 
