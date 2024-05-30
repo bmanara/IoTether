@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public HealthBarController healthBar;
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
+    public GameObject interactPanel;
 
     public TMP_Text nameText;
     public TMP_Text dialogueText;
@@ -124,5 +125,16 @@ public class UIManager : MonoBehaviour
     public void DisablePickUpPanel()
     {
         pickUpPanel.SetActive(false);
+    }
+
+    public void EnableInteractPanel()
+    {
+        interactPanel.SetActive(true);
+    }
+
+    public void DisableInteractPanel() 
+    {         
+        interactPanel.SetActive(false);
+       
     }
 }
