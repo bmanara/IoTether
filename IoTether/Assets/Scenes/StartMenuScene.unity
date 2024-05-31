@@ -168,9 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  prevScore: 0
   gameLevel: 0
   gameIsOver: 0
-  gameOverController: {fileID: 0}
+  gameIsPaused: 0
 --- !u!1 &82569457
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playButton: {fileID: 1494593775}
+  _quitButton: {fileID: 181854102}
 --- !u!1 &604956132
 GameObject:
   m_ObjectHideFlags: 0

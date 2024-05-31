@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
     public GameObject interactPanel;
+    public GameObject pauseMenu;
 
     public TMP_Text nameText;
     public TMP_Text dialogueText;
@@ -32,6 +34,35 @@ public class UIManager : MonoBehaviour
         }
         manager = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pauseMenu.activeSelf)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        GameManager.manager.gameIsPaused = false;
+    }
+
+    private void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        GameManager.manager.gameIsPaused = true;
     }
 
     private void OnEnable()
