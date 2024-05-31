@@ -135,6 +135,5 @@ public class UIManager : MonoBehaviour
     public void DisableInteractPanel() 
     {         
         interactPanel.SetActive(false);
-       
     }
 }
