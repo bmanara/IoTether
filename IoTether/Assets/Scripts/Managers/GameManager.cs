@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public int gameLevel = 0;
     public bool gameIsOver;
+    public bool gameIsPaused = false;
 
     public static event Action OnGameOver;
 
