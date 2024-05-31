@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour
             // All enemies will be damageable... right?
             IDamageable damageable = collision.GetComponent<IDamageable>();
             Impact();
-            EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             Vector2 direction = (collision.transform.position - transform.position).normalized;
             Vector2 knockback = direction * knockbackForce;

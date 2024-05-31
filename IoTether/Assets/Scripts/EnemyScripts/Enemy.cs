@@ -1,43 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour, IDamageable
+public abstract class Enemy : MonoBehaviour, IDamageable
 {
-    private GameObject player;
-    public Animator animator;
-    public Rigidbody2D rb;
-    private Material matWhite;
-    private Material matDefault;
+    [SerializeField]
+    protected int health;
+    [SerializeField]
+    protected float speed;
+    [SerializeField]
+    protected int damage;
+
+    [SerializeField]
+    protected GameObject player;
+
+    protected Animator animator;
+    protected Rigidbody2D rb;
     private SpriteRenderer sr;
 
-    public int health;
-    public float speed;
-    public int damage;
+    private Material matWhite;
+    private Material matDefault;
 
     private float distance;
     private bool facingRight = true;
 
-    private void Awake()
+    protected void Start()
+    {
+        Init();
+    }
+
+    protected virtual void Init() // can be overridden from derived classes
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        sr = gameObject.GetComponent<SpriteRenderer>();
-        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
+
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
+
+        matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
     }
 
-     void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        // Attacking the player
         if (collision.gameObject.tag == "Player")
         {
-            // Player will implement IDamageable
             IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
             damageable.DecreaseHealth(damage);
         }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         // Get distance from enemy to player
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -56,8 +70,8 @@ public class EnemyController : MonoBehaviour, IDamageable
         {
             // Move towards player if close enough to player
             transform.position = Vector2.MoveTowards(transform.position, 
-                player.transform.position, 
-                speed * Time.deltaTime);
+                               player.transform.position, 
+                               speed * Time.deltaTime);
             animator.SetBool("isMoving", true);
         }
         else
@@ -66,7 +80,7 @@ public class EnemyController : MonoBehaviour, IDamageable
         }
     }
 
-    private void Flip()
+    protected void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
@@ -82,8 +96,6 @@ public class EnemyController : MonoBehaviour, IDamageable
     public void DecreaseHealth(int damage, Vector2 knockback)
     {
         OnHit(damage);
-
-        // Apply knockback
         rb.AddForce(knockback, ForceMode2D.Impulse);
     }
 
@@ -97,18 +109,17 @@ public class EnemyController : MonoBehaviour, IDamageable
         }
         else
         {
-            Invoke("ResetMaterial", .1f);
+            Invoke("ResetMaterial", 0.1f);
         }
     }
 
     private void KillSelf()
     {
-        // TODO: Add death animation here
         Destroy(gameObject);
         GameManager.manager.IncreaseScore(1);
     }
 
-    void ResetMaterial()
+    private void ResetMaterial()
     {
         sr.material = matDefault;
     }
