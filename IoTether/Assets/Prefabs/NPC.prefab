@@ -93,13 +93,9 @@ MonoBehaviour:
   dialogue:
     name: Dave
     sentences:
-    - Good Morning Wizard! Im Dave...
-    - We have a bit of a problem and we could use your help down here...
-    - See, there's a bunch of monsters in the other room, and we are not skilled
-      enough to get rid of them.
-    - But, you're a wizard (harry)! I'll provide you with some weapons, feel free
-      to use them!
-    - And go get them. Please, they are really annoying.
+    - Hey! You've made it!
+    - Watch out for those Spikes over there! Make sure you're not standing on them
+      when they come out!
 --- !u!1 &3882278915410099678
 GameObject:
   m_ObjectHideFlags: 0
