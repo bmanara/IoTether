@@ -7144,7 +7144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022627518033849927, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2093112604480716936, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
       propertyPath: m_SortingOrder
@@ -7193,6 +7193,10 @@ PrefabInstance:
     - target: {fileID: 8585004716766399266, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
       propertyPath: m_Name
       value: Door (Room 2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585004716766399266, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9066018188032752213, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
       propertyPath: m_LocalScale.x
