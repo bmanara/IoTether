@@ -93,9 +93,7 @@ MonoBehaviour:
   dialogue:
     name: Dave
     sentences:
-    - Hey! You've made it!
-    - Watch out for those Spikes over there! Make sure you're not standing on them
-      when they come out!
+    - Hi
 --- !u!1 &3882278915410099678
 GameObject:
   m_ObjectHideFlags: 0
