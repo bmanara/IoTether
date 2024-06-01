@@ -10392,6 +10392,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5269777016557520593, guid: 61baf870e556dee4da4693d3a3d15a2f, type: 3}
   m_PrefabInstance: {fileID: 2013392360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1521467955
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Thanks for trying out our game!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Any feedback given in skylab will be greatly appreciated!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: You can leave the game using [ESC], to pull out the Pause Menu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.045237
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.58176
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6452671615376554179, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
 --- !u!1001 &1602348981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11028,3 +11101,4 @@ SceneRoots:
   - {fileID: 389354728}
   - {fileID: 1974424926}
   - {fileID: 709675789}
+  - {fileID: 1521467955}
