@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private int damage = 1;
+    private int damage = 5;
     private float knockbackForce = 10f;
     public GameObject impactEffect;
 
