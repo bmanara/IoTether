@@ -1,31 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class RifleController : MonoBehaviour
+public class RifleController : RangedWeapon
 {
-    public Transform firePoint;
-    public GameObject bulletPrefab;
+    protected override void Init()
+    {
+        base.Init();
+        bulletForce = 15f;
+        fireRate = 0.2f;
+        canFire = 0.1f;
+        energyCost = 1;
+    }
 
-    private float bulletForce = 15f;
-    private float fireRate = 0.2f;
-    private float canFire = 0.1f;
-
-    // Update is called once per frame
-    void Update()
+    // Update is overriden to allow for automatic fire
+    protected override void Update()
     {
         if (Input.GetButton("Fire1") && Time.time > canFire)
         {
-            Shoot();
+            base.Shoot();
             canFire = Time.time + fireRate;
         }
-    }
-
-    void Shoot()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
-        GetComponent<AudioSource>().Play();
     }
 }
