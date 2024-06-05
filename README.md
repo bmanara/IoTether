@@ -8,4 +8,4 @@ Our project for NUS Orbital AY 23/24
 - [Shot Rifle 39mm SFX](https://pixabay.com/sound-effects/shot-rifle-39-mm-37542/) by PixaBay
 - [Hit Impacts FREE](https://assetstore.unity.com/packages/vfx/particles/hit-impact-effects-free-218385) by TravisGameAssets
 - [UI Elements - LifeBars](https://pixel-iwart.itch.io/ui-elements-lifebars) by Fael Iwao
-0 [Complete UI Essential Pack](https://crusenho.itch.io/complete-ui-essential-pack) by Crusenho
+- [Complete UI Essential Pack](https://crusenho.itch.io/complete-ui-essential-pack) by Crusenho
