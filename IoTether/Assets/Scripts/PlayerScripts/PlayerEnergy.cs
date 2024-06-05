@@ -19,6 +19,7 @@ public class PlayerEnergy : MonoBehaviour
         if (energy >= amount)
         {
             energy -= amount;
+            UpdateEnergyBar();
             return true;
         }
 
@@ -32,25 +33,37 @@ public class PlayerEnergy : MonoBehaviour
         {
             energy = maxEnergy;
         }
+
+        UpdateEnergyBar();
     }
 
     public void IncreaseMaxEnergy(int amount)
     {
         maxEnergy += amount;
+        UpdateEnergyBar();
     }
 
     public void IncreaseMaxEnergyByPercentage(float percentage)
     {
         maxEnergy = (int)(maxEnergy * (1 + percentage));
+        UpdateEnergyBar();
     }
 
     public void SaveEnergy()
     {
         prevEnergy = energy;
+        UpdateEnergyBar();
     }
 
     public void ReloadEnergy()
     {
         energy = prevEnergy;
+        UpdateEnergyBar();
+    }
+
+    public void UpdateEnergyBar()
+    {
+        UIManager.manager.SetMaxEnergy(maxEnergy);
+        UIManager.manager.SetEnergy(energy);
     }
 }

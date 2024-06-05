@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager manager { get; private set; }
 
     public HealthBarController healthBar;
+    public EnergyBarController energyBar;
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
     public GameObject interactPanel;
@@ -90,6 +91,16 @@ public class UIManager : MonoBehaviour
     public void SetHealth(int health)
     {
         healthBar.SetHealth(health);
+    }
+
+    public void SetMaxEnergy(int maxEnergy)
+    {
+        energyBar.SetMaxEnergy(maxEnergy);
+    }
+
+    public void SetEnergy(int energy)
+    {
+        energyBar.SetEnergy(energy);
     }
 
     public void StartDialogue(Dialogue dialogue)
