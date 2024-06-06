@@ -14,7 +14,6 @@ public class SpikeMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int currentSpriteIndex = 0;
     private bool canDamage = false;
-    private GameObject player;
     public static bool onCooldown = false;
 
     //HashSet to track Colliders in Contact
@@ -25,7 +24,6 @@ public class SpikeMovement : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(StartWithDelay());
     }
 
