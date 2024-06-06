@@ -9,6 +9,7 @@ public class SpikeMovement : MonoBehaviour
     public float fastInterval = 1f;
     public int damage;
     public float damageCooldown = 1f;
+    public float startDelay = 0f;
 
     private SpriteRenderer spriteRenderer;
     private int currentSpriteIndex = 0;
@@ -25,6 +26,12 @@ public class SpikeMovement : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(StartWithDelay());
+    }
+
+    IEnumerator StartWithDelay()
+    {
+        yield return new WaitForSeconds(startDelay);
         StartCoroutine(ChangeSprite());
     }
 
