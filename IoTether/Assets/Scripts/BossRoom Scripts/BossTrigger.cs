@@ -14,4 +14,9 @@ public class BossTrigger : MonoBehaviour
               // Trigger Boss Fight
          }
     }
+
+    public bool isBossTriggered()
+    {
+        return isTriggered;
+    }
 }
