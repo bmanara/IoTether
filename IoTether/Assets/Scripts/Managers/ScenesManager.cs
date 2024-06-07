@@ -29,6 +29,7 @@ public class ScenesManager : MonoBehaviour
         TutorialScene,
         Level1,
         Level2,
+        Level3,
         // might need to change how we name our levels
     }
 
