@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
+        PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
     }
 
     public void NextLevel()
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
+        PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
     }
 
     public void IncreaseScore(int score)
