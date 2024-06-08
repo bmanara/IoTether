@@ -36,6 +36,31 @@ public class GameManager : MonoBehaviour
         OnGameOver?.Invoke();
     }
 
+    public void LoadStartMenu()
+    {
+        ScenesManager.manager.LoadStartMenu();
+        if (PlayerControllers.Instance != null)
+        {
+            PlayerControllers.Instance.DestroySelf(); // horrible coding what did cs2030s teach you!
+        }
+
+        if (UIManager.manager != null)
+        {
+            UIManager.manager.DestroySelf();
+        }
+
+    }
+
+    public void StartGame()
+    {
+        score = 0;
+        prevScore = 0;
+        gameLevel = 0;
+        gameIsOver = false;
+
+        ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
+    }
+
     public void Restart()
     {
         // will need to reset the score to previously saved score
@@ -44,7 +69,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
+        PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
     }
 
     public void NextLevel()
@@ -55,7 +80,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
-        PlayerControllers.Instance.GetComponent<PlayerHealth>().UpdateHealthBar();
+        PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
     }
 
     public void IncreaseScore(int score)

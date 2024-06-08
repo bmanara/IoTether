@@ -37,6 +37,12 @@ public class UIManager : MonoBehaviour
         GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+        manager = null;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

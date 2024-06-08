@@ -23,6 +23,12 @@ public class PlayerControllers : MonoBehaviour
         GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+        Instance = null;
+    }
+
 
     // Update is called once per frame
     void Update()

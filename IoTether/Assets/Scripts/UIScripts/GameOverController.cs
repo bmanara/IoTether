@@ -31,7 +31,7 @@ public class GameOverController : MonoBehaviour
 
     public void MainMenu()
     {
-        ScenesManager.manager.LoadStartMenu();
+        GameManager.manager.LoadStartMenu();
         this.gameObject.SetActive(false);
     }
 }

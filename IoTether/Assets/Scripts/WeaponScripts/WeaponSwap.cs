@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class WeaponSwap : MonoBehaviour
@@ -9,12 +10,14 @@ public class WeaponSwap : MonoBehaviour
     private GameObject prevWeapon; // checkpoint save
 
     private GameObject currWeapon;
+    private GameObject defaultWeapon;
 
     private void Start()
     {
         weaponSlot = gameObject.transform.parent.GetChild(0);
         GameObject weapon = Instantiate(activeWeapon, weaponSlot.transform.position, weaponSlot.transform.rotation);
         currWeapon = weapon;
+        defaultWeapon = currWeapon;
         prevWeapon = activeWeapon;
         weapon.transform.parent = weaponSlot.transform;
     }
@@ -41,5 +44,10 @@ public class WeaponSwap : MonoBehaviour
     public void ReloadWeapon()
     {
         UpdateWeapon(prevWeapon);
+    }
+
+    public void ResetWeapon()
+    {
+        UpdateWeapon(defaultWeapon);
     }
 }
