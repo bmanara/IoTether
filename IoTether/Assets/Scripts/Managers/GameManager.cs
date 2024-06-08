@@ -36,6 +36,31 @@ public class GameManager : MonoBehaviour
         OnGameOver?.Invoke();
     }
 
+    public void LoadStartMenu()
+    {
+        ScenesManager.manager.LoadStartMenu();
+        if (PlayerControllers.Instance != null)
+        {
+            PlayerControllers.Instance.DestroySelf(); // horrible coding what did cs2030s teach you!
+        }
+
+        if (UIManager.manager != null)
+        {
+            UIManager.manager.DestroySelf();
+        }
+
+    }
+
+    public void StartGame()
+    {
+        score = 0;
+        prevScore = 0;
+        gameLevel = 0;
+        gameIsOver = false;
+
+        ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
+    }
+
     public void Restart()
     {
         // will need to reset the score to previously saved score

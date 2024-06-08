@@ -16,7 +16,7 @@ public class MainMenuController : MonoBehaviour
 
     private void PlayGame()
     {
-        ScenesManager.manager.LoadScene(ScenesManager.Scene.TutorialScene);
+        GameManager.manager.StartGame();
     }
 
     private void QuitGame()

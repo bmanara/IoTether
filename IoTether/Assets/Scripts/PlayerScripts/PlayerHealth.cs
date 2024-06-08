@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
+    private readonly int defaultHealth = 10;
+
     private int health;
     private int maxHealth = 10;
     private int prevHealth;
@@ -66,6 +68,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void ReloadHealth()
     {
         health = prevHealth;
+        UpdateHealthBar();
+    }
+
+    public void ResetHealth()
+    {
+        maxHealth = defaultHealth;
+        health = maxHealth;
         UpdateHealthBar();
     }
 
