@@ -33,6 +33,11 @@ public class PlayerControllers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.manager.gameIsPaused)
+        {
+            return;
+        }
+
         // Get movement input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical"); 

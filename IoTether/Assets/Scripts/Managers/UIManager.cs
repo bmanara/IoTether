@@ -61,15 +61,13 @@ public class UIManager : MonoBehaviour
     void Resume()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        GameManager.manager.gameIsPaused = false;
+        GameManager.manager.UnpauseGame();
     }
 
     private void Pause()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        GameManager.manager.gameIsPaused = true;
+        GameManager.manager.PauseGame();
     }
 
     private void OnEnable()
@@ -111,7 +109,7 @@ public class UIManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Time.timeScale = 0; // Pause game during dialogue
+        GameManager.manager.PauseGame(); // Pause game during dialogue
         dialogueAnimator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
@@ -161,7 +159,7 @@ public class UIManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Time.timeScale = 1; // Unpause game after dialogue
+        GameManager.manager.UnpauseGame(); // Unpause game after dialogue
         dialogueAnimator.SetBool("isOpen", false);
     }
 

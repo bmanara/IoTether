@@ -61,6 +61,18 @@ public class GameManager : MonoBehaviour
         ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        gameIsPaused = true;
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1;
+        gameIsPaused = false;
+    }
+
     public void Restart()
     {
         // will need to reset the score to previously saved score

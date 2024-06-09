@@ -17,6 +17,11 @@ public class RifleController : RangedWeapon
     // Update is overriden to allow for automatic fire
     protected override void Update()
     {
+        if (GameManager.manager.gameIsPaused)
+        {
+            return;
+        }
+
         if (Input.GetButton("Fire1") && Time.time > canFire)
         {
             base.Shoot();

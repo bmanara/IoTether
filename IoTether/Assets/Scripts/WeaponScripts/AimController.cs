@@ -11,6 +11,11 @@ public class ShootingController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.manager.gameIsPaused)
+        {
+            return;
+        }
+
         // Flip gun sprite based on mouse position
         if (mousePos.x < transform.position.x)
         {
