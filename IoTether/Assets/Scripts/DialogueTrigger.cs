@@ -27,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (ableToTalk && Input.GetKeyDown(KeyCode.F))
+        if (ableToTalk && Input.GetKeyDown(KeyCode.F) && !GameManager.manager.gameIsPaused)
         {
             TriggerDialogue();
         }

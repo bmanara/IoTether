@@ -25,6 +25,11 @@ public abstract class RangedWeapon : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (GameManager.manager.gameIsPaused)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown("Fire1") && Time.time > canFire)
         {
             Shoot();
