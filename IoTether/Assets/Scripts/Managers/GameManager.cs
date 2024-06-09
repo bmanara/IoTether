@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int gameLevel = 0;
     public bool gameIsOver;
     public bool gameIsPaused = false;
+    private bool gameWasPaused = false;
 
     public static event Action OnGameOver;
 
@@ -57,20 +58,38 @@ public class GameManager : MonoBehaviour
         prevScore = 0;
         gameLevel = 0;
         gameIsOver = false;
+        gameWasPaused = false;
+        manager.UnpauseGame();
 
         ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
     }
 
     public void PauseGame()
     {
+        if (gameIsPaused)
+        {
+            gameWasPaused = true;
+        }
+        else
+        {
+            gameWasPaused = false;
+        }
+
         Time.timeScale = 0;
         gameIsPaused = true;
     }
 
     public void UnpauseGame()
     {
-        Time.timeScale = 1;
-        gameIsPaused = false;
+        if (!gameWasPaused)
+        {
+            Time.timeScale = 1;
+            gameIsPaused = false;
+        } 
+        else
+        {
+            gameWasPaused = false;
+        }
     }
 
     public void Restart()

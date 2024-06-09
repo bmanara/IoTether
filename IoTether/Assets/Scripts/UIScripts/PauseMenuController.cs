@@ -19,8 +19,7 @@ public class PauseMenuController : MonoBehaviour
     public void ResumeGame()
     {
         UIManager.manager.pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
-        GameManager.manager.gameIsPaused = false;
+        GameManager.manager.UnpauseGame();
     }
 
     public void QuitGame()
@@ -31,8 +30,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void LaunchMenu()
     {
-        Time.timeScale = 1f;
-        GameManager.manager.gameIsPaused = false;
+        GameManager.manager.PauseGame();
         GameManager.manager.LoadStartMenu();
     }
 }
