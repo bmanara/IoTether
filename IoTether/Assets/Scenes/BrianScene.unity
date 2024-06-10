@@ -4501,7 +4501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2147970567608840036, guid: 779d8f62c528bc94ba0a25aa40278844, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2147970567608840036, guid: 779d8f62c528bc94ba0a25aa40278844, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4561,6 +4561,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936089371353111781, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680267720071649316, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680267720071649316, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -4681,6 +4689,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+--- !u!1001 &5651301382071839732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9956665
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6831768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837842437872753402, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7693310014522390134, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+      propertyPath: m_Name
+      value: SniperRifle (Dropped)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
 --- !u!1001 &6259750795490300262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4752,7 +4817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2822901401904365725, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8580387
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2822901401904365725, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4808,6 +4873,7 @@ SceneRoots:
   - {fileID: 912879551}
   - {fileID: 7751896259597564938}
   - {fileID: 2618790381025373946}
+  - {fileID: 5651301382071839732}
   - {fileID: 1301877076218044535}
   - {fileID: 1495670248318634232}
   - {fileID: 1384535394}
