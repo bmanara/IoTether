@@ -23,10 +23,15 @@ public class UIManager : MonoBehaviour
     private bool isTyping = false;
     private string previousSentence = "";
 
+    public TextMeshProUGUI roomText;
+    private CanvasGroup canvasGroup;
+    private Coroutine fadeCoroutine;
+
     private Queue<string> sentences;
 
     private void Awake()
     {
+        
         sentences = new Queue<string>();
         if (manager != null)
         {
@@ -35,7 +40,16 @@ public class UIManager : MonoBehaviour
         }
         manager = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
+
+        canvasGroup = roomText.GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = roomText.gameObject.AddComponent<CanvasGroup>();
+        }
+
+        canvasGroup.alpha = 0f; // initialise text to invisible at the start of the game
     }
+
 
     public void DestroySelf()
     {
@@ -181,5 +195,39 @@ public class UIManager : MonoBehaviour
     public void DisableInteractPanel() 
     {         
         interactPanel.SetActive(false);
+    }
+
+
+    // Room entry text methods
+
+    public void EnableEntryText()
+    {
+        roomText.gameObject.SetActive(true);
+    }
+
+    public IEnumerator FadeText(bool fadeIn, float fadeDuration, float displayDuration)
+    {
+        float startAlpha = canvasGroup.alpha;
+        float endAlpha = fadeIn ? 1f : 0f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        canvasGroup.alpha = endAlpha;
+
+        if (fadeIn)
+        {
+            yield return new WaitForSeconds(displayDuration);
+            fadeCoroutine = StartCoroutine(FadeText(false, fadeDuration, displayDuration));
+        }
+    }
+
+    public void ChangeText(string newText)
+    {
+        roomText.text = newText;
     }
 }
