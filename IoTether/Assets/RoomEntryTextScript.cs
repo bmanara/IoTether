@@ -18,6 +18,7 @@ public class RoomEntryTextScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text.gameObject.SetActive(true);
         canvasGroup = text.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {

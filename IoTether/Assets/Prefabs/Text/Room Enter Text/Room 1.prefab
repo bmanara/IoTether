@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1649713534267218358
+--- !u!1 &6148766523185492110
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7856827543468306834}
-  - component: {fileID: 3753343068628851199}
-  - component: {fileID: 2312677020817440911}
+  - component: {fileID: 762173706200819021}
+  - component: {fileID: 7272540919983964668}
+  - component: {fileID: 8278603004447413966}
   m_Layer: 5
   m_Name: Room 1
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7856827543468306834
+--- !u!224 &762173706200819021
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649713534267218358}
+  m_GameObject: {fileID: 6148766523185492110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.7046971}
   m_LocalScale: {x: 0.90989256, y: 0.90989256, z: 0.90989256}
@@ -37,21 +37,21 @@ RectTransform:
   m_AnchoredPosition: {x: -8.2, y: 68}
   m_SizeDelta: {x: 306.5517, y: 122.14}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3753343068628851199
+--- !u!222 &7272540919983964668
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649713534267218358}
+  m_GameObject: {fileID: 6148766523185492110}
   m_CullTransparentMesh: 1
---- !u!114 &2312677020817440911
+--- !u!114 &8278603004447413966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649713534267218358}
+  m_GameObject: {fileID: 6148766523185492110}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2 - Room 1
+  m_text: Level 1 - Room 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8468c14a8ec7e044bbcc12b519b2abd1, type: 2}
   m_sharedMaterial: {fileID: -8938820017848803478, guid: 8468c14a8ec7e044bbcc12b519b2abd1, type: 2}
