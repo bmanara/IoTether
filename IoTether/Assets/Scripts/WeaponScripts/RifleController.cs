@@ -12,6 +12,8 @@ public class RifleController : RangedWeapon
         fireRate = 0.2f;
         canFire = 0.1f;
         energyCost = 1;
+        damage = 1;
+        force = 10f;
     }
 
     // Update is overriden to allow for automatic fire
