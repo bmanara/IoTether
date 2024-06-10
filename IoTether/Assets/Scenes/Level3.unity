@@ -8432,6 +8432,10 @@ PrefabInstance:
       propertyPath: entryText
       value: 'Level 3: Boss Room'
       objectReference: {fileID: 0}
+    - target: {fileID: 4089804453807297983, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
+      propertyPath: isBossRoom
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

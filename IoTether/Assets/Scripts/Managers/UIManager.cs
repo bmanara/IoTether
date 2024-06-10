@@ -230,4 +230,9 @@ public class UIManager : MonoBehaviour
     {
         roomText.text = newText;
     }
+
+    public void ChangeTextColour(Color newColour)
+    {
+        roomText.color = newColour;
+    }
 }

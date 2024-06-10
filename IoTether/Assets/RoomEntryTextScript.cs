@@ -12,6 +12,7 @@ public class RoomEntryTextScript : MonoBehaviour
     private bool hasFadedIn = false;
 
     public string entryText;
+    public bool isBossRoom = false;
 
     //private static int level = 0;
 
@@ -23,6 +24,10 @@ public class RoomEntryTextScript : MonoBehaviour
         {
             UIManager.manager.EnableEntryText();
             UIManager.manager.ChangeText(entryText);
+            if (isBossRoom)
+            {
+                UIManager.manager.ChangeTextColour(new Color32(255, 65, 57, 255));
+            }
             StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
             hasFadedIn = true;
         }
