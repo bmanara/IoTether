@@ -6,61 +6,26 @@ using UnityEngine;
 
 public class RoomEntryTextScript : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    
     public float fadeDuration = 1f;
     public float displayDuration = 2f;
-
-    private CanvasGroup canvasGroup;
-    private Coroutine fadeCoroutine;
-
     private bool hasFadedIn = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        text.gameObject.SetActive(true);
-        canvasGroup = text.GetComponent<CanvasGroup>();
-        if (canvasGroup == null)
-        {
-            canvasGroup = text.gameObject.AddComponent<CanvasGroup>();
-        }
+    public string entryText;
 
-        canvasGroup.alpha = 0f;
-        
-    }
+    //private static int level = 0;
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !hasFadedIn)
         {
-            if (fadeCoroutine != null)
-            {
-                StopCoroutine(fadeCoroutine);
-            }
-            fadeCoroutine = StartCoroutine(FadeText(true));
+            UIManager.manager.EnableEntryText();
+            UIManager.manager.ChangeText(entryText);
+            StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
             hasFadedIn = true;
         }
     }
 
-
-    private IEnumerator FadeText(bool fadeIn)
-    {
-        float startAlpha = canvasGroup.alpha;
-        float endAlpha = fadeIn ? 1f : 0f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeDuration);
-            yield return null;
-        }
-        canvasGroup.alpha = endAlpha;
-
-        if (fadeIn)
-        {
-            yield return new WaitForSeconds(displayDuration);
-            fadeCoroutine = StartCoroutine(FadeText(false));
-        }
-    }
 }
