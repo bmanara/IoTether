@@ -13,6 +13,8 @@ public class RoomEntryTextScript : MonoBehaviour
     private CanvasGroup canvasGroup;
     private Coroutine fadeCoroutine;
 
+    private bool hasFadedIn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +30,14 @@ public class RoomEntryTextScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !hasFadedIn)
         {
             if (fadeCoroutine != null)
             {
                 StopCoroutine(fadeCoroutine);
             }
             fadeCoroutine = StartCoroutine(FadeText(true));
+            hasFadedIn = true;
         }
     }
 
