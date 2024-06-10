@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    private int damage = 5;
-    private float knockbackForce = 10f;
+    private int damage; // damage will be determined by the weapon
+    private float knockbackForce; // knockbackForce will be determined by the weapon
     public GameObject impactEffect;
+
+    public static GameObject Create(GameObject bulletPrefab, Transform firePoint, int damage, float knockbackForce)
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<BulletController>().damage = damage;
+        bullet.GetComponent<BulletController>().knockbackForce = knockbackForce;
+        return bullet;
+    }
 
     private void Impact()
     {
