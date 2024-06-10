@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         ScenesManager.manager.RestartScene();
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
-        // PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().ReloadWeapon();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
     }
 
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         ScenesManager.manager.LoadNextScene();
         PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
-        // PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwap>().SaveWeapon();
+        PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().SaveWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
     }
 

@@ -7,11 +7,15 @@ public class WeaponSwitching : MonoBehaviour
 {
     private int primaryWeapon;
     private int secondaryWeapon;
-
     private int equippedWeapon;
+
+    // Checkpoint save
+    private int savedPrimaryWeapon;
+    private int savedSecondaryWeapon;
 
     private void Start()
     {
+        // Start with default weapons
         primaryWeapon = 0;
         secondaryWeapon = 1;
 
@@ -97,5 +101,18 @@ public class WeaponSwitching : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void SaveWeapons()
+    {
+        savedPrimaryWeapon = primaryWeapon;
+        savedSecondaryWeapon = secondaryWeapon;
+    }
+
+    public void LoadWeapons()
+    {
+        primaryWeapon = savedPrimaryWeapon;
+        secondaryWeapon = savedSecondaryWeapon;
+        SelectPrimaryWeapon();
     }
 }
