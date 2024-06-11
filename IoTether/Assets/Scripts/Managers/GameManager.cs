@@ -97,10 +97,12 @@ public class GameManager : MonoBehaviour
         // will need to reset the score to previously saved score
         score = prevScore;
         ScenesManager.manager.RestartScene();
-        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        // PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        StartCoroutine(RespawnPlayer(0));
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
+        
     }
 
     public void NextLevel()
@@ -108,10 +110,23 @@ public class GameManager : MonoBehaviour
         gameLevel += 1;
         SaveScore();
         ScenesManager.manager.LoadNextScene();
-        PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        //PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
+        StartCoroutine(RespawnPlayer(0.001f));
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().SaveWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
+      
+    }
+
+    //Added delay so SpawnPoint can fully reload before spawning player 
+    private IEnumerator RespawnPlayer(float delay)
+    {
+        //Wait for the scene to be fully loaded
+        yield return new WaitForSeconds(delay);
+
+        Transform spawnPoint = GameObject.Find("SpawnPoint").transform;
+        PlayerControllers.Instance.Respawn(spawnPoint.position);
+       
     }
 
     public void IncreaseScore(int score)
