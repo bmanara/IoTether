@@ -10,3 +10,6 @@ Our project for NUS Orbital AY 23/24
 - [Hit Impacts FREE](https://assetstore.unity.com/packages/vfx/particles/hit-impact-effects-free-218385) by TravisGameAssets
 - [UI Elements - LifeBars](https://pixel-iwart.itch.io/ui-elements-lifebars) by Fael Iwao
 - [Complete UI Essential Pack](https://crusenho.itch.io/complete-ui-essential-pack) by Crusenho
+
+## Packages Used
+[Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg

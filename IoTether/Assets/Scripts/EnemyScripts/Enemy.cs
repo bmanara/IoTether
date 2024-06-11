@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,10 +34,11 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected virtual void Init() // can be overridden from derived classes
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        GetComponent<AIDestinationSetter>().target = player.transform;
 
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
 
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
@@ -66,6 +68,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
             Flip();
         }
 
+        /*
         if (distance < 10)
         {
             // Move towards player if close enough to player
@@ -78,6 +81,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         {
             animator.SetBool("isMoving", false);
         }
+        */
     }
 
     protected void Flip()
