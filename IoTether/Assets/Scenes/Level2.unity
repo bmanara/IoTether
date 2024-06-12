@@ -25849,6 +25849,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.name
+      value: Marcus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -25907,7 +25911,7 @@ PrefabInstance:
     - target: {fileID: 5692310913959841169, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1077196332, guid: 1215bba51de321e4088b9ffe1c7ecb52, type: 3}
+      objectReference: {fileID: 382775350, guid: 1215bba51de321e4088b9ffe1c7ecb52, type: 3}
     - target: {fileID: 6452671615376554179, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: m_Name
       value: NPC
