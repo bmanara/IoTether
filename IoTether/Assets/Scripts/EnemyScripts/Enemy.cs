@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected Animator animator;
     protected Rigidbody2D rb;
     private SpriteRenderer sr;
+    public AstarAI ai;
 
     private Material matWhite;
     private Material matDefault;
@@ -34,11 +35,11 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected virtual void Init() // can be overridden from derived classes
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GetComponent<AIDestinationSetter>().target = player.transform;
 
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        ai = GetComponent<AstarAI>();
 
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material;
         matDefault = sr.material;
@@ -56,7 +57,6 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected virtual void Update()
     {
         // Get distance from enemy to player
-        distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 
         if (direction.x > 0 && !facingRight)
@@ -67,21 +67,6 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         {
             Flip();
         }
-
-        /*
-        if (distance < 10)
-        {
-            // Move towards player if close enough to player
-            transform.position = Vector2.MoveTowards(transform.position, 
-                               player.transform.position, 
-                               speed * Time.deltaTime);
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
-        }
-        */
     }
 
     protected void Flip()

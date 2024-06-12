@@ -8,7 +8,7 @@ public class SmallDevilController : Enemy
     {
         base.Init();
         health = 4;
-        speed = 2;
+        ai.speed = 2;
         damage = 1;
     }
 
