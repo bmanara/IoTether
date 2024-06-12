@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2931833781899211}
   - component: {fileID: 3726928677863893476}
-  - component: {fileID: 4089804453807297983}
+  - component: {fileID: 7291398430068784809}
   m_Layer: 0
   m_Name: Room Trigger
   m_TagString: Props
@@ -78,7 +78,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.9536405, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4089804453807297983
+--- !u!114 &7291398430068784809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +87,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3261799715949355344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208abc6277fca06418fc67cd095c223a, type: 3}
+  m_Script: {fileID: 11500000, guid: d519c8978e1f5644b96eb0fe79082f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
   fadeDuration: 1
   displayDuration: 2
+  entryText: 
+  isBossRoom: 0

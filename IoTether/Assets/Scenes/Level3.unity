@@ -8382,11 +8382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2931833781899211, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.94
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 2931833781899211, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.08
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2931833781899211, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8433,6 +8433,14 @@ PrefabInstance:
       value: 'Level 3: Boss Room'
       objectReference: {fileID: 0}
     - target: {fileID: 4089804453807297983, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
+      propertyPath: isBossRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291398430068784809, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
+      propertyPath: entryText
+      value: 3 - Boss Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291398430068784809, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
       propertyPath: isBossRoom
       value: 1
       objectReference: {fileID: 0}
