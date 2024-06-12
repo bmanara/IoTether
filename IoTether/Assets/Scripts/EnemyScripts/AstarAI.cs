@@ -54,7 +54,7 @@ public class AstarAI : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, targetPosition.transform.position);
 
-        if (distanceToPlayer > 10)
+        if (distanceToPlayer > 7)
         {
             animator.SetBool("isMoving", false);
             return;

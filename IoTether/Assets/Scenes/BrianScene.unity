@@ -2837,7 +2837,7 @@ GameObject:
   - component: {fileID: 576636101}
   - component: {fileID: 576636100}
   - component: {fileID: 576636102}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Buildings (Collide)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3271,7 +3271,7 @@ GameObject:
   - component: {fileID: 1156167654}
   - component: {fileID: 1156167653}
   - component: {fileID: 1156167655}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
