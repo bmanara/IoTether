@@ -8,7 +8,7 @@ public class SmallSkeletonController : Enemy
     {
         base.Init();
         health = 2;
-        speed = 3;
+        ai.speed = 3;
         damage = 1;
     }
 }
