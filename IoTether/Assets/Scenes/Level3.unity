@@ -6315,6 +6315,93 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &667302239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667302241}
+  - component: {fileID: 667302240}
+  m_Layer: 0
+  m_Name: Astar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &667302240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667302239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAABAIeyiHY1vcgIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzoWxgQTcW+sQ0kMSprSTiy/CWmMNsuTRR4Bk+O9dyTZ26dQXy/vxdt/blT8Jl6aG3Cq91pw9Kwbk64j4M/ky6p1PcKJ7Jbf8A7qYN85s6YNoiPlJLVdoj32aURVYzfNvci98cIRGJ3mhdLVie0iVsQbNBRUG0KWV9dkSTZ8jcsLXOPEpZzxNF/70gackGl3wmIO0oPvQOJ4k/lnEbUY8uWszppP75XQar8bRIqQ6mQta1cA8jx5hvuwykxAmkWEb4TFzJQQ3bXvEnutAP6W1cUgOAxinSDf0FE2Sha9eAt+X1rcwBHgtCgO21UPT8wPXqFyDTL6rRs6KmkPT2zsVztdahq4ayOd/vOM4uAutqqeuahz5Crbk+eEnPefU2IHaQ/ND33ocBDpScaA7AW8lyBe11spJhk6rnU91BqYP/eeVWFpCfujtTas3Rlf3infD7UbrOVwC91MqeLULSs4bw1aooHjYCNA4mx/YcNgX00Kg1Xfx28Avuh8uVut45NpYdLUspW9vp5z2oWQVNPNsnE2VlqCHCDVIKux5gzj2doI3vv9nPVJ/h9rqra+7GjcpwdzHR9GNa6OO12mZUh2fwZSvzgouoZfaO15QqFRJ2SzYkFKXtnW6oPkgbe84+3u3CCSUxcAYu7tfxrPZYpwU83lRLKaMslmymzESlo9L5EnFpmm0lQfHJntwiYvW/VpGa03rsOxM0+Oaf1TK9JFcFmqbawD52iBcGweNRfBishXjKNAWrOUyDJx8ZkSo/AAsuwJlgenqZDXNepSM1PxdWW/JSBr+JRnx5usybzS8czj64h3YhVz+AFBLAwQUAAAICAAAQCHsElMq+m0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UqplYophakpKiqmZhaGxsbmuZZqJSVqauVFKYoqxZZJxilIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAQCHsoh2Nb3ICAAAqBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAQCHsElMq+m0AAAB4AAAACQAkAAAAAAAAAAAAAAC/AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHcDAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &667302241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667302239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.48344, y: -1.0229343, z: -0.13457035}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795477405
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,7 +6534,7 @@ GameObject:
   - component: {fileID: 838768274}
   - component: {fileID: 838768273}
   - component: {fileID: 838768272}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8887,3 +8974,4 @@ SceneRoots:
   - {fileID: 1868018526}
   - {fileID: 1601302547}
   - {fileID: 1119945197}
+  - {fileID: 667302241}
