@@ -8,6 +8,7 @@ public class AstarAI : MonoBehaviour
     public Transform targetPosition;
     public Path path;
     private Seeker seeker;
+    private Animator animator;
 
     public float speed; // must set to enemy speed instead.
     public float nextWaypointDistance = 0.1f;
@@ -20,6 +21,7 @@ public class AstarAI : MonoBehaviour
         targetPosition = GameObject.Find("PlayerParent").transform;
         seeker = GetComponent<Seeker>();
         seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
+        animator = GetComponentInChildren<Animator>();
         InvokeRepeating("UpdatePath", 0f, updatePathRate); // Better to use coroutine, will do ltr
     }
 
@@ -54,6 +56,7 @@ public class AstarAI : MonoBehaviour
 
         if (distanceToPlayer > 10)
         {
+            animator.SetBool("isMoving", false);
             return;
         }
 
@@ -86,5 +89,6 @@ public class AstarAI : MonoBehaviour
         Vector3 velocity = dir * speed * speedFactor;
 
         transform.position += velocity * Time.deltaTime;
+        animator.SetBool("isMoving", true);
     }
 }

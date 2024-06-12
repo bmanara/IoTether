@@ -16,7 +16,6 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     [SerializeField]
     protected GameObject player;
 
-    protected Animator animator;
     protected Rigidbody2D rb;
     private SpriteRenderer sr;
     public AstarAI ai;
@@ -36,7 +35,6 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
         ai = GetComponent<AstarAI>();

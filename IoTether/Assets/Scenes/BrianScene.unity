@@ -4250,6 +4250,93 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 069d0ba480f925d489cfe8b480b87219, type: 3}
+--- !u!1 &1951201996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951201998}
+  - component: {fileID: 1951201997}
+  m_Layer: 0
+  m_Name: Astar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1951201997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951201996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAABAIexA9twPcgIAACwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFy2jAQ/RVG55KxDQnQW+sQ0kMSJrSTiy9CWmMNsuSR5ADJ8O9dyTZ2yfSEeLv7tO/typ9EKFsBc9qsjOBPmgP5PiL+TL6N+uAjHOlOq434gC7nTXBX+CQacl6pExrx2JdZXYIzgv1QO+mTIwRrJXJtyiXfQaqtswjnVFrAkNHOVyuEPkfkiD/jhS854SmZ+dMHnhbR6IxHBsqB6VO7xOnNfHY3myyW42jeVoxnN7fz5C6Jl+N4GoprxSQtK+BeSc+RdCRxEtIUamwzvB6mpRS2bZC4UxUMSGlla5SHCVxQFBy6im4Ws1uEChC7wnnuIcFLnltwbdeGnu6FQe8aZvJTN4aW1O6b3t6prIN/oauG8ulLdByHcG50+djdGkf+BlcItn+lJ0atG/g9hO/71uNg0IHKPd1KeCtAPeuV0bXiGHSm9qW1heS+/3sRlhbA9j3etHoF1tXXqXXD9RrOQfsxlaLcBienDbCROjgedgIMzuYXNhw2xrYUiPou/lj4TXfD1WoDD8JYh6FWpfLtbXVtfCpZBs+8mtql2igwQ4YKFJXutEYedz3Bq9j/qx6of0Xt7W2sexxXJQHu86PoKrTWh8u0bKEPT2CLl9pJoaC32gee0ahUK9Us2FBSV7apTU7ZoGxXC/7vbpEkn0Y8prBglE34bDqGW4iTGKJkPpnS/G5CwvIJhTqpXDeNtvbg2FRPrnDRuo/LaGVoFZadG3pYiY9S2z5TqFxvmAFQLw3DpXEweAk+TL7kAg3agHNChYGTz4xIzfbAswtRFpQuj87QrGfJSCXetfNIRtLwNcmIhy/LvDbwLuDgL+/IzuT8F1BLAwQUAAAICAAAQCHsiEkY6W0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0klGaiUGKYWKqZXJisnGKuYluqmmqoZFhqoGRhbFJYpqZsVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAQCHsQPbcD3ICAAAsBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAQCHsiEkY6W0AAAB4AAAACQAkAAAAAAAAAAAAAAC/AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHcDAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1951201998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951201996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.12963483, y: -2.3894687, z: -0.041665625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2024847018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4879,3 +4966,4 @@ SceneRoots:
   - {fileID: 1384535394}
   - {fileID: 1463034363}
   - {fileID: 2024847018}
+  - {fileID: 1951201998}
