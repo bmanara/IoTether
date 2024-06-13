@@ -24,7 +24,6 @@ public class RangedEnemy : Enemy
 
     private void Shoot()
     {
-        Debug.Log("Shoot");
         GameObject bullet = BulletController.Create(projectile, firePoint, damage, 0f, false);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce((player.transform.position - transform.position).normalized * projectileSpeed, ForceMode2D.Impulse);

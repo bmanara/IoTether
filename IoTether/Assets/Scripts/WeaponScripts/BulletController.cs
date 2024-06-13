@@ -38,12 +38,13 @@ public class BulletController : MonoBehaviour
                 damageable.DecreaseHealth(damage, knockback);
             } 
             else if (collision.gameObject.tag != "Player"
-                && collision.gameObject.tag != "Props")
+                && collision.gameObject.tag != "Props"
+                && collision.gameObject.tag != "Bullet")
             {
                 Impact();
             }
         }
-        else if (!isFriendly && collision.gameObject.tag == "Player")
+        else if (!isFriendly)
         {
             if (collision.gameObject.tag == "Player")
             {
@@ -53,14 +54,15 @@ public class BulletController : MonoBehaviour
 
                 damageable.DecreaseHealth(damage);
             }
-            else if (collision.gameObject.tag != "Player"
-                && collision.gameObject.tag != "Props")
+            else if (collision.gameObject.tag != "Enemy"
+                && collision.gameObject.tag != "Props"
+                && collision.gameObject.tag != "Bullet")
             {
                 Impact();
             }
         }
 
 
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 5f);
     }
 }
