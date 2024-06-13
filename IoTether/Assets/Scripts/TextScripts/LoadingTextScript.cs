@@ -7,10 +7,11 @@ public class LoadingTextScript : MonoBehaviour
 {
     public TextMeshProUGUI loadingText;
 
-    private void Start()
+   /* private void Start()
     {
         StartCoroutine(LoadingText());
     }
+   */
 
     //Doesn't exactly work when loading times are less than 0.1f but might work eventually lol
     IEnumerator LoadingText()
@@ -19,15 +20,15 @@ public class LoadingTextScript : MonoBehaviour
         while (true)
         {
             elapsedTime += Time.deltaTime;
-            if (elapsedTime >= 0.1f)
+            if (elapsedTime >= 0.5f)
             {
                 loadingText.text = "Now Loading.";
             }
-            if (elapsedTime >= 0.2f)
+            if (elapsedTime >= 1.0f)
             {
                 loadingText.text = "Now Loading..";
             }
-            if (elapsedTime >= 0.3f)
+            if (elapsedTime >= 1.5f)
             {
                 loadingText.text = "Now Loading...";
                 elapsedTime = 0f;

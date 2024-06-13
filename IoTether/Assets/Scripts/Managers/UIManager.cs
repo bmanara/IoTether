@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     public HealthBarController healthBar;
     public EnergyBarController energyBar;
+    public GameObject UIBar;
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
     public GameObject interactPanel;
@@ -26,7 +27,6 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI roomText;
     private CanvasGroup canvasGroup;
-    private Coroutine fadeCoroutine;
 
     private Queue<string> sentences;
 
@@ -54,17 +54,17 @@ public class UIManager : MonoBehaviour
         EnterScene();
     }
 
+    [ContextMenu("Enter Scene")]
     public void EnterScene()
     {
-        GameObject UIBar = energyBar.transform.parent.gameObject;
         UIBar.SetActive(true);
 
         LoadingScreen.SetActive(false);
     }
 
+    [ContextMenu("Enter Load")]
     public void EnterLoad()
     {
-        GameObject UIBar = energyBar.transform.parent.gameObject;
         UIBar.SetActive(false);
 
         LoadingScreen.SetActive(true);
@@ -74,6 +74,7 @@ public class UIManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         EnterScene();
+        Debug.Log("Scene loaded: " + scene.name);
     }
 
 
@@ -256,7 +257,7 @@ public class UIManager : MonoBehaviour
         if (fadeIn)
         {
             yield return new WaitForSeconds(displayDuration);
-            fadeCoroutine = StartCoroutine(FadeText(false, fadeDuration, displayDuration));
+            StartCoroutine(FadeText(false, fadeDuration, displayDuration));
         }
     }
 

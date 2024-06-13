@@ -11,7 +11,7 @@ public class PistolController : RangedWeapon
         fireRate = 0.4f;
         canFire = 0.1f;
         energyCost = 1;
-        damage = 1;
+        damage = 10;
         force = 7f;
     }
 }
