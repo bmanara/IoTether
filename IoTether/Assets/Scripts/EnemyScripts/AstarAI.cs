@@ -86,6 +86,6 @@ public abstract class AstarAI : MonoBehaviour
         Vector3 velocity = dir * speed * speedFactor;
 
         transform.position += velocity * Time.deltaTime;
-        // animator.SetBool("isMoving", true);
+        animator.SetBool("isMoving", true);
     }
 }

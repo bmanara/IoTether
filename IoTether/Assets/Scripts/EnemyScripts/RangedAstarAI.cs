@@ -12,6 +12,7 @@ public class RangedAstarAI : AstarAI
         if (distanceToPlayer > 10)
         {
             // if enemy not detected, don't move
+            animator.SetBool("isMoving", false);
             return;
         }
         else if (distanceToPlayer < 3)
