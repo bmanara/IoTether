@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     public HealthBarController healthBar;
     public EnergyBarController energyBar;
+    public GameObject UIBar;
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
     public GameObject interactPanel;
@@ -25,9 +27,10 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI roomText;
     private CanvasGroup canvasGroup;
-    private Coroutine fadeCoroutine;
 
     private Queue<string> sentences;
+
+    public GameObject LoadingScreen;
 
     private void Awake()
     {
@@ -48,7 +51,32 @@ public class UIManager : MonoBehaviour
         }
 
         canvasGroup.alpha = 0f; // initialise text to invisible at the start of the game
+        EnterScene();
     }
+
+    [ContextMenu("Enter Scene")]
+    public void EnterScene()
+    {
+        UIBar.SetActive(true);
+
+        LoadingScreen.SetActive(false);
+    }
+
+    [ContextMenu("Enter Load")]
+    public void EnterLoad()
+    {
+        UIBar.SetActive(false);
+
+        LoadingScreen.SetActive(true);
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        EnterScene();
+        Debug.Log("Scene loaded: " + scene.name);
+    }
+
 
 
     public void DestroySelf()
@@ -87,11 +115,18 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnGameOver += EnableGameOverMenu;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void OnDisable()
     {
         GameManager.OnGameOver -= EnableGameOverMenu;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void EnableGameOverMenu()
@@ -222,7 +257,7 @@ public class UIManager : MonoBehaviour
         if (fadeIn)
         {
             yield return new WaitForSeconds(displayDuration);
-            fadeCoroutine = StartCoroutine(FadeText(false, fadeDuration, displayDuration));
+            StartCoroutine(FadeText(false, fadeDuration, displayDuration));
         }
     }
 
