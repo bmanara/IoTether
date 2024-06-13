@@ -8,7 +8,7 @@ public class RoomEntryTextScript : MonoBehaviour
 {
     
     public float fadeDuration = 1f;
-    public float displayDuration = 2f;
+    public float displayDuration = 1f;
     private bool hasFadedIn = false;
 
     public string entryText;
@@ -20,17 +20,26 @@ public class RoomEntryTextScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !hasFadedIn)
+        if (collision.CompareTag("Player") && !hasFadedIn) // Only plays once
         {
-            UIManager.manager.EnableEntryText();
-            UIManager.manager.ChangeText(entryText);
-            if (isBossRoom)
-            {
-                UIManager.manager.ChangeTextColour(new Color32(255, 65, 57, 255));
-            }
-            StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
-            hasFadedIn = true;
+            PlayAdaptiveText();
         }
+    }
+
+    private void PlayAdaptiveText()
+    {
+        UIManager.manager.EnableAdaptiveText();
+        UIManager.manager.ChangeText(entryText);
+        if (isBossRoom)
+        {
+            UIManager.manager.ChangeTextColour(new Color32(255, 65, 57, 255));
+        }
+        else
+        {
+            UIManager.manager.ChangeTextColour(new Color32(0, 232, 242, 255));
+        }
+        StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
+        hasFadedIn = true;
     }
 
 }

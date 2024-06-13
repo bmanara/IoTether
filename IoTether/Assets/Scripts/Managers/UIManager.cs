@@ -233,9 +233,9 @@ public class UIManager : MonoBehaviour
     }
 
 
-    // Room entry text methods
+    // Room Adaptive text methods
 
-    public void EnableEntryText()
+    public void EnableAdaptiveText()
     {
         roomText.gameObject.SetActive(true);
     }
