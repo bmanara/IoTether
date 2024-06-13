@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().SaveWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
+        UIManager.manager.EnterLoad();
       
     }
 

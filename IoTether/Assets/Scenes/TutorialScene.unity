@@ -2070,6 +2070,10 @@ PrefabInstance:
       propertyPath: roomText
       value: 
       objectReference: {fileID: 110527128}
+    - target: {fileID: 4444190679936722720, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: LoadingScreen
+      value: 
+      objectReference: {fileID: 761763594}
     - target: {fileID: 5204745020850739327, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_UpdateMode
       value: 2
@@ -2293,6 +2297,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5452d1736211e0f438bef98874ee5413, type: 3}
+--- !u!1 &761763594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 210231101640428237, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+  m_PrefabInstance: {fileID: 384448369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786452374
 GameObject:
   m_ObjectHideFlags: 0

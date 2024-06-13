@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -29,6 +30,8 @@ public class UIManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    public GameObject LoadingScreen;
+
     private void Awake()
     {
         
@@ -48,7 +51,31 @@ public class UIManager : MonoBehaviour
         }
 
         canvasGroup.alpha = 0f; // initialise text to invisible at the start of the game
+        EnterScene();
     }
+
+    public void EnterScene()
+    {
+        GameObject UIBar = energyBar.transform.parent.gameObject;
+        UIBar.SetActive(true);
+
+        LoadingScreen.SetActive(false);
+    }
+
+    public void EnterLoad()
+    {
+        GameObject UIBar = energyBar.transform.parent.gameObject;
+        UIBar.SetActive(false);
+
+        LoadingScreen.SetActive(true);
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        EnterScene();
+    }
+
 
 
     public void DestroySelf()
@@ -87,11 +114,18 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnGameOver += EnableGameOverMenu;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void OnDisable()
     {
         GameManager.OnGameOver -= EnableGameOverMenu;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     public void EnableGameOverMenu()
