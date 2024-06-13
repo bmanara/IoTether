@@ -3,20 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AstarAI : MonoBehaviour
+public abstract class AstarAI : MonoBehaviour
 {
     public Transform targetPosition;
     public Path path;
-    private Seeker seeker;
-    private Animator animator;
+    protected Seeker seeker;
+    protected Animator animator;
 
     public float speed; // must set to enemy speed instead.
     public float nextWaypointDistance = 0.1f;
-    private int currentWaypoint = 0;
-    private bool reachedEndOfPath;
-    private float updatePathRate = 0.5f;
+    protected int currentWaypoint = 0;
+    protected bool reachedEndOfPath;
+    protected float updatePathRate = 0.5f;
 
     public void Start()
+    {
+        Init();
+    }
+
+    protected virtual void Init()
     {
         targetPosition = GameObject.Find("PlayerParent").transform;
         seeker = GetComponent<Seeker>();
@@ -25,7 +30,7 @@ public class AstarAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, updatePathRate); // Better to use coroutine, will do ltr
     }
 
-    private void UpdatePath()
+    protected void UpdatePath()
     {
         if (seeker.IsDone())
         {
@@ -45,18 +50,10 @@ public class AstarAI : MonoBehaviour
         }
     }
 
-    public void Update()
+    public virtual void Update()
     {
         if (path == null)
         {
-            return;
-        }
-
-        float distanceToPlayer = Vector2.Distance(transform.position, targetPosition.transform.position);
-
-        if (distanceToPlayer > 7)
-        {
-            animator.SetBool("isMoving", false);
             return;
         }
 
