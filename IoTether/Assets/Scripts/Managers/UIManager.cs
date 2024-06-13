@@ -261,6 +261,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void PlayAdaptiveText(string text, Color newColour, float fadeDuration, float displayDuration)
+    {
+        EnableAdaptiveText();
+        ChangeText(text);
+        ChangeTextColour(newColour);
+        StartCoroutine(FadeText(true, fadeDuration, displayDuration));
+
+    }
+
     public void ChangeText(string newText)
     {
         roomText.text = newText;

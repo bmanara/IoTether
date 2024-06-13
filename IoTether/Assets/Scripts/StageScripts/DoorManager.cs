@@ -58,10 +58,8 @@ public class DoorManager : MonoBehaviour
 
     protected virtual void PlayAdaptiveText()
     {
-        UIManager.manager.EnableAdaptiveText();
-        UIManager.manager.ChangeText("Room Cleared!");
-        UIManager.manager.ChangeTextColour(new Color32(0, 255, 0, 255));
-        StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
+        Color green = new Color32(0, 255, 0, 255);
+        UIManager.manager.PlayAdaptiveText("Room Cleared!", green, fadeDuration, displayDuration);
     }
 
     public bool checkOpen()

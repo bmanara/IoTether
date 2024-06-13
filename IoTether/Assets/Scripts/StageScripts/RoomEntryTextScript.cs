@@ -28,17 +28,20 @@ public class RoomEntryTextScript : MonoBehaviour
 
     private void PlayAdaptiveText()
     {
-        UIManager.manager.EnableAdaptiveText();
-        UIManager.manager.ChangeText(entryText);
+        // UIManager.manager.EnableAdaptiveText();
+        // UIManager.manager.ChangeText(entryText);
+        Color color;
         if (isBossRoom)
         {
             UIManager.manager.ChangeTextColour(new Color32(255, 65, 57, 255));
+            color = new Color32(255, 65, 57, 255);
         }
         else
         {
             UIManager.manager.ChangeTextColour(new Color32(0, 232, 242, 255));
+            color = new Color32(0, 232, 242, 255);
         }
-        StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
+        UIManager.manager.PlayAdaptiveText(entryText, color, fadeDuration, displayDuration);
         hasFadedIn = true;
     }
 

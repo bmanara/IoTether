@@ -28,10 +28,8 @@ public class FinalDoorManager : DoorManager
     protected override void PlayAdaptiveText()
     {
         //Plays adaptive text with orange colour to indicate stage clear
-        UIManager.manager.EnableAdaptiveText();
-        UIManager.manager.ChangeText("Stage Cleared!");
-        UIManager.manager.ChangeTextColour(new Color32(242, 141, 0, 255));
-        StartCoroutine(UIManager.manager.FadeText(true, 0.7f, 0.3f));
+        Color orange = new Color32(242, 141, 0, 255);
+        UIManager.manager.PlayAdaptiveText("Stage Cleared!", orange, 0.7f, 0.3f);
 
     }
 }
