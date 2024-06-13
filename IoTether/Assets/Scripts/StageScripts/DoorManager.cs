@@ -22,7 +22,7 @@ public class DoorManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemiesInRoom.childCount == 0)
+        if (enemiesInRoom.childCount == 0 && !isOpen) // Only opens once
         {
             Open();
         }   
@@ -43,6 +43,16 @@ public class DoorManager : MonoBehaviour
         Opened.SetActive(true);
        // Debug.Log("Door Opened");
         isOpen = true;
+        PlayAdaptiveText();
+       
+    }
+
+    private void PlayAdaptiveText()
+    {
+        UIManager.manager.EnableAdaptiveText();
+        UIManager.manager.ChangeText("Room Cleared!");
+        UIManager.manager.ChangeTextColour(new Color32(0, 255, 0, 255));
+        StartCoroutine(UIManager.manager.FadeText(true, 0.7f, 0.3f));
     }
 
     public bool checkOpen()
