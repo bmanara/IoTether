@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4939590892447629115}
   - component: {fileID: 4061951358418367693}
   - component: {fileID: 7779389337648452632}
-  - component: {fileID: 5912974046983288097}
   - component: {fileID: 3652078757479011039}
+  - component: {fileID: 664368030672147972}
   m_Layer: 0
   m_Name: Small Devil
   m_TagString: Enemy
@@ -155,21 +155,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &5912974046983288097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6253530402881377358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35fadd658b1cdf43b76de69c137852d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPosition: {fileID: 0}
-  speed: 2
-  nextWaypointDistance: 0.1
 --- !u!114 &3652078757479011039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +177,21 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
+--- !u!114 &664368030672147972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6253530402881377358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3baefe3c18a0d43bf9ccacaf4b8831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 0}
+  speed: 0
+  nextWaypointDistance: 0.1
 --- !u!1 &8161904092256460761
 GameObject:
   m_ObjectHideFlags: 0

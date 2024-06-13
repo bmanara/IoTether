@@ -43,6 +43,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         matDefault = sr.material;
     }
 
+    // change to onTriggerEnter2D? since hitbox is trigger
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
