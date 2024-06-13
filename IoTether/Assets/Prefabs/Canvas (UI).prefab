@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7867504679546206972
 Transform:
   m_ObjectHideFlags: 0
@@ -3181,8 +3181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.781773, y: 170.23969}
-  m_SizeDelta: {x: 1242.5002, y: 703.7834}
+  m_AnchoredPosition: {x: -61.517227, y: 165.09131}
+  m_SizeDelta: {x: 1255.7498, y: 714.0884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3474552396949436040
 CanvasRenderer:
@@ -4303,6 +4303,10 @@ PrefabInstance:
     - target: {fileID: 6148766523185492110, guid: 07e27de8a9f17ba448bf3857f74ddae0, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278603004447413966, guid: 07e27de8a9f17ba448bf3857f74ddae0, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

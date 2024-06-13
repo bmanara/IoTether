@@ -9,6 +9,10 @@ public class DoorManager : MonoBehaviour
     private GameObject Opened;
     private bool isOpen = false;
     public Transform enemiesInRoom;
+
+    //FadeText fields
+    private float fadeDuration = 0.7f;
+    private float displayDuration = 0.3f;
     
     // Start is called before the first frame update
     void Start()
@@ -19,10 +23,15 @@ public class DoorManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool canOpen()
     {
-        if (enemiesInRoom.childCount == 0 && !isOpen) // Only opens once
+        return enemiesInRoom.childCount == 0 && !isOpen;
+    }
+
+    // Update is called once per frame
+    public void Update()
+    {
+        if (canOpen()) // Only opens once
         {
             Open();
         }   
@@ -37,7 +46,7 @@ public class DoorManager : MonoBehaviour
         isOpen = false;
     }
     [ContextMenu("Open")]
-    private void Open()
+    protected virtual void Open()
     {
         Closed.SetActive(false);
         Opened.SetActive(true);
@@ -47,12 +56,12 @@ public class DoorManager : MonoBehaviour
        
     }
 
-    private void PlayAdaptiveText()
+    protected virtual void PlayAdaptiveText()
     {
         UIManager.manager.EnableAdaptiveText();
         UIManager.manager.ChangeText("Room Cleared!");
         UIManager.manager.ChangeTextColour(new Color32(0, 255, 0, 255));
-        StartCoroutine(UIManager.manager.FadeText(true, 0.7f, 0.3f));
+        StartCoroutine(UIManager.manager.FadeText(true, fadeDuration, displayDuration));
     }
 
     public bool checkOpen()
