@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -15,7 +16,9 @@ public class RangedEnemy : Enemy
     {
         base.Update();
 
-        if (Time.time > nextFire)
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if (distanceToPlayer < 7 && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Shoot();
