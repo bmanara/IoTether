@@ -9,6 +9,8 @@ public class WeaponSwitching : MonoBehaviour
     private int secondaryWeapon;
     private int equippedWeapon;
 
+    private int meleeWeapon = 1; // will need to change based on how many melees
+
     // Checkpoint save
     private int savedPrimaryWeapon;
     private int savedSecondaryWeapon;
@@ -54,6 +56,8 @@ public class WeaponSwitching : MonoBehaviour
 
             i++;
         }
+
+        CheckMelee(result);
         return result;
     }
 
@@ -76,6 +80,8 @@ public class WeaponSwitching : MonoBehaviour
 
             i++;
         }
+
+        CheckMelee(result);
         return result;
     }
 
@@ -114,5 +120,17 @@ public class WeaponSwitching : MonoBehaviour
         primaryWeapon = savedPrimaryWeapon;
         secondaryWeapon = savedSecondaryWeapon;
         SelectPrimaryWeapon();
+    }
+
+    private void CheckMelee(int weapon)
+    {
+        if (weapon < meleeWeapon)
+        {
+            transform.parent.GetComponentInChildren<AimController>().UseMeleeWeapon();
+        }
+        else
+        {
+            transform.parent.GetComponentInChildren<AimController>().UseRangedWeapon();
+        }
     }
 }
