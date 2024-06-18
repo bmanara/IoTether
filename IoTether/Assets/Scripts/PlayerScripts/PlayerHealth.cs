@@ -83,4 +83,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UIManager.manager.SetMaxHealth(maxHealth);
         UIManager.manager.SetHealth(health);
     }
+
+    // Used for HealthPerk
+
+    public void SetMaxHealth(int health)
+    {
+        maxHealth = health;
+        UpdateHealthBar();
+    }
+
+    public void IncrementHealth(int health)
+    {
+        maxHealth += health;
+        UpdateHealthBar();
+    }
 }
