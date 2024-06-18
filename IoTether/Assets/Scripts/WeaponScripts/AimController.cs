@@ -25,6 +25,7 @@ public class AimController : MonoBehaviour
 
         if (meleeWeapon)
         {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             // Do not rotate when using melee weapon
             if (mousePos.x < transform.position.x && facingRight)
             {
@@ -69,6 +70,14 @@ public class AimController : MonoBehaviour
 
     private void FlipRangedWeapon()
     {
+        if (!facingRight)
+        {
+            Vector3 currentScale = transform.localScale;
+            currentScale.x *= -1;
+            transform.localScale = currentScale;
+            facingRight = !facingRight;
+        }
+
         // Flip gun sprite based on mouse position
         if (mousePos.x < transform.position.x)
         {
