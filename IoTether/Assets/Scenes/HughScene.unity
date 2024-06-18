@@ -4565,16 +4565,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1227925690, guid: 1215bba51de321e4088b9ffe1c7ecb52, type: 3}
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
       propertyPath: m_Color.b
-      value: 0.17342713
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
       propertyPath: m_Color.g
-      value: 0.043137267
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
       propertyPath: m_Color.r
-      value: 0.9607843
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1881030572487478696, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
       propertyPath: m_Name
@@ -4869,6 +4873,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2120900141, guid: 1215bba51de321e4088b9ffe1c7ecb52, type: 3}
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019567968088215179, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1881030572487478696, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
       propertyPath: m_Name
       value: EnergyPerk
