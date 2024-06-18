@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootingController : MonoBehaviour
+public class AimController : MonoBehaviour
 {
     private Vector3 mousePos;
 
     public Transform player;
+    private bool meleeWeapon;
 
     private void Update()
     {
@@ -16,14 +17,28 @@ public class ShootingController : MonoBehaviour
             return;
         }
 
-        // Flip gun sprite based on mouse position
+        // Flip weapon sprite based on mouse position
         if (mousePos.x < transform.position.x)
         {
-            GetComponentInChildren<SpriteRenderer>().flipY = true;
+            if (meleeWeapon)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipY = true;
+            }
         }
         else
         {
-            GetComponentInChildren<SpriteRenderer>().flipY = false;
+            if (meleeWeapon)
+            {
+                GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+            else
+            {
+                GetComponentInChildren<SpriteRenderer>().flipY = false;
+            }
         }
 
         // Rotate game object based on mouse position
@@ -35,5 +50,15 @@ public class ShootingController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         transform.position = player.transform.position - new Vector3(0, 0.65f, 0);
+    }
+
+    public void UseMeleeWeapon()
+    {
+        meleeWeapon = true;
+    }
+
+    public void UseRangedWeapon()
+    {
+        meleeWeapon = false;
     }
 }
