@@ -1,49 +1,45 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class AimController : MonoBehaviour
 {
     private Vector3 mousePos;
+    private bool facingRight = true;
 
     public Transform player;
     private bool meleeWeapon;
 
     private void Update()
     {
+        // Get mouse position
+        Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+        mousePos = Camera.main.ScreenToWorldPoint(vect3);
+
         if (GameManager.manager.gameIsPaused)
         {
             return;
         }
 
-        // Flip weapon sprite based on mouse position
-        if (mousePos.x < transform.position.x)
+        if (meleeWeapon)
         {
-            if (meleeWeapon)
+            // Do not rotate when using melee weapon
+            if (mousePos.x < transform.position.x && facingRight)
             {
-                GetComponentInChildren<SpriteRenderer>().flipX = true;
+                FlipMeleeWeapon();
             }
-            else
+            else if (mousePos.x > transform.position.x && !facingRight)
             {
-                GetComponentInChildren<SpriteRenderer>().flipY = true;
+                FlipMeleeWeapon();
             }
+            return;
         }
-        else
-        {
-            if (meleeWeapon)
-            {
-                GetComponentInChildren<SpriteRenderer>().flipX = false;
-            }
-            else
-            {
-                GetComponentInChildren<SpriteRenderer>().flipY = false;
-            }
-        }
+        
+        FlipRangedWeapon();
 
         // Rotate game object based on mouse position
-        Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
-        mousePos = Camera.main.ScreenToWorldPoint(vect3);
 
         Vector3 rotation = mousePos - transform.position;
         float angle = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
@@ -60,5 +56,27 @@ public class AimController : MonoBehaviour
     public void UseRangedWeapon()
     {
         meleeWeapon = false;
+    }
+
+    private void FlipMeleeWeapon()
+    {
+        // Flip melee weapon sprite based on mouse position
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        facingRight = !facingRight;
+    }
+
+    private void FlipRangedWeapon()
+    {
+        // Flip gun sprite based on mouse position
+        if (mousePos.x < transform.position.x)
+        {
+            GetComponentInChildren<SpriteRenderer>().flipY = true;
+        }
+        else
+        {
+            GetComponentInChildren<SpriteRenderer>().flipY = false;
+        }
     }
 }

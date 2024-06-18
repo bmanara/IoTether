@@ -12,6 +12,8 @@ public class PlayerControllers : MonoBehaviour
     public Animator animator;
     public static PlayerControllers Instance;
 
+    private Vector3 mousePos;
+
     private void Start()
     {
         if (Instance != null)
@@ -38,19 +40,22 @@ public class PlayerControllers : MonoBehaviour
             return;
         }
 
+        Vector3 vect3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+        mousePos = Camera.main.ScreenToWorldPoint(vect3);
+
         // Get movement input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical"); 
 
-        // Flip sprite based on movement direction
-        if (input.x > 0 && !facingRight)
+        // Flip sprite based on mouse position
+        if (mousePos.x < transform.position.x && facingRight)
         {
             Flip();
         }
-        else if (input.x < 0 && facingRight)
+        else if (mousePos.x > transform.position.x && !facingRight)
         {
             Flip();
-        }   
+        }
 
         // Update animator parameters
         if (input != Vector2.zero)
@@ -71,6 +76,7 @@ public class PlayerControllers : MonoBehaviour
     private void Flip()
     {
         GameObject child = transform.GetChild(1).gameObject;
+
         Vector3 currentScale = child.transform.localScale;
         currentScale.x *= -1;
         child.transform.localScale = currentScale;
