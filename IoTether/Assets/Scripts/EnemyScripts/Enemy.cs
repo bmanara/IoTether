@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour, IDamageable
+public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
 {
     [SerializeField]
     protected int health;
@@ -12,6 +12,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected float speed;
     [SerializeField]
     protected int damage;
+    protected int ammoDrop;
+    protected int healthDrop;
 
     [SerializeField]
     protected GameObject player;
@@ -110,5 +112,15 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     private void ResetMaterial()
     {
         sr.material = matDefault;
+    }
+
+    public void DropAmmo()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DropHealth()
+    {
+        throw new System.NotImplementedException();
     }
 }
