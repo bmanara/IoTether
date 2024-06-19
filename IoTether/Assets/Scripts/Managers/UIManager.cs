@@ -25,8 +25,10 @@ public class UIManager : MonoBehaviour
     private bool isTyping = false;
     private string previousSentence = "";
 
-    public TextMeshProUGUI roomText;
+    //adaptive text
+    public TextMeshProUGUI adaptiveText;
     private CanvasGroup canvasGroup;
+    private Coroutine adaptiveTextCoroutine;
 
     private Queue<string> sentences;
 
@@ -44,10 +46,10 @@ public class UIManager : MonoBehaviour
         manager = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
 
-        canvasGroup = roomText.GetComponent<CanvasGroup>();
+        canvasGroup = adaptiveText.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
         {
-            canvasGroup = roomText.gameObject.AddComponent<CanvasGroup>();
+            canvasGroup = adaptiveText.gameObject.AddComponent<CanvasGroup>();
         }
 
         canvasGroup.alpha = 0f; // initialise text to invisible at the start of the game
@@ -237,7 +239,7 @@ public class UIManager : MonoBehaviour
 
     public void EnableAdaptiveText()
     {
-        roomText.gameObject.SetActive(true);
+        adaptiveText.gameObject.SetActive(true);
     }
 
     public IEnumerator FadeText(bool fadeIn, float fadeDuration, float displayDuration)
@@ -264,6 +266,10 @@ public class UIManager : MonoBehaviour
     public void PlayAdaptiveText(string text, Color newColour, float fadeDuration, float displayDuration)
     {
         EnableAdaptiveText();
+        if (adaptiveTextCoroutine != null)
+        {
+            StopCoroutine(adaptiveTextCoroutine);
+        }
         ChangeText(text);
         ChangeTextColour(newColour);
         StartCoroutine(FadeText(true, fadeDuration, displayDuration));
@@ -272,11 +278,11 @@ public class UIManager : MonoBehaviour
 
     public void ChangeText(string newText)
     {
-        roomText.text = newText;
+        adaptiveText.text = newText;
     }
 
     public void ChangeTextColour(Color newColour)
     {
-        roomText.color = newColour;
+        adaptiveText.color = newColour;
     }
 }

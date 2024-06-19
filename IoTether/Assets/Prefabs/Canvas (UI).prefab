@@ -4194,7 +4194,7 @@ MonoBehaviour:
   nameText: {fileID: 2080987022006227725}
   dialogueText: {fileID: 1930183972443358589}
   dialogueAnimator: {fileID: 5204745020850739327}
-  roomText: {fileID: 7537489313688851350}
+  adaptiveText: {fileID: 7537489313688851350}
   LoadingScreen: {fileID: 210231101640428237}
 --- !u!1001 &1907568056426284376
 PrefabInstance:
