@@ -11,6 +11,9 @@ public class EvilMageController : RangedEnemy
         ai.speed = 3;
         damage = 1;
 
+        energyDrop = 2;
+        healthDrop = 0;
+
         projectileSpeed = 6;
         fireRate = 2;
         firePoint = transform.Find("FirePoint");

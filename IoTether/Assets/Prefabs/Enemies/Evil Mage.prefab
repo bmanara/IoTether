@@ -100,6 +100,8 @@ MonoBehaviour:
   speed: 0
   damage: 0
   player: {fileID: 0}
+  energyDropPrefab: {fileID: 49506146067403583, guid: 4b2336ff7f345214caba0ea5c74bfda4, type: 3}
+  healthDropPrefab: {fileID: 0}
   ai: {fileID: 0}
   projectile: {fileID: 6619931348975271694, guid: d7b72dbf2ec82b5478c1b9d642b6c7eb, type: 3}
   projectileSpeed: 0
