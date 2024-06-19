@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perk: {fileID: 0}
+  perkText: 
+  color:
+    serializedVersion: 2
+    rgba: 4294964224
 --- !u!61 &1690625640774388867
 BoxCollider2D:
   m_ObjectHideFlags: 0

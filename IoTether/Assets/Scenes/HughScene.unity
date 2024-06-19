@@ -4628,6 +4628,14 @@ PrefabInstance:
       propertyPath: perk
       value: 
       objectReference: {fileID: 11400000, guid: 6e506957e2f5e49478a5e6d65d79acee, type: 2}
+    - target: {fileID: 9181505855019245826, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: perkText
+      value: Max Health Increased!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181505855019245826, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: color.rgba
+      value: 4278206207
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4713,6 +4721,22 @@ PrefabInstance:
     - target: {fileID: 3680267720071649316, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537489313688851350, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537489313688851350, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.95867777
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537489313688851350, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7537489313688851350, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294964224
       objectReference: {fileID: 0}
     - target: {fileID: 7671939088132736209, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_Pivot.x
@@ -4941,6 +4965,14 @@ PrefabInstance:
       propertyPath: perk
       value: 
       objectReference: {fileID: 11400000, guid: eb2ed0b27f2a01f4f83428891b21670d, type: 2}
+    - target: {fileID: 9181505855019245826, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: perkText
+      value: Max Energy Increased!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181505855019245826, guid: 9c5821ffe2715fb4faa223b5eea7ea40, type: 3}
+      propertyPath: color.rgba
+      value: 4294964224
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
