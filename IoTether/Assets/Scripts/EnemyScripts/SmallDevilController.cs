@@ -10,7 +10,7 @@ public class SmallDevilController : Enemy
         health = 4;
         ai.speed = 2;
         damage = 1;
-        ammoDrop = 6;
+        energyDrop = 6;
         healthDrop = 0;
     }
 

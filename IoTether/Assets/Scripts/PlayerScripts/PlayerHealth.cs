@@ -28,6 +28,17 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
+    public void Heal(int amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        UpdateHealthBar();
+    }
+
     public void DecreaseHealth(int damage)
     {
         OnHit(damage);

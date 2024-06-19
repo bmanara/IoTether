@@ -8,7 +8,7 @@ public class HealthPerk : IPerk
     public int amount;
     public override void Apply(GameObject target)
     {
-       GameObject playerParent = target.transform.parent.gameObject;
+        GameObject playerParent = target.transform.parent.gameObject;
         playerParent.GetComponent<PlayerHealth>().IncrementHealth(amount);
         
     }
