@@ -24,6 +24,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         prevHealth = maxHealth;
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
         matDefault = sr.material;
+
+        UpdateHealthBar();
+    }
+
+    public void Heal(int amount)
+    {
+        health += amount;
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        UpdateHealthBar();
     }
 
     public void DecreaseHealth(int damage)
@@ -80,8 +93,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public void UpdateHealthBar()
     {
-        UIManager.manager.SetMaxHealth(maxHealth);
-        UIManager.manager.SetHealth(health);
+        UIManager.manager.SetHealth(health, maxHealth);
     }
 
     // Used for HealthPerk

@@ -12,6 +12,8 @@ public class PlayerEnergy : MonoBehaviour
     {
         energy = maxEnergy;
         prevEnergy = maxEnergy;
+
+        UpdateEnergyBar();
     }
 
     public bool DecreaseEnergy(int amount)
@@ -63,7 +65,6 @@ public class PlayerEnergy : MonoBehaviour
 
     public void UpdateEnergyBar()
     {
-        UIManager.manager.SetMaxEnergy(maxEnergy);
-        UIManager.manager.SetEnergy(energy);
+        UIManager.manager.SetEnergy(energy, maxEnergy);
     }
 }

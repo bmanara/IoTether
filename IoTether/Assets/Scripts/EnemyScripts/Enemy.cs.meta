@@ -3,7 +3,11 @@ guid: 892e1fb2b58d5df4385d54a8f168bfba
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {instanceID: 0}
+  - energyDropPrefab: {fileID: 49506146067403583, guid: 4b2336ff7f345214caba0ea5c74bfda4, type: 3}
+  - healthDropPrefab: {instanceID: 0}
+  - ai: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

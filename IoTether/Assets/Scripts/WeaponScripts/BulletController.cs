@@ -39,7 +39,8 @@ public class BulletController : MonoBehaviour
             } 
             else if (collision.gameObject.tag != "Player"
                 && collision.gameObject.tag != "Props"
-                && collision.gameObject.tag != "Bullet")
+                && collision.gameObject.tag != "Bullet"
+                && collision.gameObject.tag != "Ignore")
             {
                 Impact();
             }

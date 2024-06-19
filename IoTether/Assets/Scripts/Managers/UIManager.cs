@@ -11,7 +11,11 @@ public class UIManager : MonoBehaviour
     public static UIManager manager { get; private set; }
 
     public HealthBarController healthBar;
+    public TMP_Text healthText;
+    
     public EnergyBarController energyBar;
+    public TMP_Text energyText;
+
     public GameObject UIBar;
     public GameObject gameOverMenu;
     public GameObject pickUpPanel;
@@ -138,24 +142,20 @@ public class UIManager : MonoBehaviour
             .Setup(GameManager.manager.GetScore());
     }
 
-    public void SetMaxHealth(int maxHealth)
+    public void SetHealth(int health, int maxHealth)
     {
         healthBar.SetMaxHealth(maxHealth);
-    }
-
-    public void SetHealth(int health)
-    {
         healthBar.SetHealth(health);
+
+        healthText.text = health + " / " + maxHealth;
     }
 
-    public void SetMaxEnergy(int maxEnergy)
+    public void SetEnergy(int energy, int maxEnergy)
     {
         energyBar.SetMaxEnergy(maxEnergy);
-    }
-
-    public void SetEnergy(int energy)
-    {
         energyBar.SetEnergy(energy);
+
+        energyText.text = energy + " / " + maxEnergy;
     }
 
     public void StartDialogue(Dialogue dialogue)

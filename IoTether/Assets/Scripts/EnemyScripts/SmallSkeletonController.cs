@@ -10,5 +10,8 @@ public class SmallSkeletonController : Enemy
         health = 2;
         ai.speed = 3;
         damage = 1;
+
+        energyDrop = 2;
+        healthDrop = 0;
     }
 }

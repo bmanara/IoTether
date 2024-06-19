@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour, IDamageable
+public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
 {
     [SerializeField]
     protected int health;
@@ -12,9 +12,14 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     protected float speed;
     [SerializeField]
     protected int damage;
+    protected int energyDrop;
+    protected int healthDrop;
 
     [SerializeField]
     protected GameObject player;
+
+    public GameObject energyDropPrefab;
+    public GameObject healthDropPrefab;
 
     protected Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -25,6 +30,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     private float distance;
     private bool facingRight = true;
+    private float dropForce = 5f;
 
     protected void Start()
     {
@@ -103,6 +109,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     private void KillSelf()
     {
+        DropEnergy();
         Destroy(gameObject);
         GameManager.manager.IncreaseScore(1);
     }
@@ -110,5 +117,24 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     private void ResetMaterial()
     {
         sr.material = matDefault;
+    }
+
+    public void DropEnergy()
+    {
+        for (int i = 0; i < energyDrop; i++)
+        {
+            GameObject energy = Instantiate(energyDropPrefab, transform.position, Quaternion.identity);
+            float randomX = Random.Range(-1f, 1f);
+            float randomY = Random.Range(-1f, 1f);
+
+            Vector2 randDir = new Vector2(randomX, randomY);
+            Rigidbody2D rb = energy.GetComponent<Rigidbody2D>();
+            rb.AddForce(randDir * dropForce, ForceMode2D.Impulse);
+        }
+    }
+
+    public void DropHealth()
+    {
+        throw new System.NotImplementedException();
     }
 }
