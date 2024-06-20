@@ -242,6 +242,11 @@ public class UIManager : MonoBehaviour
         adaptiveText.gameObject.SetActive(true);
     }
 
+    public void ChangeFontSize(int fontsize)
+    {
+        adaptiveText.fontSize = fontsize;
+    }
+
     public IEnumerator FadeText(bool fadeIn, float fadeDuration, float displayDuration)
     {
         float startAlpha = canvasGroup.alpha;
@@ -272,6 +277,20 @@ public class UIManager : MonoBehaviour
         }
         ChangeText(text);
         ChangeTextColour(newColour);
+        StartCoroutine(FadeText(true, fadeDuration, displayDuration));
+
+    }
+
+    public void PlayAdaptiveText(string text, Color newColour, float fadeDuration, float displayDuration, int fontSize)
+    {
+        EnableAdaptiveText();
+        if (adaptiveTextCoroutine != null)
+        {
+            StopCoroutine(adaptiveTextCoroutine);
+        }
+        ChangeText(text);
+        ChangeTextColour(newColour);
+        ChangeFontSize(fontSize);
         StartCoroutine(FadeText(true, fadeDuration, displayDuration));
 
     }

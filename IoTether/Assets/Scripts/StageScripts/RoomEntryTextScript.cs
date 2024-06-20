@@ -14,6 +14,8 @@ public class RoomEntryTextScript : MonoBehaviour
     public string entryText;
     public bool isBossRoom = false;
 
+    public int fontSize = 45;
+
     //private static int level = 0;
 
     
@@ -41,7 +43,7 @@ public class RoomEntryTextScript : MonoBehaviour
             UIManager.manager.ChangeTextColour(new Color32(0, 232, 242, 255));
             color = new Color32(0, 232, 242, 255);
         }
-        UIManager.manager.PlayAdaptiveText(entryText, color, fadeDuration, displayDuration);
+        UIManager.manager.PlayAdaptiveText(entryText, color, fadeDuration, displayDuration, fontSize);
         hasFadedIn = true;
     }
 
