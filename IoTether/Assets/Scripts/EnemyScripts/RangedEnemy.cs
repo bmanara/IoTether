@@ -11,6 +11,7 @@ public class RangedEnemy : Enemy
     public float projectileSpeed;
     public float fireRate;
     private float nextFire = 0.1f;
+    protected float range;
 
     protected override void Update()
     {
@@ -18,7 +19,7 @@ public class RangedEnemy : Enemy
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distanceToPlayer < 7 && Time.time > nextFire)
+        if (distanceToPlayer < range && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Shoot();

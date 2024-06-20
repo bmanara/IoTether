@@ -6,7 +6,19 @@ public class BossBattle : MonoBehaviour
 {
     [SerializeField] private BossTrigger bossTrigger;
     [SerializeField] private Enemy enemy;
-    
+
+    private List<Vector3> spawnPositions;
+    public float spawnRate = 5f;
+
+    private void Awake()
+    {
+        spawnPositions = new List<Vector3>();
+        foreach (Transform spawnPosition in transform.Find("Spawn Positions"))
+        {
+            spawnPositions.Add(spawnPosition.position);
+        }
+    }
+
     private void Start()
     {
         bossTrigger.OnPlayerEnterTrigger += BossTrigger_OnPlayerEnterTrigger;
@@ -22,11 +34,17 @@ public class BossBattle : MonoBehaviour
     private void StartBattle()
     {
         Debug.Log("Boss Battle Started");
-        SpawnEnemy();
+        InvokeRepeating("SpawnEnemy", 2f, spawnRate);
+    }
+
+    private void StopBattle()
+    {
+        CancelInvoke("SpawnEnemy");
     }
 
     private void SpawnEnemy()
     {
-        Instantiate(enemy, transform.position + new Vector3(20, 0), Quaternion.identity);
+        Vector3 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Count)];
+        Instantiate(enemy, spawnPosition, Quaternion.identity);
     }
 }

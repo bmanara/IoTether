@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EvilMageController : RangedEnemy
+public class DevilBossController : RangedEnemy
 {
     protected override void Init()
     {
         base.Init();
-        health = 3;
-        ai.speed = 3;
+        health = 100;
+        // ai.speed = 1;
         damage = 1;
 
-        energyDrop = 2;
-        healthDrop = 0;
+        energyDrop = 100;
+        healthDrop = 2;
 
         projectileSpeed = 6;
-        fireRate = 2;
+        fireRate = 0.5f;
         firePoint = transform.Find("FirePoint");
-        range = 7f;
+
+        range = 30f;
     }
 }
