@@ -3242,6 +3242,14 @@ PrefabInstance:
       propertyPath: enemiesInRoom
       value: 
       objectReference: {fileID: 969175654}
+    - target: {fileID: 5700967231237080743, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
+      propertyPath: enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700967231237080743, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1497573839}
     - target: {fileID: 8585004716766399266, guid: 4ee60aeab0712374ebd88c7043fa31fc, type: 3}
       propertyPath: m_Name
       value: Door
@@ -3601,6 +3609,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+--- !u!114 &783566041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939590892447629115, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+  m_PrefabInstance: {fileID: 783566040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525921f8089330945b6e792f4de617a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786452374
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,6 +3783,22 @@ PrefabInstance:
       propertyPath: enemiesInRoom
       value: 
       objectReference: {fileID: 869760053}
+    - target: {fileID: 3445330595642700557, guid: 8584d674cc41a3c4a81ee88670919781, type: 3}
+      propertyPath: enemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445330595642700557, guid: 8584d674cc41a3c4a81ee88670919781, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1202917660}
+    - target: {fileID: 3445330595642700557, guid: 8584d674cc41a3c4a81ee88670919781, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 783566041}
+    - target: {fileID: 3445330595642700557, guid: 8584d674cc41a3c4a81ee88670919781, type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 2118268517}
     - target: {fileID: 5153782122409835236, guid: 8584d674cc41a3c4a81ee88670919781, type: 3}
       propertyPath: m_Name
       value: FinalDoor
@@ -4014,6 +4049,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+--- !u!114 &1202917660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939590892447629115, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+  m_PrefabInstance: {fileID: 1202917659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525921f8089330945b6e792f4de617a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1244534743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2931833781899211, guid: 21efd862d1691b44a903c35446b1c2c1, type: 3}
@@ -4024,6 +4070,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
   m_PrefabInstance: {fileID: 2076477822}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1497573839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939590892447629115, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+  m_PrefabInstance: {fileID: 2076477822}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525921f8089330945b6e792f4de617a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511199082
 GameObject:
   m_ObjectHideFlags: 0
@@ -13340,6 +13397,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+--- !u!114 &2118268517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939590892447629115, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+  m_PrefabInstance: {fileID: 2118268516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525921f8089330945b6e792f4de617a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8806958894506748450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13443,7 +13511,7 @@ SceneRoots:
   - {fileID: 68261226}
   - {fileID: 247240027}
   - {fileID: 2031882608}
-  - {fileID: 969175654}
   - {fileID: 279953708}
   - {fileID: 842698077}
+  - {fileID: 969175654}
   - {fileID: 869760053}

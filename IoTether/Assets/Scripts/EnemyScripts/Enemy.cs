@@ -1,6 +1,7 @@
 using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -31,6 +32,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
     private float distance;
     private bool facingRight = true;
     private float dropForce = 5f;
+
+    public event Action OnEnemyDefeated;
 
     protected void Start()
     {
@@ -124,8 +127,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
         for (int i = 0; i < energyDrop; i++)
         {
             GameObject energy = Instantiate(energyDropPrefab, transform.position, Quaternion.identity);
-            float randomX = Random.Range(-1f, 1f);
-            float randomY = Random.Range(-1f, 1f);
+            float randomX = UnityEngine.Random.Range(-1f, 1f);
+            float randomY = UnityEngine.Random.Range(-1f, 1f);
 
             Vector2 randDir = new Vector2(randomX, randomY);
             Rigidbody2D rb = energy.GetComponent<Rigidbody2D>();
@@ -136,5 +139,10 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
     public void DropHealth()
     {
         throw new System.NotImplementedException();
+    }
+
+    private void OnDestroy()
+    {
+       OnEnemyDefeated?.Invoke();
     }
 }
