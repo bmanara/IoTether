@@ -44,7 +44,7 @@ public abstract class RangedWeapon : MonoBehaviour
         bool canShoot = PlayerControllers.Instance.GetComponent<PlayerEnergy>().DecreaseEnergy(energyCost);
         if (canShoot)
         {
-            GameObject bullet = BulletController.Create(bulletPrefab, firePoint, damage, force, true);
+            GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
             GetComponent<AudioSource>().Play();
