@@ -66,9 +66,10 @@ public class UIManager : MonoBehaviour
         UIBar.SetActive(true);
 
         LoadingScreen.SetActive(false);
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.GetComponent<PlayerHealth>().UpdateHealthBar();
-        player.GetComponent<PlayerEnergy>().UpdateEnergyBar();
+        GameObject playerParent = GameObject.Find("PlayerParent");
+        playerParent.GetComponent<PlayerHealth>().UpdateHealthBar();
+        playerParent.GetComponent<PlayerEnergy>().UpdateEnergyBar();
+      
     }
 
     [ContextMenu("Enter Load")]
