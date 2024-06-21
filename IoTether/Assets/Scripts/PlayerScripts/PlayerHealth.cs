@@ -28,6 +28,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
+
     public void Heal(int amount)
     {
         health += amount;
@@ -91,6 +92,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
+    [ContextMenu("Update Health Bar")]
     public void UpdateHealthBar()
     {
         UIManager.manager.SetHealth(health, maxHealth);

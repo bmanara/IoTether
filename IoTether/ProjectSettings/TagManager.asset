@@ -7,7 +7,6 @@ TagManager:
   - Enemy
   - Bullet
   - Props
-  - BulletIgnore
   - Ignore
   layers:
   - Default
