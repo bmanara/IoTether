@@ -23,6 +23,22 @@ public class BulletController : MonoBehaviour
         Destroy(gameObject);
         Instantiate(impactEffect, transform.position, transform.rotation);
     }
+
+    private bool CanPlayerImpact(Collider2D collision)
+    {
+        return collision.gameObject.tag != "Player"
+            && collision.gameObject.tag != "Props"
+            && collision.gameObject.tag != "Bullet"
+            && collision.gameObject.tag != "Ignore";
+    }
+
+    private bool CanEnemyImpact(Collider2D collision)
+    {
+        return collision.gameObject.tag != "Enemy"
+            && collision.gameObject.tag != "Props"
+            && collision.gameObject.tag != "Bullet"
+            && collision.gameObject.tag != "Ignore";
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isFriendly)
@@ -37,10 +53,7 @@ public class BulletController : MonoBehaviour
                 Vector2 knockback = direction * knockbackForce;
                 damageable.DecreaseHealth(damage, knockback);
             } 
-            else if (collision.gameObject.tag != "Player"
-                && collision.gameObject.tag != "Props"
-                && collision.gameObject.tag != "Bullet"
-                && collision.gameObject.tag != "Ignore")
+            else if (CanPlayerImpact(collision))
             {
                 Impact();
             }
@@ -55,9 +68,7 @@ public class BulletController : MonoBehaviour
 
                 damageable.DecreaseHealth(damage);
             }
-            else if (collision.gameObject.tag != "Enemy"
-                && collision.gameObject.tag != "Props"
-                && collision.gameObject.tag != "Bullet")
+            else if (CanEnemyImpact(collision))
             {
                 Impact();
             }
