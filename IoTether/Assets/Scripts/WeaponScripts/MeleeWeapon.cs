@@ -32,6 +32,7 @@ public abstract class MeleeWeapon : MonoBehaviour
             isAttacking = true;
             animator.SetTrigger("Attack"); // attack animation + moving BoxCollider2D
             timeUntilMelee = Time.time + delay;
+            GetComponent<AudioSource>().Play();
             Invoke("ResetAttack", attackSpeed);
         }
     }

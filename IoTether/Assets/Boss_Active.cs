@@ -11,6 +11,9 @@ public class Boss_Active : StateMachineBehaviour
     private float nextFire = 0.1f;
     public float range;
 
+    private float nextAttack = 0.1f;
+    public float attackInterval;
+
     private GameObject curr;
     private GameObject player;
 
@@ -29,18 +32,24 @@ public class Boss_Active : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distanceToPlayer = Vector2.Distance(curr.transform.position, player.transform.position);
-
+        // Normal Attack
         if (distanceToPlayer < range && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Shoot();
+        }
+        // Special Attack
+        if (distanceToPlayer < range && Time.time > nextAttack)
+        {
+            nextAttack = Time.time + attackInterval;
+            animator.SetTrigger("Attack");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        animator.ResetTrigger("Attack");
     }
 
     private void Shoot()
