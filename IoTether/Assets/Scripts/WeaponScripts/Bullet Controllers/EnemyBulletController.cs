@@ -1,18 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class EnemyBulletController : MonoBehaviour
+public class EnemyBulletController : BulletController
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Damage { get; set; }
+
+    public static GameObject Create(GameObject bulletPrefab, Transform firePoint, int damage)
     {
-        
+        GameObject bullet = GameObject.Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        EnemyBulletController bulletController = bullet.GetComponent<EnemyBulletController>();
+        bulletController.Damage = damage;
+        return bullet;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public override bool CanImpact(Collider2D collision)
     {
-        
+        return collision.gameObject.tag != "Enemy"
+           && base.CanImpact(collision);
     }
+
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            IDamageable damageable = collision.transform.parent.gameObject.GetComponent<IDamageable>();
+            Impact();
+            damageable.DecreaseHealth(Damage);
+        }
+        else if (CanImpact(collision))
+        {
+            Impact();
+        }
+    }
+
 }
+

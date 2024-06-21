@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class OldBulletController : MonoBehaviour
 {
     private int damage; // damage will be determined by the weapon
     private float knockbackForce; // knockbackForce will be determined by the weapon
@@ -12,9 +12,9 @@ public class BulletController : MonoBehaviour
     public static GameObject Create(GameObject bulletPrefab, Transform firePoint, int damage, float knockbackForce, bool isFriendly)
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<BulletController>().damage = damage;
-        bullet.GetComponent<BulletController>().knockbackForce = knockbackForce;
-        bullet.GetComponent<BulletController>().isFriendly = isFriendly;
+        bullet.GetComponent<OldBulletController>().damage = damage;
+        bullet.GetComponent<OldBulletController>().knockbackForce = knockbackForce;
+        bullet.GetComponent<OldBulletController>().isFriendly = isFriendly;
         return bullet;
     }
 

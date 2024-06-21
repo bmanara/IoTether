@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1690625640774388867}
   m_Layer: 0
   m_Name: BasePerk
-  m_TagString: Untagged
+  m_TagString: Ignore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

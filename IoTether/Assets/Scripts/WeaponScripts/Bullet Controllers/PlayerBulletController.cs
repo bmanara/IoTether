@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class PlayerBulletController : MonoBehaviour, IBulletController
+public class PlayerBulletController : BulletController
 {
     public int Damage { get; set; }
-    public GameObject ImpactEffect;
     public float KnockbackForce { get; set; }
 
     public static GameObject Create(GameObject bulletPrefab, Transform firePoint, int damage, float KnockbackForce)
@@ -18,22 +17,14 @@ public class PlayerBulletController : MonoBehaviour, IBulletController
         return bullet;
     }
 
-    public void Impact()
-    {
-        Destroy(gameObject);
-        Instantiate(ImpactEffect, transform.position, transform.rotation);
 
-    }
-
-    public bool CanImpact(Collider2D collision)
+    public override bool CanImpact(Collider2D collision)
     {
         return collision.gameObject.tag != "Player"
-           && collision.gameObject.tag != "Props"
-           && collision.gameObject.tag != "Bullet"
-           && collision.gameObject.tag != "Ignore";
+           && base.CanImpact(collision);
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
