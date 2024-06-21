@@ -45,7 +45,7 @@ public class Boss_Active : StateMachineBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = BulletController.Create(projectile, firePoint, damage, 0f, false);
+        GameObject bullet = EnemyBulletController.Create(projectile, firePoint, damage);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce((player.transform.position - curr.transform.position).normalized * projectileSpeed, ForceMode2D.Impulse);
         // Play audio?

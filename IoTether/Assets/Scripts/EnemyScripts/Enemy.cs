@@ -110,7 +110,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
         }
     }
 
-    private void KillSelf()
+    protected virtual void KillSelf()
     {
         DropEnergy();
         Destroy(gameObject);
