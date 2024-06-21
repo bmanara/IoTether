@@ -15,7 +15,8 @@ Our project for NUS Orbital AY 23/24
 - [9mm Pistol Shot SFX](https://pixabay.com/sound-effects/9mm-pistol-shot-6349/) by PixaBay
 - [Shot Rifle 39mm SFX](https://pixabay.com/sound-effects/shot-rifle-39-mm-37542/) by PixaBay
 - [shot and reload SFX](https://pixabay.com/sound-effects/shot-and-reload-6158/) by PixaBay
-- [Slash] (https://pixabay.com/sound-effects/slash-21834/) by PixaBay
+- [Slash](https://pixabay.com/sound-effects/slash-21834/) by 666HeroHero
+- [strong hit](https://pixabay.com/sound-effects/strong-hit-36455/) by PixaBay
 
 ## Packages Used
 - [Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg

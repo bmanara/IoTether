@@ -6,6 +6,7 @@ public class BossBattle : MonoBehaviour
 {
     [SerializeField] private BossTrigger bossTrigger;
     [SerializeField] private Enemy enemy;
+    [SerializeField] public GameObject boss;
 
     private List<Vector3> spawnPositions;
     public float spawnRate = 5f;
@@ -35,6 +36,7 @@ public class BossBattle : MonoBehaviour
     {
         Debug.Log("Boss Battle Started");
         InvokeRepeating("SpawnEnemy", 2f, spawnRate);
+        boss.GetComponent<Animator>().SetTrigger("isActive");
     }
 
     private void StopBattle()
