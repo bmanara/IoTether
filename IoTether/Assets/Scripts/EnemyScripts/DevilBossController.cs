@@ -7,8 +7,10 @@ public class DevilBossController : Enemy
     public GameObject projectile;
     protected Transform firePoint;
 
-    private int numberOfProjectiles = 18;
+    private int numberOfProjectiles = 14;
     private float radius = 5f;
+
+    private bool isEnraged = false;
 
     protected override void Init()
     {
@@ -21,6 +23,16 @@ public class DevilBossController : Enemy
         healthDrop = 2;
 
         firePoint = transform.Find("FirePoint");
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+
+        if (!isEnraged && health <= 60)
+        {
+            Enrage();
+        }
     }
 
     public void Attack()
@@ -46,5 +58,15 @@ public class DevilBossController : Enemy
 
             angle += angleStep;
         }
+    }
+
+    private void Enrage()
+    {
+        isEnraged = true;
+        numberOfProjectiles += 6;
+        GetComponent<Animator>().SetTrigger("isEnraged");
+        Color tmp = Color.red;
+        tmp.a = 0.8f;
+        GetComponent<SpriteRenderer>().color = tmp;
     }
 }
