@@ -1,22 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossTrigger : MonoBehaviour
 {
-   private bool isTriggered = false;
+    public event EventHandler OnPlayerEnterTrigger;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-         if (other.CompareTag("Player") && !isTriggered)
+        if (other.CompareTag("Player"))
         {
-              isTriggered = true;
-              // Trigger Boss Fight
-         }
-    }
-
-    public bool isBossTriggered()
-    {
-        return isTriggered;
+            OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

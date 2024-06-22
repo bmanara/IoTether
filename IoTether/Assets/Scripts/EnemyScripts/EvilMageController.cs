@@ -17,5 +17,6 @@ public class EvilMageController : RangedEnemy
         projectileSpeed = 6;
         fireRate = 2;
         firePoint = transform.Find("FirePoint");
+        range = 7f;
     }
 }

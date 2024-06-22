@@ -12,7 +12,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
     [SerializeField]
     protected float speed;
     [SerializeField]
-    protected int damage;
+    public int damage;
     protected int energyDrop;
     protected int healthDrop;
 
@@ -110,7 +110,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
         }
     }
 
-    private void KillSelf()
+    protected virtual void KillSelf()
     {
         DropEnergy();
         Destroy(gameObject);
