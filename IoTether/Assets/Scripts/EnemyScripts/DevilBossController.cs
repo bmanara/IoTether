@@ -6,6 +6,7 @@ public class DevilBossController : Enemy
 {
     public GameObject projectile;
     protected Transform firePoint;
+    public BossBattle bossBattleLogic;
 
     private int numberOfProjectiles = 14;
     private float radius = 5f;
@@ -58,6 +59,13 @@ public class DevilBossController : Enemy
 
             angle += angleStep;
         }
+    }
+
+    protected override void KillSelf()
+    {
+        base.KillSelf();
+        Debug.Log(Equals(null, GameObject.Find("Boss Room")));
+        bossBattleLogic.StopBattle();
     }
 
     private void Enrage()

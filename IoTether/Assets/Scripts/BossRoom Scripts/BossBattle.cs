@@ -39,7 +39,7 @@ public class BossBattle : MonoBehaviour
         boss.GetComponent<Animator>().SetTrigger("isActive");
     }
 
-    private void StopBattle()
+    public void StopBattle()
     {
         CancelInvoke("SpawnEnemy");
     }

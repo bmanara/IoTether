@@ -11481,6 +11481,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8930479176277013333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952295118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4757771598453457476, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+  m_PrefabInstance: {fileID: 8930479176277013332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89deecf01164af4c945e730bc8bf3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1119945197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12311,6 +12322,7 @@ MonoBehaviour:
   healthDropPrefab: {fileID: 0}
   ai: {fileID: 0}
   projectile: {fileID: 6619931348975271694, guid: d7b72dbf2ec82b5478c1b9d642b6c7eb, type: 3}
+  bossBattleLogic: {fileID: 952295118}
 --- !u!95 &1982300756
 Animator:
   serializedVersion: 5
