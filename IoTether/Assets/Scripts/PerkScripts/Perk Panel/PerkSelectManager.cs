@@ -23,9 +23,30 @@ public class PerkSelectManager : MonoBehaviour
             button.onClick.AddListener(() => OnPerkButtonClicked(button));
         }
         confirmButton.onClick.AddListener(ConfirmSelection);
+
+        UIManager.manager.onDialogueFinish += DisplayPerkPanel;
         
     }
 
+
+    private void OnDisable()
+    {
+        Debug.Log("unsubscribed to onDialogueFinish");
+        UIManager.manager.onDialogueFinish -= DisplayPerkPanel;
+    }
+    
+    public void DisplayPerkPanel()
+    {
+        Debug.Log("Displaying Perk Selection Panel.");
+        if (perkPanel == null)
+        {
+            Debug.LogError("perkPanel is null!");
+            return;
+        }
+
+        perkPanel.SetActive(true);
+        Debug.Log("Perk Panel should now be visible.");
+    }
     void OnPerkButtonClicked(Button clickedButton)
     {
         selectedPerk = clickedButton.GetComponentInChildren<TextMeshProUGUI>().text;
@@ -45,11 +66,13 @@ public class PerkSelectManager : MonoBehaviour
         {
             Debug.Log("Selected Perk: " + selectedPerk);
             perkPanel.SetActive(false);
-            Instantiate(droppedPerk, Vector3.zero, Quaternion.identity);    
+            GameObject player = GameObject.Find("Player");
+            Instantiate(droppedPerk, player.transform.position + Vector3.down, Quaternion.identity);    
         } 
         else
         {
             Debug.Log("No perk selected");
+            selectedPerkText.text = "No perk selected";
         }
     }
 

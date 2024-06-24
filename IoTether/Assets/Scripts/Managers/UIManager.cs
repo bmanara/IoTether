@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class UIManager : MonoBehaviour
     private float typingSpeed = 0.02f;
     private bool isTyping = false;
     private string previousSentence = "";
+    public event Action onDialogueFinish;
 
     //adaptive text
     public TextMeshProUGUI adaptiveText;
@@ -216,6 +218,8 @@ public class UIManager : MonoBehaviour
     {
         GameManager.manager.UnpauseGame(); // Unpause game after dialogue
         dialogueAnimator.SetBool("isOpen", false);
+        Debug.Log("Dialogue Finished, invoking onDialogueFinish");
+        onDialogueFinish?.Invoke();
     }
 
     public void EnablePickUpPanel()
