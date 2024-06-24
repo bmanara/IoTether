@@ -12,6 +12,7 @@ public class PerkSelectManager : MonoBehaviour
     public TextMeshProUGUI selectedPerkText;
 
     private string selectedPerk;
+    private GameObject droppedPerk;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class PerkSelectManager : MonoBehaviour
     {
         selectedPerk = clickedButton.GetComponentInChildren<TextMeshProUGUI>().text;
         selectedPerkText.text = "Selected Perk: " + selectedPerk;
+        droppedPerk = clickedButton.GetComponent<PerkButton>().droppedPerk;
     }
 
     [ContextMenu("Open Perk Panel")]
@@ -43,6 +45,7 @@ public class PerkSelectManager : MonoBehaviour
         {
             Debug.Log("Selected Perk: " + selectedPerk);
             perkPanel.SetActive(false);
+            Instantiate(droppedPerk, Vector3.zero, Quaternion.identity);    
         } 
         else
         {
