@@ -20,7 +20,7 @@ public class DevilBossController : Enemy
         // ai.speed = 1;
         damage = 1;
 
-        energyDrop = 100;
+        energyDrop = 120;
         healthDrop = 2;
 
         firePoint = transform.Find("FirePoint");
