@@ -51,6 +51,12 @@ public class PlayerEnergy : MonoBehaviour
         UpdateEnergyBar();
     }
 
+    public void replenishEnergy()
+    {
+        IncreaseEnergy(maxEnergy);
+        UpdateEnergyBar();
+    }
+
     public void SaveEnergy()
     {
         prevEnergy = energy;

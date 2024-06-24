@@ -40,6 +40,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
+    public void ReplenishHealth()
+    {
+        Heal(maxHealth);
+    }
+
     public void DecreaseHealth(int damage)
     {
         OnHit(damage);
