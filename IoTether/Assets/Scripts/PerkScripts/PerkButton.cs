@@ -13,15 +13,8 @@ public class PerkButton : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
-        perk = droppedPerk.GetComponent<IPerk>();
+       
     }
 
-    [ContextMenu("Apply Perk")]
-    void Apply()
-    {
-        if (perk != null)
-        {
-            perk.Apply(player);
-        }
-    }
+    
 }

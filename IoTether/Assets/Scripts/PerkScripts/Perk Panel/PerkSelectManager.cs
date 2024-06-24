@@ -13,6 +13,8 @@ public class PerkSelectManager : MonoBehaviour
 
     private string selectedPerk;
     private GameObject droppedPerk;
+
+    private bool hasPerk = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,15 +39,22 @@ public class PerkSelectManager : MonoBehaviour
     
     public void DisplayPerkPanel()
     {
-        Debug.Log("Displaying Perk Selection Panel.");
-        if (perkPanel == null)
+        if (!hasPerk)
         {
-            Debug.LogError("perkPanel is null!");
-            return;
-        }
+            hasPerk = true;
+            Debug.Log("Displaying Perk Selection Panel.");
+            if (perkPanel == null)
+            {
+                Debug.LogError("perkPanel is null!");
+                return;
+            }
 
-        perkPanel.SetActive(true);
-        Debug.Log("Perk Panel should now be visible.");
+            perkPanel.SetActive(true);
+            GameManager.manager.PauseGame();
+            Debug.Log("Perk Panel should now be visible.");
+
+        }
+        
     }
     void OnPerkButtonClicked(Button clickedButton)
     {
@@ -67,6 +76,7 @@ public class PerkSelectManager : MonoBehaviour
             Debug.Log("Selected Perk: " + selectedPerk);
             perkPanel.SetActive(false);
             GameObject player = GameObject.Find("Player");
+            GameManager.manager.UnpauseGame();
             Instantiate(droppedPerk, player.transform.position + Vector3.down, Quaternion.identity);    
         } 
         else

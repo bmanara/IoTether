@@ -10,6 +10,7 @@ public class HealthPerk : IPerk
     {
         GameObject playerParent = target.transform.parent.gameObject;
         playerParent.GetComponent<PlayerHealth>().IncrementHealth(amount);
+        playerParent.GetComponent<PlayerHealth>().ReplenishHealth();
         
     }
 }

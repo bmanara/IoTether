@@ -11,5 +11,6 @@ public class EnergyPerk : IPerk
     {
         GameObject playerParent = target.transform.parent.gameObject;
         playerParent.GetComponent<PlayerEnergy>().IncreaseMaxEnergyByPercentage(percentage);
+        playerParent.GetComponent<PlayerEnergy>().replenishEnergy();
     }
 }
