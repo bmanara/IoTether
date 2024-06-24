@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool gameIsPaused = false;
     private bool gameWasPaused = false;
 
+    public PerkSelectManager perkSelectionManager;
+
     public static event Action OnGameOver;
 
     private void Awake()
@@ -143,5 +145,13 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return score;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            perkSelectionManager.OpenPerkPanel();
+        }
     }
 }
