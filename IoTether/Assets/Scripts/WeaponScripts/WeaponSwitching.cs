@@ -21,6 +21,9 @@ public class WeaponSwitching : MonoBehaviour
         primaryWeapon = 0;
         secondaryWeapon = 1;
 
+        savedPrimaryWeapon = 0;
+        savedSecondaryWeapon = 1;
+
         SelectPrimaryWeapon();
         equippedWeapon = primaryWeapon;
     }

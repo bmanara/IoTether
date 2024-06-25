@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         OnGameOver?.Invoke();
+        manager.PauseGame();
     }
 
     public void LoadStartMenu()
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         // will need to reset the score to previously saved score
+        manager.UnpauseGame();
         score = prevScore;
         ScenesManager.manager.RestartScene();
         // PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
