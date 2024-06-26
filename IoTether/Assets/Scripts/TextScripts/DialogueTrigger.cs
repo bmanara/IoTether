@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    private bool ableToTalk = false;
+    protected bool ableToTalk = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
-    public void TriggerDialogue()
+    public virtual void TriggerDialogue()
     {
         UIManager.manager.StartDialogue(dialogue);
     }
