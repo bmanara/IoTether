@@ -71,6 +71,10 @@ public class PlayerEnergy : MonoBehaviour
 
     public void UpdateEnergyBar()
     {
-        UIManager.manager.SetEnergy(energy, maxEnergy);
+        if (UIManager.manager != null)
+        {
+            UIManager.manager.SetEnergy(energy, maxEnergy);
+        }
+       
     }
 }

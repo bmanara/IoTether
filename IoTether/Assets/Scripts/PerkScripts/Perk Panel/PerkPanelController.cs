@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PerkSelectManager : MonoBehaviour
+public class PerkPanelController : MonoBehaviour
 {
     public GameObject perkPanel;
     public List<Button> perkButtons;

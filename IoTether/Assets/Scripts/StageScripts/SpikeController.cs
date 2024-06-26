@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeMovement : MonoBehaviour
+public class SpikeController : MonoBehaviour
 {
     public Sprite[] spikeSprites;
     public float changeInterval = 2f;
