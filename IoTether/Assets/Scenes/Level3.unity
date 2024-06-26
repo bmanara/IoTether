@@ -14586,10 +14586,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duncan
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 131373826464029706, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002265236}
   m_SourcePrefab: {fileID: 100100000, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
 --- !u!1 &1212905286
 GameObject:
@@ -16018,6 +16022,33 @@ PrefabInstance:
       addedObject: {fileID: 1471508916}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482479d4b9ad7ca48b77a64b34b323bb, type: 3}
+--- !u!1 &2002265234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 131373826464029706, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+  m_PrefabInstance: {fileID: 1119945197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2002265236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002265234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b1c1d3c40ec7943bf4d365dcf7c5ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Duncan
+    sentences:
+    - "Ah, wizard! I am most grateful!\t"
+    - That monster had me trapped in this awful room!
+    - As a token of my gratitude, I will grant you one of these Perks!
+  postPerkDialogue:
+    name: Duncan
+    sentences:
+    - Enjoy your Perk!
 --- !u!1 &2076631435
 GameObject:
   m_ObjectHideFlags: 0
