@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorManager : MonoBehaviour
+public class DoorController : MonoBehaviour
 {
     private GameObject Closed;
     private GameObject Opened;
