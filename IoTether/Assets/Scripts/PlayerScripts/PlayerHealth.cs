@@ -100,7 +100,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     [ContextMenu("Update Health Bar")]
     public void UpdateHealthBar()
     {
-        UIManager.manager.SetHealth(health, maxHealth);
+        if(UIManager.manager != null)
+        {
+            UIManager.manager.SetHealth(health, maxHealth);
+        }
     }
 
     // Used for HealthPerk
