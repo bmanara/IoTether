@@ -31,8 +31,6 @@ public class WeaponPickup : MonoBehaviour
     {
         if (ableToPickup && Input.GetKeyDown(KeyCode.E))
         {
-            // other.GetComponentInChildren<WeaponSwap>().UpdateWeapon(weaponToGive);
-            Debug.Log(Equals(other, null));
             bool status = other.transform.parent.GetComponentInChildren<WeaponSwitching>().SwapWeapon(weaponToGive);
             if (status)
             {

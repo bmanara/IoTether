@@ -1,5 +1,7 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerControllers : MonoBehaviour
@@ -87,4 +89,17 @@ public class PlayerControllers : MonoBehaviour
     {
         transform.position = spawnPoint;
     }
+
+    // TESTING PURPORSES ONLY DO NOT USE ANYWHERE ELSE
+    public PlayerControllers GetInstance()
+    {
+        Start();
+        return Instance;
+    }
+
+    public static void ResetForTesting()
+    {
+        Instance = null;
+    }
+    // TESTING PURPOSES ONLY DO NOT USE ANYWHERE ELSE
 }

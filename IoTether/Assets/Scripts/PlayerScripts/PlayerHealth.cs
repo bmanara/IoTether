@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 {
     private readonly int defaultHealth = 10;
 
-    private int health;
+    [SerializeField] private int health;
     private int maxHealth = 10;
     private int prevHealth;
 
@@ -58,6 +58,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void OnHit(int damage)
     {
+        Debug.Log(Equals(null, sr));
         sr.material = matWhite;
         health = health - damage;
         if (health <= 0)
@@ -118,5 +119,11 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         maxHealth += health;
         UpdateHealthBar();
+    }
+
+    // Testing purposes
+    public int GetHealth()
+    {
+        return health;
     }
 }
