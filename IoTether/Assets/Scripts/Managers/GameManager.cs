@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
         gameIsOver = false;
         gameWasPaused = false;
         manager.UnpauseGame();
+        manager.UnpauseGame(); // again bad code, but it does fix the bug...
 
         ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
     }
