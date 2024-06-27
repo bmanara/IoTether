@@ -37,11 +37,13 @@ public class BossBattle : MonoBehaviour
         Debug.Log("Boss Battle Started");
         InvokeRepeating("SpawnEnemy", 2f, spawnRate);
         boss.GetComponent<Animator>().SetTrigger("isActive");
+        UIManager.manager.ActivateBossHealthBar();
     }
 
     public void StopBattle()
     {
         CancelInvoke("SpawnEnemy");
+        UIManager.manager.DeactivateBossHealthBar();
     }
 
     private void SpawnEnemy()

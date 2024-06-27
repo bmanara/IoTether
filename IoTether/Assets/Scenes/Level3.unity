@@ -15335,6 +15335,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
+--- !u!114 &1746632344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8361062967503443009, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+  m_PrefabInstance: {fileID: 1766074143}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1766074143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15356,6 +15367,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3680267720071649316, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444190679936722720, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: bossName
+      value: 
+      objectReference: {fileID: 1746632344}
+    - target: {fileID: 6147056000955751193, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147056000955751193, guid: 87e4569b9f287e44a9edd9c5747c3fca, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}

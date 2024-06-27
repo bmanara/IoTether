@@ -85,12 +85,12 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
         facingRight = !facingRight;
     }
 
-    public void DecreaseHealth(int damage)
+    public virtual void DecreaseHealth(int damage)
     {
         OnHit(damage);
     }
 
-    public void DecreaseHealth(int damage, Vector2 knockback)
+    public virtual void DecreaseHealth(int damage, Vector2 knockback)
     {
         OnHit(damage);
         rb.AddForce(knockback, ForceMode2D.Impulse);

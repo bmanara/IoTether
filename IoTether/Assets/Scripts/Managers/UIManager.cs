@@ -40,6 +40,9 @@ public class UIManager : MonoBehaviour
 
     public GameObject LoadingScreen;
 
+    public HealthBarController bossHealthBar;
+    public TMP_Text bossName;
+
     private void Awake()
     {
         
@@ -143,6 +146,7 @@ public class UIManager : MonoBehaviour
 
     public void EnableGameOverMenu()
     {
+        DeactivateBossHealthBar(); // wtf
         gameOverMenu
             .GetComponent<GameOverController>()
             .Setup(GameManager.manager.GetScore());
@@ -311,5 +315,26 @@ public class UIManager : MonoBehaviour
     public void ChangeTextColour(Color newColour)
     {
         adaptiveText.color = newColour;
+    }
+
+    public void ActivateBossHealthBar()
+    {
+        bossHealthBar.gameObject.SetActive(true);
+    }
+
+    public void SetBossHealth(int health, int maxHealth)
+    {
+        bossHealthBar.SetMaxHealth(maxHealth);
+        bossHealthBar.SetHealth(health);
+    }
+
+    public void DeactivateBossHealthBar()
+    {
+        bossHealthBar.gameObject.SetActive(false);
+    }
+
+    public void SetBossName(string name)
+    {
+        bossName.text = name;
     }
 }

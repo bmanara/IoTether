@@ -58,7 +58,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void OnHit(int damage)
     {
-        Debug.Log(Equals(null, sr));
         sr.material = matWhite;
         health = health - damage;
         if (health <= 0)

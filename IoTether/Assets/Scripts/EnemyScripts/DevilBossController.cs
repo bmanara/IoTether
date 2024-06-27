@@ -8,6 +8,8 @@ public class DevilBossController : Enemy
     protected Transform firePoint;
     public BossBattle bossBattleLogic;
 
+    private string name = "Azazel";
+
     private int numberOfProjectiles = 14;
     private float radius = 5f;
 
@@ -24,6 +26,10 @@ public class DevilBossController : Enemy
         healthDrop = 2;
 
         firePoint = transform.Find("FirePoint");
+
+        UIManager.manager.SetBossHealth(health, 120);
+
+        UIManager.manager.SetBossName(name);
     }
 
     protected override void Update()
@@ -76,5 +82,17 @@ public class DevilBossController : Enemy
         Color tmp = Color.red;
         tmp.a = 0.8f;
         GetComponent<SpriteRenderer>().color = tmp;
+    }
+
+    public override void DecreaseHealth(int damage)
+    {
+        base.DecreaseHealth(damage);
+        UIManager.manager.SetBossHealth(health, 120);
+    }
+
+    public override void DecreaseHealth(int damage, Vector2 knockback)
+    {
+        base.DecreaseHealth(damage, knockback);
+        UIManager.manager.SetBossHealth(health, 120); 
     }
 }
