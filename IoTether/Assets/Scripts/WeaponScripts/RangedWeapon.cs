@@ -50,4 +50,10 @@ public abstract class RangedWeapon : MonoBehaviour
             GetComponent<AudioSource>().Play();
         }
     }
+
+    // TESTING PURPOSES
+    public void SetFirePoint()
+    {
+        firePoint = transform.Find("FirePoint");
+    }
 }

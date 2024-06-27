@@ -90,12 +90,6 @@ public class WeaponSwitching : MonoBehaviour
 
     public bool SwapWeapon(int newWeapon)
     {
-        if (newWeapon == primaryWeapon || newWeapon == secondaryWeapon)
-        {
-            // Shouldn't be able to pick up the same weapon
-            return false;
-        }
-
         if (equippedWeapon == primaryWeapon)
         {
             transform.GetChild(primaryWeapon).GetComponent<WeaponDrop>().DropWeapon(transform.position);

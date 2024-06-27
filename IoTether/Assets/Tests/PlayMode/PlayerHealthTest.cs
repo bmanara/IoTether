@@ -8,12 +8,22 @@ using UnityEngine.TestTools;
 
 public class PlayerHealthTest
 {
-    // A Test behaves as an ordinary method
+    GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/PlayerParent.prefab");
+
+    [Test]
+    public void TakeDamage()
+    {
+        var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        int initialHealth = player.GetComponent<PlayerHealth>().GetHealth();
+        player.GetComponent<PlayerHealth>().DecreaseHealth(2);
+
+        Assert.AreEqual(player.GetComponent<PlayerHealth>().GetHealth(), initialHealth - 2);
+    }
+
     [Test]
     public void TakeDamageAndHeal()
     {
         // Use the Assert class to test conditions
-        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/PlayerParent.prefab");
         var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
         int initialHealth = player.GetComponent<PlayerHealth>().GetHealth();
         player.GetComponent<PlayerHealth>().DecreaseHealth(1);
@@ -23,6 +33,4 @@ public class PlayerHealthTest
 
         Assert.AreEqual(player.GetComponent<PlayerHealth>().GetHealth(), initialHealth);
     }
-
-    
 }

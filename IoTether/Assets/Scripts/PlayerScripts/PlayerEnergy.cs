@@ -77,4 +77,10 @@ public class PlayerEnergy : MonoBehaviour
         }
        
     }
+
+    // For testing purposes
+    public int GetEnergy()
+    {
+        return energy;
+    }
 }
