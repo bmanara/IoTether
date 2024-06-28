@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     [SerializeField] private int health;
     private int maxHealth = 10;
+    private int prevMaxHealth;
     private int prevHealth;
 
     private Material matWhite;
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         sr = gameObject.GetComponentInChildren<SpriteRenderer>();
         health = maxHealth;
         prevHealth = maxHealth;
+        prevMaxHealth = maxHealth;
         matWhite = Resources.Load("WhiteFlash", typeof(Material)) as Material; // as Material is type casting
         matDefault = sr.material;
 
@@ -81,12 +83,14 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public void SaveHealth()
     {
         prevHealth = health;
+        prevMaxHealth = maxHealth;
         UpdateHealthBar();
     }
 
     public void ReloadHealth()
     {
         health = prevHealth;
+        maxHealth = prevMaxHealth;
         UpdateHealthBar();
     }
 

@@ -7,11 +7,13 @@ public class PlayerEnergy : MonoBehaviour
     private int energy;
     private int maxEnergy = 120;
     private int prevEnergy;
+    private int prevMaxEnergy;
 
     private void Awake()
     {
         energy = maxEnergy;
         prevEnergy = maxEnergy;
+        prevMaxEnergy = maxEnergy;
 
         UpdateEnergyBar();
     }
@@ -60,12 +62,14 @@ public class PlayerEnergy : MonoBehaviour
     public void SaveEnergy()
     {
         prevEnergy = energy;
+        prevMaxEnergy = maxEnergy;
         UpdateEnergyBar();
     }
 
     public void ReloadEnergy()
     {
         energy = prevEnergy;
+        maxEnergy = prevMaxEnergy;
         UpdateEnergyBar();
     }
 
