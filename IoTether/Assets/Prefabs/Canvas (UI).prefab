@@ -4938,7 +4938,7 @@ MonoBehaviour:
   adaptiveText: {fileID: 7537489313688851350}
   LoadingScreen: {fileID: 210231101640428237}
   bossHealthBar: {fileID: 3672697428575117804}
-  bossName: {fileID: 0}
+  bossName: {fileID: 8361062967503443009}
 --- !u!1001 &1907568056426284376
 PrefabInstance:
   m_ObjectHideFlags: 0
