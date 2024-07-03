@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private bool gameWasPaused = false;
 
     public static event Action OnGameOver;
+    private bool isGameOverTriggered = false;
 
     private void Awake()
     {
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (isGameOverTriggered) return;
+        isGameOverTriggered = true;
         OnGameOver?.Invoke();
         manager.PauseGame();
     }
@@ -61,7 +64,6 @@ public class GameManager : MonoBehaviour
         gameIsOver = false;
         gameWasPaused = false;
         manager.UnpauseGame();
-        manager.UnpauseGame(); // again bad code, but it does fix the bug...
 
         ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
     }
@@ -87,7 +89,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
             gameIsPaused = false;
-        } 
+        }
         else
         {
             gameWasPaused = false;
@@ -105,7 +107,8 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
-        
+        isGameOverTriggered = false;
+
     }
 
     public void NextLevel()
@@ -119,7 +122,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().SaveWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
         UIManager.manager.EnterLoad();
-      
+
     }
 
     //Added delay so SpawnPoint can fully reload before spawning player 
@@ -130,7 +133,7 @@ public class GameManager : MonoBehaviour
 
         Transform spawnPoint = GameObject.Find("SpawnPoint").transform;
         PlayerControllers.Instance.Respawn(spawnPoint.position);
-       
+
     }
 
     public void IncreaseScore(int score)
