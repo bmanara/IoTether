@@ -16195,7 +16195,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1216926109619479851, guid: 482479d4b9ad7ca48b77a64b34b323bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.000061
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1559012081291353075, guid: 482479d4b9ad7ca48b77a64b34b323bb, type: 3}
       propertyPath: droppedPerk
@@ -16465,6 +16465,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 316664301559017636, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418634587394786560, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4665547977576405370, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.709
@@ -16505,6 +16513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4688325835440118880, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4757771598453457476, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
       propertyPath: boss
       value: 
@@ -16513,9 +16525,29 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 4939590892447629115, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+    - target: {fileID: 5385788695756862444, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605007386404055150, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6201368389888985310, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
       propertyPath: m_Name
       value: 'Boss Room '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192466686067637660, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192466686067637660, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350360062128176239, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.645
       objectReference: {fileID: 0}
     - target: {fileID: 8611122266785198806, guid: 5371d1fcd99d7734692cf1c76ab9fdec, type: 3}
       propertyPath: m_Size.x
