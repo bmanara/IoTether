@@ -13,6 +13,8 @@ public abstract class MeleeWeapon : MonoBehaviour
     protected float force;
     protected bool isAttacking = false;
 
+    public Quaternion originalRotation;
+
     private float timeUntilMelee = 0.1f;
 
     protected void Start()

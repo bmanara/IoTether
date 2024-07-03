@@ -34,10 +34,11 @@ public class AimController : MonoBehaviour
             {
                 FlipMeleeWeapon();
             }
-            return;
         }
-        
-        FlipRangedWeapon();
+        else 
+        {
+            FlipRangedWeapon();
+        }
 
         // Rotate game object based on mouse position
 
@@ -62,20 +63,22 @@ public class AimController : MonoBehaviour
     {
         // Flip melee weapon sprite based on mouse position
         Vector3 currentScale = transform.localScale;
-        currentScale.x *= -1;
+        currentScale.y *= -1;
         transform.localScale = currentScale;
         facingRight = !facingRight;
     }
 
     private void FlipRangedWeapon()
     {
+        
         if (!facingRight)
         {
             Vector3 currentScale = transform.localScale;
-            currentScale.x *= -1;
+            currentScale.y *= -1;
             transform.localScale = currentScale;
             facingRight = !facingRight;
         }
+        
 
         // Flip gun sprite based on mouse position
         if (mousePos.x < transform.position.x)
