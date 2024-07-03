@@ -10,6 +10,7 @@ public class BossBattle : MonoBehaviour
 
     private List<Vector3> spawnPositions;
     public float spawnRate = 5f;
+    private bool isBattleActive = false;
 
     private void Awake()
     {
@@ -23,6 +24,13 @@ public class BossBattle : MonoBehaviour
     private void Start()
     {
         bossTrigger.OnPlayerEnterTrigger += BossTrigger_OnPlayerEnterTrigger;
+        GameManager.OnGameOver += HandleGameOver;
+    }
+
+    private void OnDestroy()
+    {
+        bossTrigger.OnPlayerEnterTrigger -= BossTrigger_OnPlayerEnterTrigger;
+        GameManager.OnGameOver -= HandleGameOver;
     }
 
     private void BossTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
@@ -34,6 +42,7 @@ public class BossBattle : MonoBehaviour
 
     private void StartBattle()
     {
+        isBattleActive = true;
         Debug.Log("Boss Battle Started");
         InvokeRepeating("SpawnEnemy", 2f, spawnRate);
         boss.GetComponent<Animator>().SetTrigger("isActive");
@@ -42,13 +51,23 @@ public class BossBattle : MonoBehaviour
 
     public void StopBattle()
     {
+        if(!isBattleActive) return;
+        isBattleActive = false;
         CancelInvoke("SpawnEnemy");
         UIManager.manager.DeactivateBossHealthBar();
     }
 
     private void SpawnEnemy()
     {
+        if(!isBattleActive) return;
+
         Vector3 spawnPosition = spawnPositions[Random.Range(0, spawnPositions.Count)];
         Instantiate(enemy, spawnPosition, Quaternion.identity);
+    }
+
+    private void HandleGameOver()
+    {
+        StopBattle();
+        bossTrigger.DisableTrigger();
     }
 }

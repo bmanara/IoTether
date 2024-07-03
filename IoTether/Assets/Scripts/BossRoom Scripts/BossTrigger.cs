@@ -14,4 +14,9 @@ public class BossTrigger : MonoBehaviour
             OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
         }
     }
+
+    public void DisableTrigger()
+    {
+        gameObject.SetActive(false);
+    }
 }
