@@ -90,6 +90,11 @@ public class PlayerControllers : MonoBehaviour
         transform.position = spawnPoint;
     }
 
+    public void IncreaseMoveSpeed(float speed)
+    {
+        moveSpeed += speed;
+    }
+
     // TESTING PURPORSES ONLY DO NOT USE ANYWHERE ELSE
     public PlayerControllers GetInstance()
     {
