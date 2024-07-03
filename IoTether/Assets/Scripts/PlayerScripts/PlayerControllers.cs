@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerControllers : MonoBehaviour
 {
     private float moveSpeed = 4f;
+    private float prevMoveSpeed;
     private bool facingRight = true;
 
     private Vector2 input;
@@ -18,6 +19,7 @@ public class PlayerControllers : MonoBehaviour
 
     private void Start()
     {
+        prevMoveSpeed = moveSpeed;
         if (Instance != null)
         {
             Destroy(this.gameObject);
@@ -88,6 +90,21 @@ public class PlayerControllers : MonoBehaviour
     public void Respawn(Vector3 spawnPoint)
     {
         transform.position = spawnPoint;
+    }
+    //Used for Perks
+    public void IncreaseMoveSpeed(float speed)
+    {
+        moveSpeed += speed;
+    }
+
+    public void SaveSpeed()
+    {
+        prevMoveSpeed = moveSpeed;
+    }
+
+    public void ReloadSpeed()
+    {
+        moveSpeed = prevMoveSpeed;
     }
 
     // TESTING PURPORSES ONLY DO NOT USE ANYWHERE ELSE
