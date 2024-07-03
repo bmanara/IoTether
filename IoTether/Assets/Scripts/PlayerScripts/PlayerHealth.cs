@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     private Material matDefault;
     private SpriteRenderer sr;
 
+    private bool isDead = false;
+
 
     private void Awake()
     {
@@ -72,6 +74,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        if (isDead) return;
+        isDead = true;
+        Debug.Log("invoking GameOver");
         GameManager.manager.GameOver();
     }
 
@@ -91,6 +96,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         health = prevHealth;
         maxHealth = prevMaxHealth;
+        isDead = false;
         UpdateHealthBar();
     }
 
@@ -98,6 +104,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         maxHealth = defaultHealth;
         health = maxHealth;
+        isDead = false;
         UpdateHealthBar();
     }
 
@@ -129,4 +136,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         return health;
     }
+
+   
 }
