@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8760b8e2530ded94b9a86938ca3c19f7, type: 3}
-  m_Name: SpeedPerk
+  m_Name: SmallSpeedPerk
   m_EditorClassIdentifier: 
-  amount: 3
+  amount: 1.5

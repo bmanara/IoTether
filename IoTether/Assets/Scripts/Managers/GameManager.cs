@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
+        PlayerControllers.Instance.ReloadSpeed();
         isGameOverTriggered = false;
 
     }
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.GetComponent<PlayerHealth>().SaveHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().SaveWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
+        PlayerControllers.Instance.SaveSpeed();
         UIManager.manager.EnterLoad();
 
     }
