@@ -5,8 +5,15 @@ using UnityEngine;
 public class SpikeController : MonoBehaviour
 {
     public Sprite[] spikeSprites;
-    public float changeInterval = 2f;
-    public float fastInterval = 1f;
+    public float primeInterval = 1f;
+    public float activeInterval = 0.1f;
+    public float cooldownInterval = 0.1f;
+
+
+    //public float changeInterval = 2f;
+    //public float fastInterval = 1f;
+
+
     public int damage;
     public float damageCooldown = 1f;
     public float startDelay = 0f;
@@ -34,6 +41,7 @@ public class SpikeController : MonoBehaviour
     }
 
  
+    /*
 
     IEnumerator ChangeSprite()
     {
@@ -50,6 +58,32 @@ public class SpikeController : MonoBehaviour
 
             float currentInterval = (currentSpriteIndex >= spikeSprites.Length - 2) ? fastInterval : changeInterval;
             yield return new WaitForSeconds(currentInterval);
+        }
+    }
+    */ 
+
+    IEnumerator ChangeSprite()
+    {
+        while (true)
+        {
+            spriteRenderer.sprite = spikeSprites[0];
+            canDamage = false;
+            yield return new WaitForSeconds(primeInterval);
+
+            spriteRenderer.sprite = spikeSprites[1];
+            canDamage = true;
+            DamageAllInContact();
+            yield return new WaitForSeconds(activeInterval);
+
+            spriteRenderer.sprite = spikeSprites[2];
+            canDamage = true;
+            DamageAllInContact();
+            yield return new WaitForSeconds(activeInterval);
+
+            spriteRenderer.sprite = spikeSprites[3];
+            canDamage = false;
+            yield return new WaitForSeconds(cooldownInterval);
+
         }
     }
 
