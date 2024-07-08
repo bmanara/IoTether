@@ -8,7 +8,7 @@ public class PistolController : RangedWeapon
     {
         base.Init();
         bulletForce = 12f;
-        fireRate = 0.4f;
+        fireRate = 0.5f;
         canFire = 0.1f;
         energyCost = 1;
         damage = 150;

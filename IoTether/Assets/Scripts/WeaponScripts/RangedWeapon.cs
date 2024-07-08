@@ -14,6 +14,8 @@ public abstract class RangedWeapon : MonoBehaviour
     protected int energyCost;
     protected int damage;
     protected float force;
+    
+    // TODO: Add spread variable 
 
     protected void Start()
     {

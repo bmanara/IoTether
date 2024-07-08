@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class RifleController : RangedWeapon
+public class SMGController : RangedWeapon
 {
     protected override void Init()
     {
         base.Init();
-        bulletForce = 15f;
-        fireRate = 0.4f;
+        bulletForce = 12f;
+        fireRate = 0.2f;
         canFire = 0.1f;
         energyCost = 1;
-        damage = 2;
-        force = 10f;
+        damage = 1; // should buff rifle?
+
+        force = 6f;
+
     }
 
-    // Update is overriden to allow for automatic fire
     protected override void Update()
     {
         if (GameManager.manager.gameIsPaused)
