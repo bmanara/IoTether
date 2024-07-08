@@ -5,15 +5,22 @@ using UnityEngine;
 public class SpikeController : MonoBehaviour
 {
     public Sprite[] spikeSprites;
-    public float changeInterval = 2f;
-    public float fastInterval = 1f;
-    public int damage;
+    public float primeInterval = 1f;
+    public float activeInterval = 0.1f;
+    public float cooldownInterval = 0.5f;
+
+
+    //public float changeInterval = 2f;
+    //public float fastInterval = 1f;
+
+
+    public int damage = 1;
     public float damageCooldown = 1f;
     public float startDelay = 0f;
 
-    private SpriteRenderer spriteRenderer;
-    private int currentSpriteIndex = 0;
-    private bool canDamage = false;
+    protected SpriteRenderer spriteRenderer;
+    protected int currentSpriteIndex = 0;
+    protected bool canDamage = false;
     public static bool onCooldown = false;
 
     //HashSet to track Colliders in Contact
@@ -21,7 +28,7 @@ public class SpikeController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(StartWithDelay());
@@ -34,6 +41,7 @@ public class SpikeController : MonoBehaviour
     }
 
  
+    /*
 
     IEnumerator ChangeSprite()
     {
@@ -50,6 +58,32 @@ public class SpikeController : MonoBehaviour
 
             float currentInterval = (currentSpriteIndex >= spikeSprites.Length - 2) ? fastInterval : changeInterval;
             yield return new WaitForSeconds(currentInterval);
+        }
+    }
+    */ 
+
+    protected virtual IEnumerator ChangeSprite()
+    {
+        while (true)
+        {
+            spriteRenderer.sprite = spikeSprites[0];
+            canDamage = false;
+            yield return new WaitForSeconds(primeInterval);
+
+            spriteRenderer.sprite = spikeSprites[1];
+            canDamage = true;
+            DamageAllInContact();
+            yield return new WaitForSeconds(activeInterval);
+
+            spriteRenderer.sprite = spikeSprites[2];
+            canDamage = true;
+            DamageAllInContact();
+            yield return new WaitForSeconds(activeInterval);
+
+            spriteRenderer.sprite = spikeSprites[3];
+            canDamage = false;
+            yield return new WaitForSeconds(cooldownInterval);
+
         }
     }
 
@@ -77,7 +111,7 @@ public class SpikeController : MonoBehaviour
         }
     }
 
-    private void TryDamagePlayer(Collider2D other)
+    protected void TryDamagePlayer(Collider2D other)
     {
         if (canDamage
             && !onCooldown
@@ -92,7 +126,7 @@ public class SpikeController : MonoBehaviour
         }
     }
 
-    private void DamageAllInContact()
+    protected void DamageAllInContact()
     {
         foreach (var collider in collidersInContact)
         {
