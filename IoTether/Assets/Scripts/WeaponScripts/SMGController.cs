@@ -11,9 +11,10 @@ public class SMGController : RangedWeapon
         fireRate = 0.2f;
         canFire = 0.1f;
         energyCost = 1;
-        damage = 1; // should buff rifle?
+        damage = 1;
 
         force = 6f;
+        spread = 5f;
     }
 
     protected override void Update()

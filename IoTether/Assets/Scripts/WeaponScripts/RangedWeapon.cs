@@ -14,8 +14,9 @@ public abstract class RangedWeapon : MonoBehaviour
     protected int energyCost;
     protected int damage;
     protected float force;
-    
+
     // TODO: Add spread variable 
+    protected float spread = 0;
 
     protected void Start()
     {
@@ -46,7 +47,26 @@ public abstract class RangedWeapon : MonoBehaviour
         bool canShoot = PlayerControllers.Instance.GetComponent<PlayerEnergy>().DecreaseEnergy(energyCost);
         if (canShoot)
         {
-            GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
+            // GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
+            GameObject bullet;
+            if (spread > 0)
+            {
+                bullet = PlayerBulletController.Create(
+                    bulletPrefab, 
+                    firePoint.position, 
+                    firePoint.rotation * Quaternion.Euler(Random.Range(-spread, spread), 0, 0), 
+                    damage, 
+                    force);
+            }
+            else {      
+                bullet = PlayerBulletController.Create(
+                    bulletPrefab, 
+                    firePoint.position, 
+                    firePoint.rotation, 
+                    damage, 
+                    force);
+            }
+
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             Vector3 dir = firePoint.right;
             rb.AddForce(dir * bulletForce, ForceMode2D.Impulse);

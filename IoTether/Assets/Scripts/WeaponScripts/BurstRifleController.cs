@@ -9,7 +9,7 @@ public class BurstRifleController : RangedWeapon
         base.Init();
 
         bulletForce = 15f;
-        fireRate = 0.55f;
+        fireRate = 0.7f;
         canFire = 0.1f;
         energyCost = 1;
         damage = 1;
