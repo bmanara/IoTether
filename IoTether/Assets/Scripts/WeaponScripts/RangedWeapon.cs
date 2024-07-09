@@ -41,14 +41,15 @@ public abstract class RangedWeapon : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public virtual void Shoot()
     {
         bool canShoot = PlayerControllers.Instance.GetComponent<PlayerEnergy>().DecreaseEnergy(energyCost);
         if (canShoot)
         {
             GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+            Vector3 dir = firePoint.right;
+            rb.AddForce(dir * bulletForce, ForceMode2D.Impulse);
             GetComponent<AudioSource>().Play();
         }
     }

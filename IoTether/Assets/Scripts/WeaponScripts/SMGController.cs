@@ -14,7 +14,6 @@ public class SMGController : RangedWeapon
         damage = 1; // should buff rifle?
 
         force = 6f;
-
     }
 
     protected override void Update()

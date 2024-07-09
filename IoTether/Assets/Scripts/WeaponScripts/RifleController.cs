@@ -11,7 +11,7 @@ public class RifleController : RangedWeapon
         bulletForce = 15f;
         fireRate = 0.4f;
         canFire = 0.1f;
-        energyCost = 1;
+        energyCost = 2;
         damage = 2;
         force = 10f;
     }
