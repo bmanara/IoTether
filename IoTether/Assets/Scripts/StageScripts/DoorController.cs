@@ -8,16 +8,15 @@ public class DoorController : MonoBehaviour
     private GameObject Closed;
     private GameObject Opened;
     private bool isOpen = false;
-    //public Transform enemiesInRoom;
 
     public List<Enemy> enemies;
 
-    //FadeText fields
     private float fadeDuration = 0.7f;
     private float displayDuration = 0.3f;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private bool isRestarting = false;
+
+    private void Start()
     {
         Closed = gameObject.transform.GetChild(0).gameObject;
         Opened = gameObject.transform.GetChild(1).gameObject;
@@ -25,8 +24,10 @@ public class DoorController : MonoBehaviour
 
         foreach (var enemy in enemies)
         {
-            enemy.OnEnemyDefeated += CheckEnemies; // Subscribe to the enemy's defeat event
+            enemy.OnEnemyDefeated += CheckEnemies;
         }
+
+        GameManager.OnGameRestart += OnGameRestarted; 
     }
 
     private void OnDestroy()
@@ -35,9 +36,11 @@ public class DoorController : MonoBehaviour
         {
             if (enemy != null)
             {
-                enemy.OnEnemyDefeated -= CheckEnemies; // Unsubscribe to avoid memory leaks
+                enemy.OnEnemyDefeated -= CheckEnemies;
             }
         }
+
+        GameManager.OnGameRestart -= OnGameRestarted;
     }
 
     private void CheckEnemies()
@@ -52,23 +55,6 @@ public class DoorController : MonoBehaviour
         Open();
     }
 
-
-     /* public bool canOpen()
-    {
-        return enemiesInRoom.childCount == 0 && !isOpen;
-    }
-
-    // Update is called once per frame
-    public void Update()
-    {
-        if (canOpen()) // Only opens once
-        {
-            Open();
-        }   
-        
-    }
-     */
-
     [ContextMenu("Close")]
     private void Close()
     {
@@ -76,20 +62,21 @@ public class DoorController : MonoBehaviour
         Opened.SetActive(false);
         isOpen = false;
     }
+
     [ContextMenu("Open")]
-    protected virtual void Open()
+    private void Open()
     {
-        if(!isOpen)
+        if (!isOpen)
         {
             Closed.SetActive(false);
             Opened.SetActive(true);
-            // Debug.Log("Door Opened");
             isOpen = true;
-            PlayAdaptiveText();
 
+            if (!isRestarting) // Only play adaptive text if the game is not restarting
+            {
+                PlayAdaptiveText();
+            }
         }
-       
-       
     }
 
     protected virtual void PlayAdaptiveText()
@@ -103,4 +90,14 @@ public class DoorController : MonoBehaviour
         return isOpen;
     }
 
+    private void OnGameRestarted()
+    {
+        isRestarting = true;
+        Invoke("ResetRestartingFlag", 1f); // Reset the flag after a short delay
+    }
+
+    private void ResetRestartingFlag()
+    {
+        isRestarting = false;
+    }
 }

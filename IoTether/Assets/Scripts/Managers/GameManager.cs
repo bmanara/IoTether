@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private bool gameWasPaused = false;
 
     public static event Action OnGameOver;
+    public static event Action OnGameRestart;
     private bool isGameOverTriggered = false;
 
     private void Awake()
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        OnGameRestart?.Invoke();
         // will need to reset the score to previously saved score
         manager.UnpauseGame();
         score = prevScore;
