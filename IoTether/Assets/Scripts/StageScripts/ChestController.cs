@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestController : MonoBehaviour
+public class ChestController : InteractableProp
 {
-    private bool hasOpened = false;
-    protected bool canDrop = false;
     private GameObject closed;
     private GameObject opened;
     private GameObject prompt;
@@ -20,38 +18,7 @@ public class ChestController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && !hasOpened)
-        {
-            canDrop = true;
-            UIManager.manager.EnableInteractPanel();
-        }
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            canDrop = false;
-            UIManager.manager.DisableInteractPanel();
-        }
-    }
-
-    private void Update()
-    {
-        if (canDrop && Input.GetKeyDown(KeyCode.F) && !GameManager.manager.gameIsPaused)
-        {
-            if (!hasOpened)
-            {
-                TriggerOpen();
-                hasOpened = true;
-            }
-        }
-    }
-
-    public virtual void TriggerOpen()
+    protected override void Trigger()
     {
         Open();
         GameObject player = GameObject.Find("Player");
@@ -59,10 +26,11 @@ public class ChestController : MonoBehaviour
         UIManager.manager.DisableInteractPanel();
     }
 
+
     private void Open()
     {
-        opened.SetActive(true);
         closed.SetActive(false);
+        opened.SetActive(true);
         prompt.SetActive(false);
     }
 
@@ -71,4 +39,5 @@ public class ChestController : MonoBehaviour
         closed.SetActive(true);
         opened.SetActive(false);
     }
+
 }

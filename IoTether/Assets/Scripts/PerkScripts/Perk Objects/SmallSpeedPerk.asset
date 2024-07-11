@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8760b8e2530ded94b9a86938ca3c19f7, type: 3}
   m_Name: SmallSpeedPerk
   m_EditorClassIdentifier: 
-  amount: 1.5
+  amount: 0.75
