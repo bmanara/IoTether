@@ -41,6 +41,7 @@ public class FountainScript : MonoBehaviour
     {
         GameObject player = GameObject.Find("Player");
         Instantiate(refillPerk, player.transform.position + Vector3.down, Quaternion.identity);
+        UIManager.manager.DisableInteractPanel();
     }
 
    
