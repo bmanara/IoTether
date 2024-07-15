@@ -7,7 +7,7 @@ public class ChestController : InteractableProp
     private GameObject closed;
     private GameObject opened;
     private GameObject prompt;
-    public GameObject chestDrop;
+    public GameObject[] chestDrops;
 
     private void Start()
     {
@@ -22,7 +22,11 @@ public class ChestController : InteractableProp
     {
         Open();
         GameObject player = GameObject.Find("Player");
-        Instantiate(chestDrop, player.transform.position + Vector3.down, Quaternion.identity);
+        if (chestDrops.Length > 0)
+        {
+            int randomIndex = Random.Range(0, chestDrops.Length);
+            Instantiate(chestDrops[randomIndex], player.transform.position + Vector3.down, Quaternion.identity);
+        }
         UIManager.manager.DisableInteractPanel();
     }
 

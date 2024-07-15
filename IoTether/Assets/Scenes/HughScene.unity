@@ -5776,6 +5776,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 429ff9de161f9574ea1695fbcfb751ee, type: 3}
+--- !u!1001 &1314425516764295107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.8779798
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6922994
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.021958591
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517915594357716914, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379225191688064320, guid: 9c359336277dc7548b502f587c189867, type: 3}
+      propertyPath: m_Name
+      value: PerkChest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c359336277dc7548b502f587c189867, type: 3}
 --- !u!4 &1572609364513807147
 Transform:
   m_ObjectHideFlags: 0
@@ -6221,6 +6278,26 @@ PrefabInstance:
       propertyPath: chestDrop
       value: 
       objectReference: {fileID: 5876923210314228977, guid: 429ff9de161f9574ea1695fbcfb751ee, type: 3}
+    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
+      propertyPath: chestDrops.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
+      propertyPath: chestDrops.Array.data[0]
+      value: 
+      objectReference: {fileID: 4732712503975164115, guid: 779d8f62c528bc94ba0a25aa40278844, type: 3}
+    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
+      propertyPath: chestDrops.Array.data[1]
+      value: 
+      objectReference: {fileID: 7279023391579149387, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
+    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
+      propertyPath: chestDrops.Array.data[2]
+      value: 
+      objectReference: {fileID: 7693310014522390134, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
+    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
+      propertyPath: chestDrops.Array.data[3]
+      value: 
+      objectReference: {fileID: 2831318719191472299, guid: 4b1a0a6a987415f4d906b6ec94e21c49, type: 3}
     - target: {fileID: 5350398394705223075, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.57
@@ -6293,3 +6370,4 @@ SceneRoots:
   - {fileID: 8414739329207663319}
   - {fileID: 2111810580}
   - {fileID: 1822532739}
+  - {fileID: 1314425516764295107}
