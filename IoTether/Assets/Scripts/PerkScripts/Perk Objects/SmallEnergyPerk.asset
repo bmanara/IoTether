@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bcaec176f582c4ebce986534b16bcd, type: 3}
   m_Name: SmallEnergyPerk
   m_EditorClassIdentifier: 
-  percentage: 0.25
+  amount: 10
