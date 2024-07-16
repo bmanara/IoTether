@@ -6270,34 +6270,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
-    - target: {fileID: 1462345086893824180, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrop
-      value: 
-      objectReference: {fileID: 5876923210314228977, guid: 429ff9de161f9574ea1695fbcfb751ee, type: 3}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrop
-      value: 
-      objectReference: {fileID: 5876923210314228977, guid: 429ff9de161f9574ea1695fbcfb751ee, type: 3}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrops.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrops.Array.data[0]
-      value: 
-      objectReference: {fileID: 4732712503975164115, guid: 779d8f62c528bc94ba0a25aa40278844, type: 3}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrops.Array.data[1]
-      value: 
-      objectReference: {fileID: 7279023391579149387, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrops.Array.data[2]
-      value: 
-      objectReference: {fileID: 7693310014522390134, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
-    - target: {fileID: 1664351051302640914, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
-      propertyPath: chestDrops.Array.data[3]
-      value: 
-      objectReference: {fileID: 2831318719191472299, guid: 4b1a0a6a987415f4d906b6ec94e21c49, type: 3}
     - target: {fileID: 5350398394705223075, guid: db645ae6b1a724442a07df35fcb1e889, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.57

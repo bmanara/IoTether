@@ -15370,6 +15370,10 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2929440887755449441, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.066
+      objectReference: {fileID: 0}
     - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.02
