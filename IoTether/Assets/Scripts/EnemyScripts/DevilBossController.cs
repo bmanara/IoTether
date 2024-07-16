@@ -8,7 +8,7 @@ public class DevilBossController : Enemy
     protected Transform firePoint;
     public BossBattle bossBattleLogic;
 
-    private string name = "Azazel";
+    private string bossName = "Azazel";
 
     private int numberOfProjectiles = 14;
     private float radius = 5f;
@@ -29,7 +29,7 @@ public class DevilBossController : Enemy
 
         UIManager.manager.SetBossHealth(health, 120);
 
-        UIManager.manager.SetBossName(name);
+        UIManager.manager.SetBossName(bossName);
     }
 
     protected override void Update()

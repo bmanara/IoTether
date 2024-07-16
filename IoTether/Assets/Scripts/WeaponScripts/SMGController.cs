@@ -14,7 +14,7 @@ public class SMGController : RangedWeapon
         damage = 1;
 
         force = 6f;
-        spread = 5f;
+        spread = 10f;
     }
 
     protected override void Update()
