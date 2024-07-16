@@ -20,7 +20,7 @@ public class PumpShotgunController : RangedWeapon
         bool canShoot = PlayerControllers.Instance.GetComponent<PlayerEnergy>().DecreaseEnergy(energyCost);
         if (canShoot)
         {
-            float spreadAngle = -30;
+            float spreadAngle = -15;
             for (int i = 0; i < 5; i++)
             {
                 GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
@@ -32,7 +32,7 @@ public class PumpShotgunController : RangedWeapon
                 rb.AddForce(dir * bulletForce, ForceMode2D.Impulse);
                 GetComponent<AudioSource>().Play();
 
-                spreadAngle += 15;
+                spreadAngle += 9;
             }
         }
     }
