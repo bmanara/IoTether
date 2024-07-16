@@ -15,6 +15,9 @@ public abstract class RangedWeapon : MonoBehaviour
     protected int damage;
     protected float force;
 
+    // TODO: Add spread variable 
+    protected float spread = 0;
+
     protected void Start()
     {
         Init();
@@ -39,14 +42,20 @@ public abstract class RangedWeapon : MonoBehaviour
         }
     }
 
-    public void Shoot()
+    public virtual void Shoot()
     {
         bool canShoot = PlayerControllers.Instance.GetComponent<PlayerEnergy>().DecreaseEnergy(energyCost);
         if (canShoot)
         {
             GameObject bullet = PlayerBulletController.Create(bulletPrefab, firePoint, damage, force);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+
+            // Add spread by rotating bullet
+            float spreadAngle = Random.Range(-spread, spread);
+            bullet.transform.rotation *= Quaternion.Euler(0, 0, spreadAngle);
+            Vector3 dir = bullet.transform.right;
+
+            rb.AddForce(dir * bulletForce, ForceMode2D.Impulse);
             GetComponent<AudioSource>().Play();
         }
     }

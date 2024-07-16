@@ -17,6 +17,8 @@ Our project for NUS Orbital AY 23/24
 - [shot and reload SFX](https://pixabay.com/sound-effects/shot-and-reload-6158/) by PixaBay
 - [Slash](https://pixabay.com/sound-effects/slash-21834/) by 666HeroHero
 - [strong hit](https://pixabay.com/sound-effects/strong-hit-36455/) by PixaBay
+- [SMG_Shot](https://pixabay.com/sound-effects/gunshot-smg-shot-1-203471/) by Moniker_Subriquet
+- [Shotgun Shot](https://www.soundsnap.com/remington_870_pump_action_shotgun_firing_a_single_shot_and_pumping_01_wav_0) by SoundSnap
 
 ## Packages Used
 - [Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg
