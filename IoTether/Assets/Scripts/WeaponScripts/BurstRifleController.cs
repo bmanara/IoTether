@@ -27,7 +27,7 @@ public class BurstRifleController : RangedWeapon
         for (int i = 0; i < 3; i++)
         {
             Debug.Log(i);
-            base.Shoot();
+            base.Shoot(); // ok wtf is this LOL
             yield return new WaitForSeconds(0.15f);
         }
     }
