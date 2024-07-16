@@ -240,4 +240,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cd8728e0873f64eaf445c7c42089d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToDrop: {fileID: 0}
+  weaponToDrop: {fileID: 2814847193303301628, guid: 67738d3b4092e1e46809776cbede9ede, type: 3}
