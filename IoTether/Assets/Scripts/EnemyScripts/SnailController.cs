@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GremlinController : Enemy
+public class SnailController : Enemy
 {
     protected override void Init()
     {
         base.Init();
-        health = 6;
-        ai.speed = 3;
-        damage = 2;
-        energyDrop = 8;
+        health = 150;
+        ai.speed = 0.5f;
+        damage = 10;
+        energyDrop = 150;
         healthDrop = 0;
     }
 }

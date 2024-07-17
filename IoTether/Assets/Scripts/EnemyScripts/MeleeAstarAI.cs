@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class MeleeAstarAI : AstarAI
 {
+    public int range;
     public override void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, targetPosition.transform.position);
-        if (distanceToPlayer > 8)
+        if (distanceToPlayer > range)
         {
             // if enemy not detected, don't move
             animator.SetBool("isMoving", false);

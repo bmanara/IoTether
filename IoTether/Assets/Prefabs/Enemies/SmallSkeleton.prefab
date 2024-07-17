@@ -300,3 +300,4 @@ MonoBehaviour:
   targetPosition: {fileID: 0}
   speed: 0
   nextWaypointDistance: 0.1
+  range: 8
