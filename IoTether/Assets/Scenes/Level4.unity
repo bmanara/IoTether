@@ -292,6 +292,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSkeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -982,6 +990,14 @@ PrefabInstance:
     - target: {fileID: 6253530402881377358, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_Name
       value: Small Devil (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4954,6 +4970,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSkeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.99
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6150,6 +6174,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Devil (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6222,6 +6254,14 @@ PrefabInstance:
     - target: {fileID: 6253530402881377358, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_Name
       value: Small Devil (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7055,6 +7095,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Devil
       objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7237,11 +7285,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.728333
+      value: -34.62
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.140398
+      value: 5.17
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7294,11 +7342,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.38173
+      value: -39.35
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5195198
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7472,11 +7520,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3787598903900552991, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.356003
+      value: -39.32
       objectReference: {fileID: 0}
     - target: {fileID: 3787598903900552991, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.754471
+      value: 6.71
       objectReference: {fileID: 0}
     - target: {fileID: 3787598903900552991, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7921,6 +7969,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSkeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7982,6 +8038,14 @@ PrefabInstance:
     - target: {fileID: 5553002186034159044, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
       propertyPath: m_Name
       value: SmallSkeleton (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32748,6 +32812,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSkeleton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.81
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32804,6 +32876,14 @@ PrefabInstance:
     - target: {fileID: 6253530402881377358, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_Name
       value: Small Devil (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45599,6 +45679,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallSkeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314640472561821903, guid: f8f53c17cc7f3cd48942b8df3394742d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45755,11 +45843,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.44
+      value: -32.53
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.27
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 6197003114818867087, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -46107,6 +46195,14 @@ PrefabInstance:
     - target: {fileID: 6253530402881377358, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
       propertyPath: m_Name
       value: Small Devil
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6901166940190394082, guid: 08b818a00ccba9a4d97e1e1674b80ae7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46713,6 +46809,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 850214789}
     m_Modifications:
+    - target: {fileID: 3653913531562450499, guid: 468671c9726f2ca4fab4b84f029bdff3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653913531562450499, guid: 468671c9726f2ca4fab4b84f029bdff3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 4505572602568805213, guid: 468671c9726f2ca4fab4b84f029bdff3, type: 3}
       propertyPath: m_Name
       value: Evil Mage (1)
