@@ -10,8 +10,8 @@ public class BananaController : InteractableProp
     public void haha()
     {
         GameObject playerParent = GameObject.Find("PlayerParent");
-        playerParent.GetComponent<PlayerHealth>().IncrementHealth(10);
-        playerParent.GetComponent<PlayerHealth>().ReplenishHealth();
+        playerParent.GetComponent<PlayerHealth>().Heal(5);
+        //playerParent.GetComponent<PlayerHealth>().ReplenishHealth();
     }
     protected override void Trigger()
     {
