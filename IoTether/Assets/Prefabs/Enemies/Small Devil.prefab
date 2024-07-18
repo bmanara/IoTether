@@ -194,6 +194,7 @@ MonoBehaviour:
   targetPosition: {fileID: 0}
   speed: 0
   nextWaypointDistance: 0.1
+  range: 8
 --- !u!1 &8161904092256460761
 GameObject:
   m_ObjectHideFlags: 0
