@@ -15,7 +15,7 @@ public class EvilWizardController : RangedEnemy
         energyDrop = 6;
         healthDrop = 0;
 
-        projectileSpeed = 8;
+        projectileSpeed = 10;
         fireRate = 1.5f;
         firePoint = transform.Find("Weapon").transform.Find("FirePoint");
         range = 10f;
