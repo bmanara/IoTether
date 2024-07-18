@@ -7,16 +7,12 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
 {
-    [SerializeField]
     protected int health;
-    [SerializeField]
     protected float speed;
-    [SerializeField]
     public int damage;
     protected int energyDrop;
     protected int healthDrop;
 
-    [SerializeField]
     protected GameObject player;
 
     public GameObject energyDropPrefab;

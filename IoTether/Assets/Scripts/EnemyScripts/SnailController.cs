@@ -8,7 +8,7 @@ public class SnailController : Enemy
     {
         base.Init();
         health = 150;
-        ai.speed = 0.5f;
+        ai.speed = 0.3f;
         damage = 10;
         energyDrop = 150;
         healthDrop = 0;

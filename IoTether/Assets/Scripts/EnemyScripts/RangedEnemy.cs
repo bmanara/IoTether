@@ -8,8 +8,8 @@ public class RangedEnemy : Enemy
 {
     public GameObject projectile;
     protected Transform firePoint;
-    public float projectileSpeed;
-    public float fireRate;
+    protected float projectileSpeed;
+    protected float fireRate;
     private float nextFire = 0.1f;
     protected float range;
 
@@ -26,7 +26,7 @@ public class RangedEnemy : Enemy
         }
     }
 
-    private void Shoot()
+    protected virtual void Shoot()
     {
         GameObject bullet = EnemyBulletController.Create(projectile, firePoint, damage);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
