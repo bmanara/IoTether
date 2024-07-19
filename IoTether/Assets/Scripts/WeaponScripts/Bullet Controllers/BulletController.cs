@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public abstract class BulletController : MonoBehaviour
 {
-    int Damage { get; set; }
+    public int Damage { get; set; }
 
     public GameObject ImpactEffect;
 

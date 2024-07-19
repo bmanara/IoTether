@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerBulletController : BulletController
 {
-    public int Damage { get; set; }
     public float KnockbackForce { get; set; }
 
     // unsupported, getting rid
