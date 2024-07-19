@@ -66,4 +66,9 @@ public class ChrisController : Enemy
         base.DecreaseHealth(damage, knockback);
         UIManager.manager.SetBossHealth(health, 160);
     }
+
+    public void Attack()
+    {
+        Debug.Log("Chris Attacks! RAAAAAH");
+    }
 }
