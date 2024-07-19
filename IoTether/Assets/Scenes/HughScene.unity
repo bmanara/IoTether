@@ -340,7 +340,7 @@ MonoBehaviour:
   - Name: PickUp
     clip: {fileID: 8300000, guid: 308926eba4fdd2941aea759dc6fe360d, type: 3}
   - Name: PlayerHit
-    clip: {fileID: 8300000, guid: 16900e4d31888d148ac4640ef440b211, type: 3}
+    clip: {fileID: 8300000, guid: 1048ab9d368bfe741b86e28291281ef1, type: 3}
   musicSource: {fileID: 1831148115}
   sfxSource: {fileID: 1240198853}
 --- !u!4 &125417459
