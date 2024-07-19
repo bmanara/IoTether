@@ -27,7 +27,7 @@ public class ChestController : InteractableProp
             int randomIndex = Random.Range(0, chestDrops.Length);
             Instantiate(chestDrops[randomIndex], player.transform.position + Vector3.down, Quaternion.identity);
         }
-        //AudioManager.manager.PlaySFX("GetItem");
+        AudioManager.manager.PlaySFX("ChestOpen");
         UIManager.manager.DisableInteractPanel();
     }
 

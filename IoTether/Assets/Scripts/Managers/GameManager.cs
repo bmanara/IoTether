@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         score = prevScore;
         ScenesManager.manager.RestartScene();
         // PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
-        StartCoroutine(RespawnPlayer(0.001f));
+        StartCoroutine(RespawnPlayer(0f));
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
