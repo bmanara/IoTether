@@ -18,6 +18,7 @@ public class DroppedPerk : MonoBehaviour
             perk.Apply(collision.gameObject);
 
             UIManager.manager.PlayAdaptiveText(perkText, color, 0.7f, 0.3f);
+            AudioManager.manager.PlaySFX("GetItem");
         }
     }
 }

@@ -70,6 +70,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         }
         
         Invoke("ResetMaterial", .1f);
+        AudioManager.manager.PlaySFX("PlayerHit");
     }
 
     private void Die()

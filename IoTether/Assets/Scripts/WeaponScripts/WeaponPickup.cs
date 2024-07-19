@@ -32,6 +32,7 @@ public class WeaponPickup : MonoBehaviour
         if (ableToPickup && Input.GetKeyDown(KeyCode.E))
         {
             bool status = other.transform.parent.GetComponentInChildren<WeaponSwitching>().SwapWeapon(weaponToGive);
+            AudioManager.manager.PlaySFX("PickUp");
             if (status)
             {
                 Destroy(gameObject);

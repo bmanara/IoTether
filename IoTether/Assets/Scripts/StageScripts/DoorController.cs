@@ -74,6 +74,7 @@ public class DoorController : MonoBehaviour
 
             if (!isRestarting) // Only play adaptive text if the game is not restarting
             {
+                AudioManager.manager.PlaySFX("RoomClear");
                 PlayAdaptiveText();
             }
         }
