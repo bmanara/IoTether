@@ -19,5 +19,6 @@ public class BananaController : InteractableProp
         UIManager.manager.PlayAdaptiveText(BananaText, yellow, 0.7f, 0.3f, 45);
         Destroy(gameObject);
         haha();
+        AudioManager.manager.PlaySFX("BananaEat");
     }
 }
