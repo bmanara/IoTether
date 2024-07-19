@@ -104,12 +104,13 @@ public class GameManager : MonoBehaviour
         manager.UnpauseGame();
         score = prevScore;
         ScenesManager.manager.RestartScene();
-        // PlayerControllers.Instance.Respawn(GameObject.Find("SpawnPoint").transform.position);
-        StartCoroutine(RespawnPlayer(0f));
+        RespawnPlayer();
+       // StartCoroutine(RespawnPlayer(0.5f));
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
         PlayerControllers.Instance.ReloadSpeed();
+        UIManager.manager.EnterLoad();
         isGameOverTriggered = false;
 
     }
@@ -127,6 +128,12 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.SaveSpeed();
         UIManager.manager.EnterLoad();
 
+    }
+
+    private void RespawnPlayer()
+    {
+        Transform spawnPoint = GameObject.Find("SpawnPoint").transform;
+        PlayerControllers.Instance.Respawn(spawnPoint.position);
     }
 
     //Added delay so SpawnPoint can fully reload before spawning player 
