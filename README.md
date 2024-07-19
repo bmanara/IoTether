@@ -19,6 +19,13 @@ Our project for NUS Orbital AY 23/24
 - [strong hit](https://pixabay.com/sound-effects/strong-hit-36455/) by PixaBay
 - [SMG_Shot](https://pixabay.com/sound-effects/gunshot-smg-shot-1-203471/) by Moniker_Subriquet
 - [Shotgun Shot](https://www.soundsnap.com/remington_870_pump_action_shotgun_firing_a_single_shot_and_pumping_01_wav_0) by SoundSnap
+- [Item Pickup](https://pixabay.com/sound-effects/item-pick-up-38258/) by PixaBay
+- [Item Equip](https://pixabay.com/sound-effects/item-equip-6904/) by PixaBay
+- [Damage](https://pixabay.com/sound-effects/damage-40114/) by PixaBay
+- [Yay](https://pixabay.com/sound-effects/yay-6326/) by PixaBay
+- [Good!](https://pixabay.com/sound-effects/good-6081/) by PixaBay
+- [Mmmm!](https://pixabay.com/sound-effects/mmmm-102363/) by PixaBay
+- [Chest Opening](https://pixabay.com/sound-effects/chest-opening-87569/) by PixaBay
 
 ## Packages Used
 - [Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg
