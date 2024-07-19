@@ -335,7 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds: []
   sfxSounds:
-  - Name: Get Item
+  - Name: GetItem
     clip: {fileID: 8300000, guid: c239c74397e84674fb956730d705b45d, type: 3}
   musicSource: {fileID: 1831148115}
   sfxSource: {fileID: 1240198853}

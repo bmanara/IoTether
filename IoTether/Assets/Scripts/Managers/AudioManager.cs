@@ -7,10 +7,17 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
+    public static AudioManager manager;
 
     private void Start()
     {
-
+        if (manager != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        manager = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
         
     }
 
@@ -38,8 +45,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            sfxSource.clip = s.clip;
-            sfxSource.Play();
+            sfxSource.PlayOneShot(s.clip);
         }
     }
 }
