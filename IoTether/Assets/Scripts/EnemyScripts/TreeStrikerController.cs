@@ -47,4 +47,14 @@ public class TreeStrikerController : RangedEnemy
         active = true;
         ResetMaterial();
     }
+
+    public void OnDestroy()
+    {
+        if (active)
+        {
+            DropEnergy();
+        }
+
+        Destroy(gameObject);
+    }
 }

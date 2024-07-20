@@ -15,6 +15,9 @@ public class ChrisController : Enemy
 
     private bool isEnraged = false;
 
+    public TreeStrikerController treeStrikerOne;
+    public TreeStrikerController treeStrikerTwo;
+
     protected override void Init()
     {
         base.Init();
@@ -45,6 +48,8 @@ public class ChrisController : Enemy
     {
         base.KillSelf();
         bossBattleLogic.StopBattle();
+        treeStrikerOne.OnDestroy();
+        treeStrikerTwo.OnDestroy();
     }
 
     private void Enrage()
