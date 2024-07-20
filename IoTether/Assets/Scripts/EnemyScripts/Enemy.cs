@@ -113,7 +113,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable, ILootable
         GameManager.manager.IncreaseScore(1);
     }
 
-    private void ResetMaterial()
+    protected void ResetMaterial()
     {
         sr.material = matDefault;
     }
