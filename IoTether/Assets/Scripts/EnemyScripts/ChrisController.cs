@@ -71,4 +71,9 @@ public class ChrisController : Enemy
     {
         Debug.Log("Chris Attacks! RAAAAAH");
     }
+
+    public void EnragedAttack()
+    {
+        Debug.Log("Angry Chris Attacks! RAAAAAH");
+    }
 }
