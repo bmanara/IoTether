@@ -6835,6 +6835,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 517467375248392692, guid: d6d941ee84e073448ac10455030ad940, type: 3}
+      propertyPath: m_LightType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 517467375248392692, guid: d6d941ee84e073448ac10455030ad940, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517467375248392692, guid: d6d941ee84e073448ac10455030ad940, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517467375248392692, guid: d6d941ee84e073448ac10455030ad940, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517467375248392692, guid: d6d941ee84e073448ac10455030ad940, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1474171935857738458, guid: d6d941ee84e073448ac10455030ad940, type: 3}
       propertyPath: m_Name
       value: Main Camera

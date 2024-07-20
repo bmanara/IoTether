@@ -317,6 +317,6 @@ MonoBehaviour:
   - Name: RoomClear
     clip: {fileID: 8300000, guid: 6ba141eb7641ea5428cc84493033f23e, type: 3}
   - Name: StageClear
-    clip: {fileID: 8300000, guid: 1a2094989c7f8eb48b51f0e23c8ef749, type: 3}
+    clip: {fileID: 8300000, guid: 6ba141eb7641ea5428cc84493033f23e, type: 3}
   musicSource: {fileID: 8983544209731526080}
   sfxSource: {fileID: 5311581349776388774}
