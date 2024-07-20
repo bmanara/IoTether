@@ -48,7 +48,7 @@ public class TreeStrikerController : RangedEnemy
         ResetMaterial();
     }
 
-    public void OnDestroy()
+    public void FullDestroy()
     {
         if (active)
         {

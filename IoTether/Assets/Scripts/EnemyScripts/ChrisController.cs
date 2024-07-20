@@ -48,8 +48,8 @@ public class ChrisController : Enemy
     {
         base.KillSelf();
         bossBattleLogic.StopBattle();
-        treeStrikerOne.OnDestroy();
-        treeStrikerTwo.OnDestroy();
+        treeStrikerOne.FullDestroy();
+        treeStrikerTwo.FullDestroy();
     }
 
     private void Enrage()
