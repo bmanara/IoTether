@@ -14,8 +14,8 @@ public abstract class BulletController : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(ImpactEffect, transform.position, transform.rotation);
-
     }
+
     public virtual bool CanImpact(Collider2D collision)
     {
         return collision.gameObject.tag != "Props"
