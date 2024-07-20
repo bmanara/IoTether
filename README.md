@@ -26,6 +26,7 @@ Our project for NUS Orbital AY 23/24
 - [Good!](https://pixabay.com/sound-effects/good-6081/) by PixaBay
 - [Mmmm!](https://pixabay.com/sound-effects/mmmm-102363/) by PixaBay
 - [Chest Opening](https://pixabay.com/sound-effects/chest-opening-87569/) by PixaBay
+- [Magic Smite](https://pixabay.com/sound-effects/magic-smite-6012/) by PixaBay
 
 ## Packages Used
 - [Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg
