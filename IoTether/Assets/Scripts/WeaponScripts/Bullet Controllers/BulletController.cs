@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public abstract class BulletController : MonoBehaviour
 {
-    int Damage { get; set; }
+    public int Damage { get; set; }
 
     public GameObject ImpactEffect;
 
@@ -14,8 +14,8 @@ public abstract class BulletController : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(ImpactEffect, transform.position, transform.rotation);
-
     }
+
     public virtual bool CanImpact(Collider2D collision)
     {
         return collision.gameObject.tag != "Props"

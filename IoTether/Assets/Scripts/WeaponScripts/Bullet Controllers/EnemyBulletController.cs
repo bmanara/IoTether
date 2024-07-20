@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EnemyBulletController : BulletController
 {
-    public int Damage { get; set; }
-
     public static GameObject Create(GameObject bulletPrefab, Transform firePoint, int damage)
     {
         GameObject bullet = GameObject.Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
