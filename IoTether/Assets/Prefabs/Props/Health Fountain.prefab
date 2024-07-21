@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 2502347752967163978}
   - component: {fileID: 7231748370725763501}
   - component: {fileID: 1573963418134764819}
+  - component: {fileID: 8879640658555167358}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -386,6 +387,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8838136, y: 0.6328511}
   m_EdgeRadius: 0
+--- !u!95 &8879640658555167358
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114989753966407174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68d9b714d6f3517489c6fea2b7cfc9ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4403953500570728831
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +420,7 @@ GameObject:
   - component: {fileID: 7245244677034449546}
   - component: {fileID: 8279926398523752379}
   - component: {fileID: 4671633304600220391}
+  - component: {fileID: 8522970671976321985}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -561,3 +584,24 @@ PolygonCollider2D:
       - {x: 0.47434032, y: -0.27236128}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!95 &8522970671976321985
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4403953500570728831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f0701d0b567e94c4792a4a370e4d389a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
