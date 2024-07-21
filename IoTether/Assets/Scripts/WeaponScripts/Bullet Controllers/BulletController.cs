@@ -20,7 +20,8 @@ public abstract class BulletController : MonoBehaviour
     {
         return collision.gameObject.tag != "Props"
            && collision.gameObject.tag != "Bullet"
-           && collision.gameObject.tag != "Ignore";
+           && collision.gameObject.tag != "Ignore"
+           && collision.gameObject.tag != "CrystalCollide";
     }
 
     abstract public void OnTriggerEnter2D(Collider2D collision);

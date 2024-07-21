@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Props
   - Ignore
+  - CrystalCollide
   layers:
   - Default
   - TransparentFX
