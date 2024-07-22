@@ -320,5 +320,21 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6ba141eb7641ea5428cc84493033f23e, type: 3}
   - Name: StageClear
     clip: {fileID: 8300000, guid: 6ba141eb7641ea5428cc84493033f23e, type: 3}
+  - Name: Pistol
+    clip: {fileID: 8300000, guid: 84adcb7a7f9ba594e8f240c8778e0ffc, type: 3}
+  - Name: Rifle
+    clip: {fileID: 8300000, guid: ed7cec7319cce924cb7af788f9bc5d1e, type: 3}
+  - Name: Sniper
+    clip: {fileID: 8300000, guid: 1fc8f41104e74b649a6c4fcb4299078c, type: 3}
+  - Name: Sword
+    clip: {fileID: 8300000, guid: 2f6de3843c24a2a44814196169a0ce69, type: 3}
+  - Name: Shotgun
+    clip: {fileID: 8300000, guid: 5b9b6a2852209304490390daae4024a2, type: 3}
+  - Name: SMG
+    clip: {fileID: 8300000, guid: b14b01f0f22093a48a9983ce35e08c1a, type: 3}
+  - Name: BossHit
+    clip: {fileID: 8300000, guid: 4f011aeaee489ea409fc0375339dcc4f, type: 3}
+  - Name: Smite
+    clip: {fileID: 8300000, guid: 494f6c60c3534d44fbe130b7cc1315cb, type: 3}
   musicSource: {fileID: 8983544209731526080}
   sfxSource: {fileID: 5311581349776388774}
