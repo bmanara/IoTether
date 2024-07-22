@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] Button _playButton;
     [SerializeField] Button _quitButton;
+    [SerializeField] Slider _slider;
 
     private void Start()
     {
@@ -24,4 +25,15 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Quit game");
         Application.Quit();
     }
+
+    public void MusicVolume()
+    {
+        AudioManager.manager.MusicVolume(_slider.value);
+    }
+
+    public void SFXVolume()
+    {
+        AudioManager.manager.SFXVolume(_slider.value);
+    }
+
 }

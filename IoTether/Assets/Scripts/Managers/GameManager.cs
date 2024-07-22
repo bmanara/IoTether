@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action OnGameOver;
     public static event Action OnGameRestart;
+    public static event Action OnLoadStartMenu;
     private bool isGameOverTriggered = false;
 
     private void Awake()
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadStartMenu()
     {
+        OnLoadStartMenu?.Invoke();
         ScenesManager.manager.LoadStartMenu();
         if (PlayerControllers.Instance != null)
         {

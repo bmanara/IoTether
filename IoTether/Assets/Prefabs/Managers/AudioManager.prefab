@@ -46,7 +46,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -302,7 +302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607829c2676313847b492f90eb1e4c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - Name: Background
+    clip: {fileID: 8300000, guid: f43504d6e9a689f4681ed895fe62be3b, type: 3}
   sfxSounds:
   - Name: GetItem
     clip: {fileID: 8300000, guid: c239c74397e84674fb956730d705b45d, type: 3}
