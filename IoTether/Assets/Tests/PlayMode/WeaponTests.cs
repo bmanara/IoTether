@@ -33,7 +33,7 @@ public class WeaponTests
     }
 
     [Test]
-    public void RifleTests()
+    public void SMGTests()
     {
         var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
         player.GetComponentInChildren<WeaponSwitching>().SwapWeapon(2);
@@ -49,10 +49,61 @@ public class WeaponTests
     }
 
     [Test]
-    public void SniperTests()
+    public void RifleTests()
     {
         var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
         player.GetComponentInChildren<WeaponSwitching>().SwapWeapon(3);
+
+        RangedWeapon rangedWeapon = player.transform.GetChild(0).GetComponentInChildren<RangedWeapon>();
+        GameObject firePoint = new GameObject();
+        firePoint.name = "FirePoint";
+        firePoint.transform.parent = rangedWeapon.gameObject.transform;
+        rangedWeapon.SetFirePoint();
+        int initialEnergy = player.GetComponent<PlayerEnergy>().GetEnergy();
+
+        rangedWeapon.Shoot();
+    }
+
+    [Test]
+
+    public void SniperTests()
+    {
+        var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        player.GetComponentInChildren<WeaponSwitching>().SwapWeapon(4);
+
+        RangedWeapon rangedWeapon = player.transform.GetChild(0).GetComponentInChildren<RangedWeapon>();
+        GameObject firePoint = new GameObject();
+        firePoint.name = "FirePoint";
+        firePoint.transform.parent = rangedWeapon.gameObject.transform;
+        rangedWeapon.SetFirePoint();
+        int initialEnergy = player.GetComponent<PlayerEnergy>().GetEnergy();
+
+        rangedWeapon.Shoot();
+    }
+
+    [Test]
+
+    public void BurstRifleTests()
+    {
+        var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        player.GetComponentInChildren<WeaponSwitching>().SwapWeapon(5);
+
+        RangedWeapon rangedWeapon = player.transform.GetChild(0).GetComponentInChildren<RangedWeapon>();
+        GameObject firePoint = new GameObject();
+        firePoint.name = "FirePoint";
+        firePoint.transform.parent = rangedWeapon.gameObject.transform;
+        rangedWeapon.SetFirePoint();
+        int initialEnergy = player.GetComponent<PlayerEnergy>().GetEnergy();
+
+        rangedWeapon.Shoot();
+    }
+
+    [Test]
+
+    public void ShotgunTests()
+    {
+        var player = Object.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        player.GetComponentInChildren<WeaponSwitching>().SwapWeapon(6);
 
         RangedWeapon rangedWeapon = player.transform.GetChild(0).GetComponentInChildren<RangedWeapon>();
         GameObject firePoint = new GameObject();
