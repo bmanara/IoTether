@@ -27,7 +27,8 @@ public class DoorController : MonoBehaviour
             enemy.OnEnemyDefeated += CheckEnemies;
         }
 
-        GameManager.OnGameRestart += OnGameRestarted; 
+        GameManager.OnGameRestart += OnGameRestarted;
+        GameManager.OnLoadStartMenu += OnGameRestarted;
     }
 
     private void OnDestroy()
@@ -41,6 +42,7 @@ public class DoorController : MonoBehaviour
         }
 
         GameManager.OnGameRestart -= OnGameRestarted;
+        GameManager.OnLoadStartMenu -= OnGameRestarted;
     }
 
     private void CheckEnemies()

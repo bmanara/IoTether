@@ -43,6 +43,8 @@ public class UIManager : MonoBehaviour
     public HealthBarController bossHealthBar;
     public TMP_Text bossName;
 
+    [SerializeField] Slider _slider;
+
     private void Awake()
     {
         
@@ -336,5 +338,15 @@ public class UIManager : MonoBehaviour
     public void SetBossName(string name)
     {
         bossName.text = name;
+    }
+
+    public void MusicVolume()
+    {
+        AudioManager.manager.MusicVolume(_slider.value);
+    }
+
+    public void SFXVolume()
+    {
+        AudioManager.manager.SFXVolume(_slider.value);
     }
 }

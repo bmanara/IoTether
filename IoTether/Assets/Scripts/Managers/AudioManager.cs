@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource, sfxSource;
     public static AudioManager manager;
 
-    private void Start()
+    private void Awake()
     {
         if (manager != null)
         {
@@ -19,6 +19,11 @@ public class AudioManager : MonoBehaviour
         manager = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
         
+    }
+
+    private void Start()
+    {
+        PlayMusic("Main Menu");
     }
 
     public void PlayMusic(string name)
@@ -47,5 +52,31 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(s.clip);
         }
+    }
+
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+    }
+
+    public void ToggleSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+    }
+
+
+    public void MusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
+    }
+
+    public void ChangeMusic(string name)
+    {
+        PlayMusic(name);
     }
 }

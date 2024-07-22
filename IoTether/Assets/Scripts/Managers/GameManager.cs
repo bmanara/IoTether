@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public static event Action OnGameOver;
     public static event Action OnGameRestart;
+    public static event Action OnLoadStartMenu;
     private bool isGameOverTriggered = false;
 
     private void Awake()
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadStartMenu()
     {
+        OnLoadStartMenu?.Invoke();
         ScenesManager.manager.LoadStartMenu();
         if (PlayerControllers.Instance != null)
         {
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         {
             UIManager.manager.DestroySelf();
         }
+        AudioManager.manager.PlayMusic("Main Menu");
 
     }
 
@@ -67,6 +70,7 @@ public class GameManager : MonoBehaviour
         manager.UnpauseGame();
 
         ScenesManager.manager.LoadTutorial(); // might need to change whether we want to load tutorial or not
+        AudioManager.manager.PlayMusic("Background");
     }
 
     public void PauseGame()
@@ -105,7 +109,13 @@ public class GameManager : MonoBehaviour
         score = prevScore;
         ScenesManager.manager.RestartScene();
         RespawnPlayer();
-       // StartCoroutine(RespawnPlayer(0.5f));
+        if (SceneManager.GetActiveScene().buildIndex == 7 || 
+            SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            AudioManager.manager.PlayMusic("Background");
+        }
+        
+        // StartCoroutine(RespawnPlayer(0.5f));
         PlayerControllers.Instance.GetComponent<PlayerHealth>().ReloadHealth();
         PlayerControllers.Instance.gameObject.GetComponentInChildren<WeaponSwitching>().LoadWeapons();
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().ReloadEnergy();
@@ -127,6 +137,11 @@ public class GameManager : MonoBehaviour
         PlayerControllers.Instance.GetComponent<PlayerEnergy>().SaveEnergy();
         PlayerControllers.Instance.SaveSpeed();
         UIManager.manager.EnterLoad();
+
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            //AudioManager.manager.PlayMusic("Background");
+        }
 
     }
 

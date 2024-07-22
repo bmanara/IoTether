@@ -27,6 +27,11 @@ Our project for NUS Orbital AY 23/24
 - [Mmmm!](https://pixabay.com/sound-effects/mmmm-102363/) by PixaBay
 - [Chest Opening](https://pixabay.com/sound-effects/chest-opening-87569/) by PixaBay
 - [Magic Smite](https://pixabay.com/sound-effects/magic-smite-6012/) by PixaBay
+- [Voyage](https://www.youtube.com/watch?v=qqaChAqCJiU) by Panda Beats
+- [16-Bit Fantasy RPG OST - Boss Battle 1](https://trombonistmjhood.wixsite.com/mjhood) by M.J Hood Music
+- [Cherry Cola](https://www.youtube.com/watch?v=I380eM9YSms) by Cody O'Quinn
+
+
 
 ## Packages Used
 - [Astar Pathfinding Project](https://arongranberg.com/astar/) by Aron Granberg
