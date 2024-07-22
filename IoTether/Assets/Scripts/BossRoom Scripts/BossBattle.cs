@@ -47,6 +47,7 @@ public class BossBattle : MonoBehaviour
         InvokeRepeating("SpawnEnemy", 2f, spawnRate);
         boss.GetComponent<Animator>().SetTrigger("isActive");
         UIManager.manager.ActivateBossHealthBar();
+        AudioManager.manager.PlayMusic("Boss");
     }
 
     public void StopBattle()
@@ -55,6 +56,7 @@ public class BossBattle : MonoBehaviour
         isBattleActive = false;
         CancelInvoke("SpawnEnemy");
         UIManager.manager.DeactivateBossHealthBar();
+        AudioManager.manager.PlayMusic("Background");
     }
 
     private void SpawnEnemy()

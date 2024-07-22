@@ -23,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("Background");
+        PlayMusic("Main Menu");
     }
 
     public void PlayMusic(string name)
@@ -73,5 +73,10 @@ public class AudioManager : MonoBehaviour
     public void SFXVolume(float volume)
     {
         sfxSource.volume = volume;
+    }
+
+    public void ChangeMusic(string name)
+    {
+        PlayMusic(name);
     }
 }

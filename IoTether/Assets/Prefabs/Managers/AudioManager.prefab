@@ -305,6 +305,10 @@ MonoBehaviour:
   musicSounds:
   - Name: Background
     clip: {fileID: 8300000, guid: f43504d6e9a689f4681ed895fe62be3b, type: 3}
+  - Name: Main Menu
+    clip: {fileID: 8300000, guid: 3f8d0866f13c05541988be858781d868, type: 3}
+  - Name: Boss
+    clip: {fileID: 8300000, guid: c1dcb5213c5c9544abc0e4a7dcb854c8, type: 3}
   sfxSounds:
   - Name: GetItem
     clip: {fileID: 8300000, guid: c239c74397e84674fb956730d705b45d, type: 3}
