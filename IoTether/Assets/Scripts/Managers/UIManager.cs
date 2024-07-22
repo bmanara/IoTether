@@ -108,6 +108,7 @@ public class UIManager : MonoBehaviour
         {
             if (pauseMenu.activeSelf)
             {
+                PauseMenuController.controller.ResetPauseMenu();
                 Resume();
             }
             else

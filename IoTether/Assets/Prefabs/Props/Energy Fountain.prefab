@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 3638769529587810614}
   m_Layer: 0
   m_Name: Energy Fountain
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
