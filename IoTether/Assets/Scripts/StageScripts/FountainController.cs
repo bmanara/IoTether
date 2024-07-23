@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FountainScript : InteractableProp
+public class FountainController : InteractableProp
 {
     public GameObject refillPerk;
     
