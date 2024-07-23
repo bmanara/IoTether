@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ChestController : InteractableProp
 {
-    private GameObject closed;
-    private GameObject opened;
-    private GameObject prompt;
-    public GameObject[] chestDrops;
+    private GameObject Closed;
+    private GameObject Opened;
+    private GameObject Prompt;
+    public GameObject[] ChestDrops;
 
     private void Start()
     {
-        closed = gameObject.transform.GetChild(0).gameObject;
-        opened = gameObject.transform.GetChild(1).gameObject;
-        prompt = gameObject.transform.GetChild(2).gameObject;
+        Closed = gameObject.transform.GetChild(0).gameObject;
+        Opened = gameObject.transform.GetChild(1).gameObject;
+        Prompt = gameObject.transform.GetChild(2).gameObject;
         Close();
         
     }
@@ -22,10 +22,10 @@ public class ChestController : InteractableProp
     {
         Open();
         GameObject player = GameObject.Find("Player");
-        if (chestDrops.Length > 0)
+        if (ChestDrops.Length > 0)
         {
-            int randomIndex = Random.Range(0, chestDrops.Length);
-            Instantiate(chestDrops[randomIndex], player.transform.position + Vector3.down, Quaternion.identity);
+            int randomIndex = Random.Range(0, ChestDrops.Length);
+            Instantiate(ChestDrops[randomIndex], player.transform.position + Vector3.down, Quaternion.identity);
         }
         AudioManager.manager.PlaySFX("ChestOpen");
         UIManager.manager.DisableInteractPanel();
@@ -34,15 +34,15 @@ public class ChestController : InteractableProp
 
     private void Open()
     {
-        closed.SetActive(false);
-        opened.SetActive(true);
-        prompt.SetActive(false);
+        Closed.SetActive(false);
+        Opened.SetActive(true);
+        Prompt.SetActive(false);
     }
 
     private void Close()
     {
-        closed.SetActive(true);
-        opened.SetActive(false);
+        Closed.SetActive(true);
+        Opened.SetActive(false);
     }
 
 }

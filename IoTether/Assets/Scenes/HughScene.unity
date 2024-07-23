@@ -6460,71 +6460,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c8cd5854a40c134699fb360bb7a93d3, type: 3}
---- !u!1001 &2499861214471438738
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2943556398579877591, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: sourceTilemap
-      value: 
-      objectReference: {fileID: 1156167654}
-    - target: {fileID: 2943556398579877591, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: minimapTilemap
-      value: 
-      objectReference: {fileID: 1173443748}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1005245
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.37681457
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.07932297
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4176952612974331576, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4792178858234876311, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
-      propertyPath: m_Name
-      value: MiniMapGenerator
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b8d9844bfdc5fc478cf96dd12dc476d, type: 3}
 --- !u!50 &2689040191899927468
 Rigidbody2D:
   serializedVersion: 4
@@ -7097,7 +7032,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 619394802}
   - {fileID: 7575344578980771601}
-  - {fileID: 2499861214471438738}
   - {fileID: 912879551}
   - {fileID: 1885364962}
   - {fileID: 250331781}

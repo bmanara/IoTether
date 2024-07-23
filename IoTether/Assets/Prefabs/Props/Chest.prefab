@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f15ebf4e2d6ee4ea3add9c08d7a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestDrops:
-  - {fileID: 7279023391579149387, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
-  - {fileID: 7693310014522390134, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
-  - {fileID: 2814847193303301628, guid: 67738d3b4092e1e46809776cbede9ede, type: 3}
-  - {fileID: 5990960264517596502, guid: 8926e384e05b9b24aafffe1e0a7329a4, type: 3}
+  ChestDrops:
   - {fileID: 1303581188437842451, guid: b5ce103a5310f6c41bc7a04a73ea3c1b, type: 3}
+  - {fileID: 2814847193303301628, guid: 67738d3b4092e1e46809776cbede9ede, type: 3}
+  - {fileID: 7279023391579149387, guid: 74d338f85485e8b44b463c4995eee077, type: 3}
+  - {fileID: 5990960264517596502, guid: 8926e384e05b9b24aafffe1e0a7329a4, type: 3}
+  - {fileID: 7693310014522390134, guid: 3f5152ebbfcba78418ec0f0e3b35e69d, type: 3}
 --- !u!61 &4172346870321244637
 BoxCollider2D:
   m_ObjectHideFlags: 0
