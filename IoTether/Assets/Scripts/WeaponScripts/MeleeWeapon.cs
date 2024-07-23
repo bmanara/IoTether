@@ -29,6 +29,11 @@ public abstract class MeleeWeapon : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.manager.gameIsPaused)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown("Fire1") && Time.time > timeUntilMelee)
         {
             isAttacking = true;
