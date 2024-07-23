@@ -17,6 +17,8 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private Button _cancelButton;
     [SerializeField] private GameObject _mainOptionsScreen; // Reference to the main options screen
     [SerializeField] private GameObject _optionsScreen;
+    [SerializeField] private Slider _slider;
+
 
     private System.Action _confirmAction;        // Action to store the confirm action
 
@@ -45,6 +47,7 @@ public class PauseMenuController : MonoBehaviour
 
         _confirmDialog.SetActive(false);         // Ensure the confirmation dialog is initially inactive
         _mainOptionsScreen.SetActive(true);      // Ensure the main options screen is initially active
+        _slider.value = AudioManager.manager.GetMusicVolume();
     }
 
     public void ResumeGame()

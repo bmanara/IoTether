@@ -13,6 +13,7 @@ public class MainMenuController : MonoBehaviour
     {
         _playButton.onClick.AddListener(PlayGame);
         _quitButton.onClick.AddListener(QuitGame);
+        _slider.value = AudioManager.manager.GetMusicVolume();
     }
 
     private void PlayGame()

@@ -5671,7 +5671,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -79.893074, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.5530778, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5986,6 +5986,7 @@ MonoBehaviour:
   _cancelButton: {fileID: 5464255268374961154}
   _mainOptionsScreen: {fileID: 5914671949168739560}
   _optionsScreen: {fileID: 7857159320410519880}
+  _slider: {fileID: 1246565787211765492}
 --- !u!1 &7692935550735289396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6717,8 +6718,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -515.90466, y: 216.04614}
-  m_SizeDelta: {x: 180, y: 60}
+  m_AnchoredPosition: {x: -464.99228, y: 216.04614}
+  m_SizeDelta: {x: 264.8541, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5215416974954113453
 CanvasRenderer:

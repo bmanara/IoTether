@@ -79,4 +79,9 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(name);
     }
+
+    public float GetMusicVolume()
+    {
+        return musicSource.volume;
+    }
 }
