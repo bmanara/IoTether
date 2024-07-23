@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f15ebf4e2d6ee4ea3add9c08d7a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestDrops:
+  ChestDrops:
   - {fileID: 2510880464166757905, guid: 90abeb46041e02744a39eec9041a7f67, type: 3}
   - {fileID: 834503886602734015, guid: 63e713c2e82c14742b5fa0dac2b8eea4, type: 3}
   - {fileID: 5876923210314228977, guid: 429ff9de161f9574ea1695fbcfb751ee, type: 3}
