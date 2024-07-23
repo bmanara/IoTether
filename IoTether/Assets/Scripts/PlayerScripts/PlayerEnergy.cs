@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerEnergy : MonoBehaviour
 {
     private int energy;
-    private int maxEnergy = 120;
+    private int maxEnergy = 150;
     private int prevEnergy;
     private int prevMaxEnergy;
 
