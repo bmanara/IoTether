@@ -7,7 +7,7 @@ public class BananaController : InteractableProp
 {
     public string BananaText;
 
-    public void haha()
+    public void BananaHeal()
     {
         GameObject playerParent = GameObject.Find("PlayerParent");
         playerParent.GetComponent<PlayerHealth>().Heal(5);
@@ -18,7 +18,7 @@ public class BananaController : InteractableProp
         Color yellow = new Color32(255, 233, 0, 255);
         UIManager.manager.PlayAdaptiveText(BananaText, yellow, 0.7f, 0.3f, 45);
         Destroy(gameObject);
-        haha();
+        BananaHeal();
         AudioManager.manager.PlaySFX("BananaEat");
     }
 }
