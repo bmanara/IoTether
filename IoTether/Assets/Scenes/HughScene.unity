@@ -4285,11 +4285,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
       value: ddddd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: asdasd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175130894984835537, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: asdasd
       objectReference: {fileID: 0}
     - target: {fileID: 4653949414116843487, guid: 5ac6e148e88fada449e0c2ecb4461d70, type: 3}
       propertyPath: m_LocalPosition.x

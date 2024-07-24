@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     private bool isTyping = false;
     private string previousSentence = "";
     public event Action onDialogueFinish;
+    private Coroutine dialogueCoroutine;
 
     //adaptive text
     public TextMeshProUGUI adaptiveText;
@@ -192,7 +193,7 @@ public class UIManager : MonoBehaviour
     {
         if (isTyping)
         {
-            StopAllCoroutines(); // Allow user to skip dialogue
+            StopCoroutine(dialogueCoroutine); // Allow user to skip dialogue
             dialogueText.text = previousSentence;
             isTyping = false;
             return;
@@ -206,7 +207,7 @@ public class UIManager : MonoBehaviour
         
         string sentence = sentences.Dequeue();
         previousSentence = sentence;
-        StartCoroutine(TypeSentence(sentence));
+        dialogueCoroutine = StartCoroutine(TypeSentence(sentence));
     }
 
     IEnumerator TypeSentence(string sentence)
