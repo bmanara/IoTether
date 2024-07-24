@@ -278,7 +278,7 @@ public class UIManager : MonoBehaviour
 
         if (fadeIn)
         {
-            yield return new WaitForSeconds(displayDuration);
+            yield return new WaitForSecondsRealtime(displayDuration);
             StartCoroutine(FadeText(false, fadeDuration, displayDuration));
         }
     }
