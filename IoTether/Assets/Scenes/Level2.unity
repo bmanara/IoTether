@@ -24733,7 +24733,7 @@ GameObject:
   - component: {fileID: 1183323522}
   - component: {fileID: 1183323521}
   m_Layer: 3
-  m_Name: Props
+  m_Name: WallProps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
